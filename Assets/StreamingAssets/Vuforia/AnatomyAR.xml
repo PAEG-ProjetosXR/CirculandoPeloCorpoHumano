@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QCARConfig>
+  <Tracking>
+    <ImageTarget name="RinsAR" size="1.000000 1.000000" />
+    <ImageTarget name="DenteAR" size="1.000000 1.000000" />
+    <ImageTarget name="OlhoAR" size="1.000000 1.000000" />
+    <ImageTarget name="TesticulosAR" size="1.000000 1.000000" />
+    <ImageTarget name="SinapseAR" size="1.000000 1.000000" />
+    <ImageTarget name="PulmaoAR" size="1.000000 1.000000" />
+    <ImageTarget name="ProstataAR" size="1.000000 1.000000" />
+    <ImageTarget name="PlaquetaAR" size="1.000000 1.000000" />
+    <ImageTarget name="PancreasAR" size="1.000000 1.000000" />
+    <ImageTarget name="IntestinoGrossoAR" size="1.000000 1.000000" />
+    <ImageTarget name="IntestinoDelgadoAR" size="1.000000 1.000000" />
+    <ImageTarget name="HumanoAR" size="1.000000 1.000000" />
+    <ImageTarget name="GlobuloVermelhoAR" size="1.000000 1.000000" />
+    <ImageTarget name="GlobuloBrancoAR" size="1.000000 1.000000" />
+    <ImageTarget name="FrangoAR" size="1.000000 1.000000" />
+    <ImageTarget name="FigadoAR" size="1.000000 1.000000" />
+    <ImageTarget name="EstomagoAR" size="1.000000 1.000000" />
+    <ImageTarget name="EsqueletoAR" size="1.000000 1.000000" />
+    <ImageTarget name="DNAAR" size="1.000000 1.000000" />
+    <ImageTarget name="CromossomoAR" size="1.000000 1.000000" />
+    <ImageTarget name="CoracaoAR" size="1.000000 1.000000" />
+    <ImageTarget name="CerebroAR" size="1.000000 1.000000" />
+    <ImageTarget name="BexigaAR" size="1.000000 1.000000" />
+  </Tracking>
+</QCARConfig>

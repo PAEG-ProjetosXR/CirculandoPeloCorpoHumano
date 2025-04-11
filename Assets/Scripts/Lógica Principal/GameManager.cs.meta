@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: ca29da02018b5234aa8a09ee44ce9cd5
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - questionText: {instanceID: 0}
+  - pontosText: {instanceID: 0}
+  - tempoText: {instanceID: 0}
+  - correctAnswerSound: {fileID: 8300000, guid: 60d7b6901d67bbe40831ea63a83c95dc,
+      type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
