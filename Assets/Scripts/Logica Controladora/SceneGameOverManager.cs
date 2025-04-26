@@ -70,11 +70,11 @@ public class SceneGameOverManager : MonoBehaviour
     }
 
     /// <summary>
-    /// Carrega uma cena intermediária (ID:7) antes de retornar ao menu (ID:0).
+    /// Carrega uma cena intermediária (ID:6) antes de retornar ao menu (ID:0).
     /// </summary>
     private IEnumerator LoadMenuAfterDelay() 
     {
-        SceneManager.LoadScene(7);  // Cena de transição/loading
+        SceneManager.LoadScene(6);  // Cena de transição/loading
         yield return new WaitForSeconds(3f);  // Tempo fixo para demonstração
         SceneManager.LoadScene(0);  // Menu principal
     }
