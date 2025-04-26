@@ -31,6 +31,7 @@ public class GameManager : MonoBehaviour
     private bool _targetIdentificado;        // Flag para controle de image targets
     private bool _questaoMultiplaEscolha;    // Tipo da questão atual
     private bool _botoesHabilitados;         // Controle de interação com botões
+    private bool _questaoArHabilitada = false;
 
     //-----------------------------
     // Pontuação por Questão
@@ -42,8 +43,12 @@ public class GameManager : MonoBehaviour
     //-----------------------------
     [Header("Configurações de UI")]
     [SerializeField] private TextMeshProUGUI _textoQuestao;
+    [SerializeField] private TextMeshProUGUI _textoQuestaoAr;
     [SerializeField] private TextMeshProUGUI _textoPontos;
     [SerializeField] private TextMeshProUGUI _textoTempo;
+    [SerializeField] private GameObject _containerPergunataMultiplaEscolha;
+    [SerializeField] private GameObject _containerPerguntaAr;
+    [SerializeField] private GameObject _toggleArQuestionButton;
     private GameObject _telaCarregamento;
     private TextMeshProUGUI _textoCarregamento;
     [SerializeField] private GameObject _fundo;
@@ -267,6 +272,8 @@ public class GameManager : MonoBehaviour
 
                 _textoQuestao.text = _questoesMultiplaEscolha[indiceQuestao].pergunta;
                 MostrarBotoes();
+                MostrarPerguntaMultiplaEscolha();
+                EsconderBotaoAr();
                 AtualizarBotoes(indiceQuestao);
                 _botoesHabilitados = true;
             }
@@ -279,6 +286,8 @@ public class GameManager : MonoBehaviour
 
         _textoQuestao.text = _questoes[_indiceQuestaoAtual / 5];
         EsconderBotoes();
+        EsconderPerguntaMultiplaEscolha();
+        MostrarBotaoAr();
         if (_targetAtual != null) Destroy(_targetAtual);
         _targetAtual = Instantiate(_imageTargets[_indiceQuestaoAtual / 5], Vector3.zero, Quaternion.identity);
     }
@@ -491,7 +500,7 @@ public class GameManager : MonoBehaviour
             _textoCarregamento.text = "Carregando...";
         }
         
-        yield return new WaitForSeconds(0.5f);
+        //yield return new WaitForSeconds(0.1f);
         
         AsyncOperation carregamento = SceneManager.LoadSceneAsync(indiceCena);
         while (!carregamento.isDone)
@@ -577,12 +586,38 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    private void MostrarBotaoAr()
+    {
+        _toggleArQuestionButton.SetActive(true);
+    }
+
+    private void MostrarPerguntaMultiplaEscolha()
+    {
+        _containerPergunataMultiplaEscolha.SetActive(true);
+    } 
+
+    public void MostrarEsconderQuestaoAr()
+    {
+        _questaoArHabilitada = !_questaoArHabilitada;
+        _containerPerguntaAr.SetActive(_questaoArHabilitada);
+        _textoQuestaoAr.text = _questoes[_indiceQuestaoAtual / 5];
+    }
     private void EsconderBotoes()
     {
         foreach (var botao in _botoes)
         {
             botao.SetActive(false);
         }
+    }
+
+    private void EsconderBotaoAr()
+    {
+        _toggleArQuestionButton.SetActive(false);
+    }
+
+    private void EsconderPerguntaMultiplaEscolha()
+    {
+        _containerPergunataMultiplaEscolha.SetActive(false);
     }
 
     // No GameManager.cs, adicione isso:
