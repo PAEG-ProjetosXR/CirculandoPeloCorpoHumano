@@ -160,8 +160,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -0.000011444, y: 1026}
-  m_SizeDelta: {x: 875.128, y: 281.14}
+  m_AnchoredPosition: {x: -0.000011444, y: 883.99994}
+  m_SizeDelta: {x: 1100, y: 281.14}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &25225619
 MonoBehaviour:
@@ -460,8 +460,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _textoQuestao: {fileID: 697638238}
+  _textoQuestaoAr: {fileID: 1532819041}
   _textoPontos: {fileID: 941140860}
   _textoTempo: {fileID: 1519749871}
+  _containerPergunataMultiplaEscolha: {fileID: 1770035666}
+  _containerPerguntaAr: {fileID: 1482858253}
+  _toggleArQuestionButton: {fileID: 408824860}
   _fundo: {fileID: 1977181533}
   _botoes:
   - {fileID: 1837002865}
@@ -474,116 +478,145 @@ MonoBehaviour:
   _somAcerto: {fileID: 8300000, guid: 60d7b6901d67bbe40831ea63a83c95dc, type: 3}
   _somErro: {fileID: 8300000, guid: f3bac615c5cd5744c9562dbb1bf04706, type: 3}
   _questoes:
-  - "Pulm\xE3o"
-  - "Cora\xE7\xE3o"
-  - Dente
-  - "C\xE9rebro"
+  - "Durante uma cirurgia odontol\xF3gica para extra\xE7\xE3o de terceiros molares
+    inferiores, um paciente masculino de 58 anos apresentou epis\xF3dio de tosse
+    intensa seguido por dispneia. Um fragmento de um dente foi aspirado durante o
+    procedimento, por\xE9m o evento passou despercebido naquele momento. Tr\xEAs
+    dias depois, o paciente deu entrada ao pronto-atendimento com febre, dor tor\xE1cica
+    e dificuldade respirat\xF3ria. O exame f\xEDsico revelou estertores (sons respirat\xF3rios
+    anormais) no hemit\xF3rax direito e a radiografia de t\xF3rax mostrou infiltrado
+    pulmonar sugestivo de pneumonia lobar. A broncoscopia confirmou a presen\xE7a
+    de fragmento dent\xE1rio impactado em um br\xF4nquio segmentar inferior direito.
+    O paciente recebeu tratamento antibi\xF3tico e o corpo estranho foi removido.
+    Com base nesse contexto, qual \xF3rg\xE3o foi mais amea\xE7ado e teve suas fun\xE7\xF5es
+    comprometidas?"
+  - 
+  - 
+  - 
   _questoesMultiplaEscolha:
-  - pergunta: "Pulm\xE3o"
+  - pergunta: "Em crian\xE7as e adultos em posi\xE7\xE3o ereta, qual estrutura das
+      vias a\xE9reas apresenta maior probabilidade de receber um corpo estranho,
+      como feij\xE3o ou amendoim, aspirado acidentalmente?"
     alternativas:
-    - "Pulm\xE3o"
-    - "Cora\xE7\xE3o"
-    - Dente
-    - "C\xE9rebro"
-    indiceRespostaCorreta: 0
-  - pergunta: "Pulm\xE3o"
-    alternativas:
-    - "Pulm\xE3o"
-    - "Cora\xE7\xE3o"
-    - Dente
-    - "C\xE9rebro"
-    indiceRespostaCorreta: 0
-  - pergunta: "Pulm\xE3o"
-    alternativas:
-    - "Pulm\xE3o"
-    - "Cora\xE7\xE3o"
-    - Dente
-    - "C\xE9rebro"
-    indiceRespostaCorreta: 0
-  - pergunta: "Pulm\xE3o"
-    alternativas:
-    - "Pulm\xE3o"
-    - "Cora\xE7\xE3o"
-    - Dente
-    - "C\xE9rebro"
-    indiceRespostaCorreta: 0
-  - pergunta: "Cora\xE7\xE3o"
-    alternativas:
-    - "Pulm\xE3o"
-    - "Cora\xE7\xE3o"
-    - Dente
-    - "C\xE9rebro"
-    indiceRespostaCorreta: 1
-  - pergunta: "Cora\xE7\xE3o"
-    alternativas:
-    - "Pulm\xE3o"
-    - "Cora\xE7\xE3o"
-    - Dente
-    - "C\xE9rebro"
-    indiceRespostaCorreta: 1
-  - pergunta: "Cora\xE7\xE3o"
-    alternativas:
-    - "Pulm\xE3o"
-    - "Cora\xE7\xE3o"
-    - Dente
-    - "C\xE9rebro"
-    indiceRespostaCorreta: 1
-  - pergunta: "Cora\xE7\xE3o"
-    alternativas:
-    - "Pulm\xE3o"
-    - "Cora\xE7\xE3o"
-    - Dente
-    - "C\xE9rebro"
-    indiceRespostaCorreta: 1
-  - pergunta: Dente
-    alternativas:
-    - "Pulm\xE3o"
-    - "Cora\xE7\xE3o"
-    - Dente
-    - "C\xE9rebro"
+    - "Br\xF4nquio principal esquerdo"
+    - "Br\xF4nquio lobar superior esquerdo"
+    - "Br\xF4nquio principal direito"
+    - "Alv\xE9olos pulmonares"
     indiceRespostaCorreta: 2
-  - pergunta: Dente
+  - pergunta: "Qual a principal caracter\xEDstica anat\xF4mica do br\xF4nquio principal
+      direito que facilita a aspira\xE7\xE3o de corpos estranhos?"
     alternativas:
-    - "Pulm\xE3o"
-    - "Cora\xE7\xE3o"
-    - Dente
-    - "C\xE9rebro"
+    - "Maior comprimento em rela\xE7\xE3o ao esquerdo"
+    - "Presen\xE7a de mais ramifica\xE7\xF5es secund\xE1rias (lobares)"
+    - "Di\xE2metro maior e inclina\xE7\xE3o mais vertical"
+    - "Proximidade com o cora\xE7\xE3o"
     indiceRespostaCorreta: 2
-  - pergunta: Dente
+  - pergunta: "Considerando o percurso anat\xF4mico de um corpo estranho aspirado,
+      como o fragmento dent\xE1rio, qual sequ\xEAncia de estruturas ele atravessa?"
     alternativas:
-    - "Pulm\xE3o"
-    - "Cora\xE7\xE3o"
-    - Dente
-    - "C\xE9rebro"
-    indiceRespostaCorreta: 2
-  - pergunta: Dente
+    - "Faringe, laringe, traqueia, br\xF4nquio principal, br\xF4nquio lobar"
+    - "Laringe, faringe, br\xF4nquio principal, traqueia, br\xF4nquio lobar"
+    - "Laringe, traqueia, br\xF4nquio lobar, traqueia, br\xF4nquio principal"
+    - "Faringe, laringe, traqueia, br\xF4nquio lobar, br\xF4nquio principal"
+    indiceRespostaCorreta: 0
+  - pergunta: "O pulm\xE3o direito \xE9 dividido em quantos lobos, e qual a principal
+      diferen\xE7a em rela\xE7\xE3o ao pulm\xE3o esquerdo?"
     alternativas:
-    - "Pulm\xE3o"
-    - "Cora\xE7\xE3o"
-    - Dente
-    - "C\xE9rebro"
-    indiceRespostaCorreta: 2
-  - pergunta: "C\xE9rebro"
+    - 3 lobos, tendo maior volume que o esquerdo
+    - 2 lobos, sendo mais curto que o esquerdo
+    - 3 lobos, sendo mais alongado que o esquerdo
+    - "2 lobos, tendo menor di\xE2metro que o esquerdo"
+    indiceRespostaCorreta: 0
+  - pergunta: "O dente 31 assim como os demais dentes se unem \xE0 mand\xEDbula ou
+      \xE0 maxila por meio de qual tipo de articula\xE7\xE3o?"
     alternativas:
-    - "Pulm\xE3o"
-    - "Cora\xE7\xE3o"
-    - Dente
-    - "C\xE9rebro"
+    - Sinovial
+    - "S\xEDnfise"
+    - Sutura
+    - Gonfose
     indiceRespostaCorreta: 3
-  - pergunta: "C\xE9rebro"
+  - pergunta: "A mand\xEDbula \xE9 classificada como parte de qual divis\xE3o do
+      esqueleto humano?"
     alternativas:
-    - "Pulm\xE3o"
-    - "Cora\xE7\xE3o"
-    - Dente
-    - "C\xE9rebro"
-    indiceRespostaCorreta: 3
-  - pergunta: "C\xE9rebro"
+    - Esqueleto apendicular
+    - Esqueleto axial
+    - "Neurocr\xE2nio"
+    - Cintura escapular
+    indiceRespostaCorreta: 1
+  - pergunta: "Qual a articula\xE7\xE3o que conecta a mand\xEDbula ao osso temporal
+      e permite os movimentos de mastiga\xE7\xE3o?"
     alternativas:
-    - "Pulm\xE3o"
-    - "Cora\xE7\xE3o"
-    - Dente
-    - "C\xE9rebro"
+    - Sutura lambdoide
+    - "Articula\xE7\xE3o zigom\xE1tica"
+    - "Articula\xE7\xE3o temporomandibular "
+    - Sutura coronal
+    indiceRespostaCorreta: 2
+  - pergunta: "A valva mitral regula o fluxo sangu\xEDneo entre:"
+    alternativas:
+    - "\xC1trio direito e Ventr\xEDculo direito"
+    - "Ventr\xEDculo direito e Tronco pulmonar"
+    - "\xC1trio esquerdo e Ventr\xEDculo esquerdo"
+    - "Ventr\xEDculo esquerdo e Aorta"
+    indiceRespostaCorreta: 2
+  - pergunta: "Qual estrutura anat\xF4mica divide o cora\xE7\xE3o longitudinalmente,
+      separando os ventr\xEDculos direito e esquerdo?"
+    alternativas:
+    - Septo interatrial
+    - Septo interventricular
+    - "Peric\xE1rdio fibroso"
+    - "Sulco coron\xE1rio"
+    indiceRespostaCorreta: 1
+  - pergunta: "A partir de qual cavidade card\xEDaca o sangue oxigenado \xE9 ejetado
+      para a circula\xE7\xE3o sist\xEAmica?"
+    alternativas:
+    - "\xC1trio esquerdo"
+    - "\xC1trio direito"
+    - "Ventr\xEDculo esquerdo"
+    - "Ventr\xEDculo direito"
+    indiceRespostaCorreta: 2
+  - pergunta: "Qual vaso da base emerge do ventr\xEDculo direito e conduz sangue
+      \xE0 circula\xE7\xE3o pulmonar?"
+    alternativas:
+    - Tronco pulmonar
+    - Veia pulmonar
+    - Veia cava inferior
+    - Aorta
+    indiceRespostaCorreta: 0
+  - pergunta: "O c\xF3rtex cerebral pode ser dividido em lobos. Em qual deles h\xE1
+      comprometimento no suprimento sangu\xEDneo afetando uma \xE1rea fundamental
+      para a fala?"
+    alternativas:
+    - Lobo frontal
+    - Lobo parietal
+    - Lobo temporal
+    - Lobo occipital
+    indiceRespostaCorreta: 0
+  - pergunta: "Qual estrutura do enc\xE9falo \xE9 conhecida como \u201Cporta de entrada\u201D
+      para o c\xF3rtex cerebral, recebendo informa\xE7\xF5es sensoriais provenientes
+      da periferia do corpo?"
+    alternativas:
+    - "Hipot\xE1lamo"
+    - "T\xE1lamo"
+    - Cerebelo
+    - "Mesenc\xE9falo"
+    indiceRespostaCorreta: 1
+  - pergunta: "Qual estrutura do enc\xE9falo \xE9 respons\xE1vel pela coordena\xE7\xE3o
+      e corre\xE7\xE3o dos movimentos, al\xE9m de auxiliar na manuten\xE7\xE3o do
+      equil\xEDbrio?"
+    alternativas:
+    - "Tronco encef\xE1lico"
+    - "Dienc\xE9falo"
+    - "Telenc\xE9falo"
+    - Cerebelo
     indiceRespostaCorreta: 3
+  - pergunta: "Qual estrutura do enc\xE9falo \xE9 respons\xE1vel por regular fun\xE7\xF5es
+      essenciais, como respira\xE7\xE3o, batimentos card\xEDacos e press\xE3o arterial?"
+    alternativas:
+    - "Tronco encef\xE1lico"
+    - Cerebelo
+    - "C\xF3rtex cerebral"
+    - "Dienc\xE9falo"
+    indiceRespostaCorreta: 0
   - pergunta: "C\xE9rebro"
     alternativas:
     - "Pulm\xE3o"
@@ -759,8 +792,8 @@ MonoBehaviour:
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 1080, y: 1920}
-  m_ScreenMatchMode: 1
-  m_MatchWidthOrHeight: 0.25
+  m_ScreenMatchMode: 0
+  m_MatchWidthOrHeight: 1
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -804,8 +837,10 @@ RectTransform:
   - {fileID: 1977181536}
   - {fileID: 710524756}
   - {fileID: 1770035667}
+  - {fileID: 1482858254}
   - {fileID: 779459329}
   - {fileID: 160216808}
+  - {fileID: 408824861}
   - {fileID: 1837002866}
   - {fileID: 25225618}
   - {fileID: 1998917650}
@@ -817,6 +852,140 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &152880655
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 152880656}
+  - component: {fileID: 152880658}
+  - component: {fileID: 152880657}
+  m_Layer: 5
+  m_Name: Text (TMP)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &152880656
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 152880655}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 408824861}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: -0.0010147, y: 140.57}
+  m_SizeDelta: {x: 875.13, y: 281.14}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &152880657
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 152880655}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: Mostrar / Esconder pergunta
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 50
+  m_fontSizeBase: 50
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 1
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: -66.392914, y: 35.409447, z: -61.966583, w: 39.835815}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &152880658
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 152880655}
+  m_CullTransparentMesh: 1
 --- !u!1 &160216807
 GameObject:
   m_ObjectHideFlags: 0
@@ -853,7 +1022,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: 59.80005}
+  m_AnchoredPosition: {x: 0, y: 59.799805}
   m_SizeDelta: {x: 188.0436, y: 70.86975}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &160216809
@@ -950,6 +1119,178 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 160216807}
   m_CullTransparentMesh: 1
+--- !u!1 &408824860
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 408824861}
+  - component: {fileID: 408824866}
+  - component: {fileID: 408824865}
+  - component: {fileID: 408824864}
+  - component: {fileID: 408824863}
+  - component: {fileID: 408824862}
+  m_Layer: 5
+  m_Name: ToggleArQuestionButton
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &408824861
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 408824860}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 152880656}
+  m_Father: {fileID: 130002791}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: -0.000011444, y: 154}
+  m_SizeDelta: {x: 875, y: 281}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!111 &408824862
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 408824860}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: -4874553466153255288, guid: ec9eb985a3ba8114dae2633713e00cdd,
+    type: 2}
+  m_Animations: []
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
+--- !u!95 &408824863
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 408824860}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ec9eb985a3ba8114dae2633713e00cdd, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &408824864
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 408824860}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 3
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.21960786, g: 0.21960786, b: 0.21960786, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 408824865}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 85620590}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: MostrarEsconderQuestaoAr
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &408824865
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 408824860}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 61238a5b17b39ad419f47217a9283620, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &408824866
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 408824860}
+  m_CullTransparentMesh: 1
 --- !u!1 &434144695
 GameObject:
   m_ObjectHideFlags: 0
@@ -988,8 +1329,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0.0000085831, y: 429}
-  m_SizeDelta: {x: 875.128, y: 281.14}
+  m_AnchoredPosition: {x: 0.0000085831, y: 286.99994}
+  m_SizeDelta: {x: 1100, y: 281.14}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &434144697
 MonoBehaviour:
@@ -1157,7 +1498,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
   m_AnchoredPosition: {x: -0.0010147, y: 140.57}
-  m_SizeDelta: {x: 875.13, y: 281.14}
+  m_SizeDelta: {x: 1100, y: 281.14}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &483400323
 MonoBehaviour:
@@ -1208,8 +1549,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 100
-  m_fontSizeBase: 100
+  m_fontSize: 50
+  m_fontSizeBase: 50
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1244,7 +1585,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 44.26181, y: 22.130959, z: 53.114502, w: 26.55706}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1293,7 +1634,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
   m_AnchoredPosition: {x: -0.0010147, y: 140.57}
-  m_SizeDelta: {x: 875.13, y: 281.14}
+  m_SizeDelta: {x: 1100, y: 281.14}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &617212656
 MonoBehaviour:
@@ -1342,8 +1683,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 100
-  m_fontSizeBase: 100
+  m_fontSize: 50
+  m_fontSizeBase: 50
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1378,7 +1719,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 39.835693, y: 22.130966, z: 35.409363, w: 26.557022}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1514,7 +1855,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0.47503662, y: 9.723751, z: -2.3032227, w: -208.90663}
+  m_margin: {x: -141.16287, y: 9.723751, z: -143.94131, w: -354.97067}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1563,7 +1904,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 160.20001, y: 59.80005}
+  m_AnchoredPosition: {x: 160.2002, y: 59.799805}
   m_SizeDelta: {x: 300, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &710524757
@@ -1639,7 +1980,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -159.90002, y: 59.80005}
+  m_AnchoredPosition: {x: -159.90039, y: 59.799805}
   m_SizeDelta: {x: 300, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &779459330
@@ -2037,8 +2378,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 100
-  m_fontSizeBase: 100
+  m_fontSize: 50
+  m_fontSizeBase: 50
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -2073,7 +2414,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: -66.392914, y: 35.409447, z: -61.966583, w: 39.835815}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -2207,6 +2548,82 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1482858253
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1482858254}
+  - component: {fileID: 1482858256}
+  - component: {fileID: 1482858255}
+  m_Layer: 5
+  m_Name: ArQuestionImage
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &1482858254
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1482858253}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1.9374, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1532819040}
+  m_Father: {fileID: 130002791}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: 0, y: -805}
+  m_SizeDelta: {x: 1580.598, y: 800}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1482858255
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1482858253}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 3cec875a75d0b1c48808d9f93b2a8482, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1482858256
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1482858253}
+  m_CullTransparentMesh: 1
 --- !u!1 &1508618021
 GameObject:
   m_ObjectHideFlags: 0
@@ -2242,7 +2659,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
   m_AnchoredPosition: {x: -0.0010147, y: 140.57}
-  m_SizeDelta: {x: 875.13, y: 281.14}
+  m_SizeDelta: {x: 1100, y: 281.14}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1508618023
 MonoBehaviour:
@@ -2293,8 +2710,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 100
-  m_fontSizeBase: 100
+  m_fontSize: 50
+  m_fontSizeBase: 50
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -2329,7 +2746,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 35.409454, y: 22.130829, z: 35.409363, w: 22.131096}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -2478,6 +2895,142 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1519749869}
   m_CullTransparentMesh: 1
+--- !u!1 &1532819039
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1532819040}
+  - component: {fileID: 1532819042}
+  - component: {fileID: 1532819041}
+  m_Layer: 5
+  m_Name: ArQuestionText
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1532819040
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1532819039}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 0.51615566, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1482858254}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: 1.1488037, y: -44.47123}
+  m_SizeDelta: {x: 980.2475, y: 132.60815}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1532819041
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1532819039}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: 'Texto
+
+'
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 60
+  m_fontSizeBase: 60
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 1
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: -193.33377, y: 56.67757, z: -185.6777, w: -1328.3169}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &1532819042
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1532819039}
+  m_CullTransparentMesh: 1
 --- !u!1 &1770035666
 GameObject:
   m_ObjectHideFlags: 0
@@ -2513,8 +3066,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -205.892}
-  m_SizeDelta: {x: 1053.598, y: 199.288}
+  m_AnchoredPosition: {x: 0, y: -308}
+  m_SizeDelta: {x: 1580.598, y: 280.288}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1770035668
 MonoBehaviour:
@@ -2592,8 +3145,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -0.000011444, y: 1325}
-  m_SizeDelta: {x: 875.128, y: 281.14}
+  m_AnchoredPosition: {x: -0.000011444, y: 1183}
+  m_SizeDelta: {x: 1100, y: 281.14}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1837002867
 MonoBehaviour:
@@ -2907,8 +3460,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0.000017166, y: 725}
-  m_SizeDelta: {x: 875.128, y: 281.14}
+  m_AnchoredPosition: {x: 0.000017166, y: 583}
+  m_SizeDelta: {x: 1100, y: 281.14}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1998917651
 MonoBehaviour:
