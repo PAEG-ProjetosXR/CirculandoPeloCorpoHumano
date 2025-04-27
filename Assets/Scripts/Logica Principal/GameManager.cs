@@ -274,6 +274,7 @@ public class GameManager : MonoBehaviour
         MostrarBotoesQuestaoMultiplaEscolha();
         MostrarPerguntaMultiplaEscolha();
         EsconderBotaoToggleQuestaoImageTarget();
+        EsconderPerguntaImageTarget();
         AtualizarBotoesMultiplaEscolha(indiceQuestao);
         _botoesHabilitados = true;
       }
@@ -601,6 +602,12 @@ public class GameManager : MonoBehaviour
     _imageBoxQuestaoImageTargetHabilitada = !_imageBoxQuestaoImageTargetHabilitada;
     _imageBoxQuestaoImageTarget.SetActive(_imageBoxQuestaoImageTargetHabilitada);
     _textoQuestaoAr.text = _questoes[_indiceQuestaoAtual / 5];
+  }
+
+  public void EsconderPerguntaImageTarget()
+  {
+    _imageBoxQuestaoImageTargetHabilitada = false;
+    _imageBoxQuestaoImageTarget.SetActive(_imageBoxQuestaoImageTargetHabilitada);
   }
 
   private void EsconderBotoesQuestaoMultiplaEscolha()
