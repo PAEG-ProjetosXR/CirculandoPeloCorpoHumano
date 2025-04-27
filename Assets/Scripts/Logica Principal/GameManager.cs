@@ -32,6 +32,7 @@ public class GameManager : MonoBehaviour
   private bool _questaoMultiplaEscolha;    // Tipo da questão atual
   private bool _botoesHabilitados;         // Controle de interação com botões
   private bool _imageBoxQuestaoImageTargetHabilitada = false;
+  private int _paginaAtualQuestaoImageTarget = 0;
 
   //-----------------------------
   // Pontuação por Questão
@@ -42,10 +43,11 @@ public class GameManager : MonoBehaviour
   // Referências de UI
   //-----------------------------
   [Header("Configurações de UI")]
-  [SerializeField] private TextMeshProUGUI _textoQuestao;
-  [SerializeField] private TextMeshProUGUI _textoQuestaoAr;
-  [SerializeField] private TextMeshProUGUI _textoPontos;
-  [SerializeField] private TextMeshProUGUI _textoTempo;
+  [SerializeField] private TextMeshProUGUI _textQuestaoMultiplaEscolha;
+  [SerializeField] private TextMeshProUGUI _textQuestaoImageTarget;
+  [SerializeField] private TextMeshProUGUI _textPaginaAtualQuestaoImageTarget;
+  [SerializeField] private TextMeshProUGUI _textPontos;
+  [SerializeField] private TextMeshProUGUI _textTempo;
   [SerializeField] private GameObject _imageBoxQuestaoMultiplaEscolha;
   [SerializeField] private GameObject _imageBoxQuestaoImageTarget;
   [SerializeField] private GameObject _buttonToggleQuestaoImageTarget;
@@ -73,7 +75,7 @@ public class GameManager : MonoBehaviour
   // Questões e Targets
   //-----------------------------
   [Header("Banco de Questões")]
-  [SerializeField] private List<string> _questoes;
+  [SerializeField] private List<QuestaoImageTarget> _questoesImageTarget;
   [SerializeField] private List<QuestaoMultiplaEscolha> _questoesMultiplaEscolha;
   [SerializeField] private List<GameObject> _imageTargets;
   private GameObject _targetAtual;
@@ -97,6 +99,12 @@ public class GameManager : MonoBehaviour
     public string pergunta;
     public string[] alternativas;
     public int indiceRespostaCorreta;
+  }
+
+  [System.Serializable]
+  public class QuestaoImageTarget
+  {
+    public string[] perguntaFracionada;
   }
 
   //-----------------------------
@@ -165,7 +173,7 @@ public class GameManager : MonoBehaviour
   {
     _pontos = 0;
     _indiceQuestaoAtual = -1;
-    _totalQuestoes = _questoes.Count + _questoesMultiplaEscolha.Count;
+    _totalQuestoes = _questoesImageTarget.Count + _questoesMultiplaEscolha.Count;
     _tempo = 60f;
     _tempoTotal = 0f;
     _statusGame = "Play";
@@ -174,7 +182,7 @@ public class GameManager : MonoBehaviour
     _botoesHabilitados = true;
 
     // Inicializa pontos por questão
-    _pontosPorQuestao = new int[_questoes.Count];
+    _pontosPorQuestao = new int[_questoesImageTarget.Count];
     for (int i = 0; i < _pontosPorQuestao.Length; i++)
     {
       _pontosPorQuestao[i] = 0;
@@ -270,7 +278,7 @@ public class GameManager : MonoBehaviour
       {
         if (_fundo != null) _fundo.SetActive(true);
 
-        _textoQuestao.text = _questoesMultiplaEscolha[indiceQuestao].pergunta;
+        _textQuestaoMultiplaEscolha.text = _questoesMultiplaEscolha[indiceQuestao].pergunta;
         MostrarBotoesQuestaoMultiplaEscolha();
         MostrarPerguntaMultiplaEscolha();
         EsconderBotaoToggleQuestaoImageTarget();
@@ -285,7 +293,6 @@ public class GameManager : MonoBehaviour
   {
     if (_fundo != null) _fundo.SetActive(false);
 
-    _textoQuestao.text = _questoes[_indiceQuestaoAtual / 5];
     EsconderBotoesQuestaoMultiplaEscolha();
     EsconderPerguntaMultiplaEscolha();
     MostrarBotaoToggleQuestaoImageTarget();
@@ -436,11 +443,11 @@ public class GameManager : MonoBehaviour
 
   private void AtualizarHUD()
   {
-    if (_textoPontos != null)
-      _textoPontos.text = $"PONTOS: {_pontos}";
+    if (_textPontos != null)
+      _textPontos.text = $"PONTOS: {_pontos}";
 
-    if (_textoTempo != null)
-      _textoTempo.text = $"TEMPO: {Mathf.CeilToInt(_tempo)}";
+    if (_textTempo != null)
+      _textTempo.text = $"TEMPO: {Mathf.CeilToInt(_tempo)}";
   }
 
   //-----------------------------
@@ -579,6 +586,17 @@ public class GameManager : MonoBehaviour
   // Controle de UI
   //-----------------------------
 
+  private void UpdateTextsQuestaoImageTarget()
+  {
+    _textQuestaoImageTarget.text =
+      _questoesImageTarget[_indiceQuestaoAtual / 5]
+      .perguntaFracionada[_paginaAtualQuestaoImageTarget];
+    _textPaginaAtualQuestaoImageTarget.text =
+      (_paginaAtualQuestaoImageTarget + 1) +
+      "/" +
+      _questoesImageTarget[_indiceQuestaoAtual / 5].perguntaFracionada.Length;
+  }
+
   private void MostrarBotoesQuestaoMultiplaEscolha()
   {
     foreach (var botao in _botoes)
@@ -601,13 +619,14 @@ public class GameManager : MonoBehaviour
   {
     _imageBoxQuestaoImageTargetHabilitada = !_imageBoxQuestaoImageTargetHabilitada;
     _imageBoxQuestaoImageTarget.SetActive(_imageBoxQuestaoImageTargetHabilitada);
-    _textoQuestaoAr.text = _questoes[_indiceQuestaoAtual / 5];
+    UpdateTextsQuestaoImageTarget();
   }
 
   public void EsconderPerguntaImageTarget()
   {
     _imageBoxQuestaoImageTargetHabilitada = false;
     _imageBoxQuestaoImageTarget.SetActive(_imageBoxQuestaoImageTargetHabilitada);
+    _paginaAtualQuestaoImageTarget = 0;
   }
 
   private void EsconderBotoesQuestaoMultiplaEscolha()
@@ -628,6 +647,25 @@ public class GameManager : MonoBehaviour
     _imageBoxQuestaoMultiplaEscolha.SetActive(false);
   }
 
+  public void handlePaginaSeguinte()
+  {
+    if (
+      _imageBoxQuestaoImageTargetHabilitada &&
+      _paginaAtualQuestaoImageTarget < _questoesImageTarget[_indiceQuestaoAtual / 5].perguntaFracionada.Length - 1)
+    {
+      _paginaAtualQuestaoImageTarget++;
+      UpdateTextsQuestaoImageTarget();
+    }
+  }
+
+  public void handlePaginaAnterior()
+  {
+    if (_imageBoxQuestaoImageTargetHabilitada && _paginaAtualQuestaoImageTarget > 0)
+    {
+      _paginaAtualQuestaoImageTarget--;
+      UpdateTextsQuestaoImageTarget();
+    }
+  }
   // No GameManager.cs, adicione isso:
   // Variável privada para armazenar as iniciais do jogador durante a sessão atual.
   // O uso de '_' no prefixo é uma convenção comum para campos privados.
