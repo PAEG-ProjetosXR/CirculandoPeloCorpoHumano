@@ -137,7 +137,7 @@ GameObject:
   - component: {fileID: 25225623}
   - component: {fileID: 25225622}
   m_Layer: 5
-  m_Name: B-Button
+  m_Name: ButtonB
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -463,9 +463,9 @@ MonoBehaviour:
   _textoQuestaoAr: {fileID: 1532819041}
   _textoPontos: {fileID: 941140860}
   _textoTempo: {fileID: 1519749871}
-  _containerPergunataMultiplaEscolha: {fileID: 1770035666}
-  _containerPerguntaAr: {fileID: 1482858253}
-  _toggleArQuestionButton: {fileID: 408824860}
+  _imageBoxQuestaoMultiplaEscolha: {fileID: 1770035666}
+  _imageBoxQuestaoImageTarget: {fileID: 1482858253}
+  _buttonToggleQuestaoImageTarget: {fileID: 408824860}
   _fundo: {fileID: 1977181533}
   _botoes:
   - {fileID: 1837002865}
@@ -1134,7 +1134,7 @@ GameObject:
   - component: {fileID: 408824863}
   - component: {fileID: 408824862}
   m_Layer: 5
-  m_Name: ToggleArQuestionButton
+  m_Name: ButtonToggleQuestaoImageTarget
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1243,7 +1243,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 85620590}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: MostrarEsconderQuestaoAr
+        m_MethodName: MostrarEsconderPerguntaImageTarget
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1306,7 +1306,7 @@ GameObject:
   - component: {fileID: 434144701}
   - component: {fileID: 434144700}
   m_Layer: 5
-  m_Name: D-Button
+  m_Name: ButtonD
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1745,7 +1745,7 @@ GameObject:
   - component: {fileID: 697638239}
   - component: {fileID: 697638238}
   m_Layer: 5
-  m_Name: QuestionText
+  m_Name: TextQuestaoMultiplaEscolha
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1881,7 +1881,7 @@ GameObject:
   - component: {fileID: 710524758}
   - component: {fileID: 710524757}
   m_Layer: 5
-  m_Name: ScoreImage
+  m_Name: ImageBoxPontos
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1957,7 +1957,7 @@ GameObject:
   - component: {fileID: 779459331}
   - component: {fileID: 779459330}
   m_Layer: 5
-  m_Name: TimerImage
+  m_Name: ImageBoxTempo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2127,7 +2127,7 @@ GameObject:
   - component: {fileID: 941140861}
   - component: {fileID: 941140860}
   m_Layer: 5
-  m_Name: ScoreText
+  m_Name: TextPontos
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2560,7 +2560,7 @@ GameObject:
   - component: {fileID: 1482858256}
   - component: {fileID: 1482858255}
   m_Layer: 5
-  m_Name: ArQuestionImage
+  m_Name: ImageBoxQuestaoImageTarget
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2772,7 +2772,7 @@ GameObject:
   - component: {fileID: 1519749872}
   - component: {fileID: 1519749871}
   m_Layer: 5
-  m_Name: TimerText
+  m_Name: TextTempo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2907,7 +2907,7 @@ GameObject:
   - component: {fileID: 1532819042}
   - component: {fileID: 1532819041}
   m_Layer: 5
-  m_Name: ArQuestionText
+  m_Name: TextQuestaoImageTarget
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3043,7 +3043,7 @@ GameObject:
   - component: {fileID: 1770035669}
   - component: {fileID: 1770035668}
   m_Layer: 5
-  m_Name: QuestionImage
+  m_Name: ImageBoxQuestaoMultiplaEscolha
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3122,7 +3122,7 @@ GameObject:
   - component: {fileID: 1837002871}
   - component: {fileID: 1837002870}
   m_Layer: 5
-  m_Name: A-Button
+  m_Name: ButtonA
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3437,7 +3437,7 @@ GameObject:
   - component: {fileID: 1998917655}
   - component: {fileID: 1998917654}
   m_Layer: 5
-  m_Name: C-Button
+  m_Name: ButtonC
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
