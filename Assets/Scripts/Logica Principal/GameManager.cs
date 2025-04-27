@@ -33,7 +33,7 @@ public class GameManager : MonoBehaviour
   private bool _botoesHabilitados;         // Controle de interação com botões
   private bool _imageBoxQuestaoImageTargetHabilitada = false;
   private int _paginaAtualQuestaoImageTarget = 0;
-
+  private int _quantidadeQuestoesPorSecao;
   //-----------------------------
   // Pontuação por Questão
   //-----------------------------
@@ -161,6 +161,7 @@ public class GameManager : MonoBehaviour
   /// </summary>
   private void IniciarJogo()
   {
+    _quantidadeQuestoesPorSecao = ((_questoesMultiplaEscolha.Count / 4) + 1);
     ResetarJogo();
     RandomizarQuestoesPorSecao();
     MostrarProximaQuestao();
@@ -242,7 +243,7 @@ public class GameManager : MonoBehaviour
     if (_indiceQuestaoAtual < _totalQuestoes - 1)
     {
       _indiceQuestaoAtual++;
-      _questaoMultiplaEscolha = (_indiceQuestaoAtual % 5 != 0);
+      _questaoMultiplaEscolha = (_indiceQuestaoAtual % _quantidadeQuestoesPorSecao != 0);
 
       if (_questaoMultiplaEscolha)
       {
@@ -267,8 +268,8 @@ public class GameManager : MonoBehaviour
 
   private void ConfigurarQuestaoMultiplaEscolha()
   {
-    int indiceSecao = (_indiceQuestaoAtual / 5);
-    int indiceQuestaoNaSecao = (_indiceQuestaoAtual % 5 - 1);
+    int indiceSecao = (_indiceQuestaoAtual / _quantidadeQuestoesPorSecao);
+    int indiceQuestaoNaSecao = ((_indiceQuestaoAtual % _quantidadeQuestoesPorSecao) - 1);
 
     if (indiceSecao < _indicesRandomizados.Count && indiceQuestaoNaSecao < 4)
     {
@@ -297,7 +298,7 @@ public class GameManager : MonoBehaviour
     EsconderPerguntaMultiplaEscolha();
     MostrarBotaoToggleQuestaoImageTarget();
     if (_targetAtual != null) Destroy(_targetAtual);
-    _targetAtual = Instantiate(_imageTargets[_indiceQuestaoAtual / 5], Vector3.zero, Quaternion.identity);
+    _targetAtual = Instantiate(_imageTargets[_indiceQuestaoAtual / _quantidadeQuestoesPorSecao], Vector3.zero, Quaternion.identity);
   }
 
   private void FinalizarJogo()
@@ -322,7 +323,7 @@ public class GameManager : MonoBehaviour
 
       if (_audioSource != null) _audioSource.Play();
 
-      int questaoAtual = _indiceQuestaoAtual / 5;
+      int questaoAtual = _indiceQuestaoAtual / _quantidadeQuestoesPorSecao;
       if (_pontosPorQuestao[questaoAtual] < 10)
       {
         _pontosPorQuestao[questaoAtual] += 10;
@@ -353,8 +354,8 @@ public class GameManager : MonoBehaviour
       _botoesHabilitados = false;
       PararContagemRegressiva();
 
-      int indiceSecao = (_indiceQuestaoAtual / 5);
-      int indiceQuestaoNaSecao = (_indiceQuestaoAtual % 5 - 1);
+      int indiceSecao = (_indiceQuestaoAtual / _quantidadeQuestoesPorSecao);
+      int indiceQuestaoNaSecao = (_indiceQuestaoAtual % _quantidadeQuestoesPorSecao - 1);
 
       if (indiceSecao < _indicesRandomizados.Count && indiceQuestaoNaSecao < 4)
       {
@@ -589,12 +590,12 @@ public class GameManager : MonoBehaviour
   private void UpdateTextsQuestaoImageTarget()
   {
     _textQuestaoImageTarget.text =
-      _questoesImageTarget[_indiceQuestaoAtual / 5]
+      _questoesImageTarget[_indiceQuestaoAtual / _quantidadeQuestoesPorSecao]
       .perguntaFracionada[_paginaAtualQuestaoImageTarget];
     _textPaginaAtualQuestaoImageTarget.text =
       (_paginaAtualQuestaoImageTarget + 1) +
       "/" +
-      _questoesImageTarget[_indiceQuestaoAtual / 5].perguntaFracionada.Length;
+      _questoesImageTarget[_indiceQuestaoAtual / _quantidadeQuestoesPorSecao].perguntaFracionada.Length;
   }
 
   private void MostrarBotoesQuestaoMultiplaEscolha()
@@ -651,7 +652,7 @@ public class GameManager : MonoBehaviour
   {
     if (
       _imageBoxQuestaoImageTargetHabilitada &&
-      _paginaAtualQuestaoImageTarget < _questoesImageTarget[_indiceQuestaoAtual / 5].perguntaFracionada.Length - 1)
+      _paginaAtualQuestaoImageTarget < _questoesImageTarget[_indiceQuestaoAtual / _quantidadeQuestoesPorSecao].perguntaFracionada.Length - 1)
     {
       _paginaAtualQuestaoImageTarget++;
       UpdateTextsQuestaoImageTarget();
