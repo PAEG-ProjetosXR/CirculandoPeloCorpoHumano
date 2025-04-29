@@ -160,8 +160,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -0.000011444, y: 883.99994}
-  m_SizeDelta: {x: 900, y: 280}
+  m_AnchoredPosition: {x: 1.849, y: 825}
+  m_SizeDelta: {x: 800, y: 260}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &25225619
 MonoBehaviour:
@@ -364,7 +364,8 @@ MonoBehaviour:
 '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4fc6496a05d503f449e75deddef145e4, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
+  m_sharedMaterial: {fileID: 8988953509644133527, guid: 4fc6496a05d503f449e75deddef145e4,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -618,16 +619,18 @@ MonoBehaviour:
   - perguntaFracionada:
     - "Durante uma cirurgia odontol\xF3gica para extra\xE7\xE3o de terceiros molares
       inferiores, um paciente masculino de 58 anos apresentou epis\xF3dio de tosse
-      intensa seguido por dispneia. Um fragmento de um dente foi aspirado durante
-      o procedimento, por\xE9m o evento passou despercebido naquele momento. "
-    - "Tr\xEAs dias depois, o paciente deu entrada ao pronto-atendimento com febre,
-      dor tor\xE1cica e dificuldade respirat\xF3ria. O exame f\xEDsico revelou estertores
-      (sons respirat\xF3rios anormais) no hemit\xF3rax direito e a radiografia de
-      t\xF3rax mostrou infiltrado pulmonar sugestivo de pneumonia lobar. "
-    - "A broncoscopia confirmou a presen\xE7a de fragmento dent\xE1rio impactado
-      em um br\xF4nquio segmentar inferior direito. O paciente recebeu tratamento
-      antibi\xF3tico e o corpo estranho foi removido. Com base nesse contexto, qual
-      \xF3rg\xE3o foi mais amea\xE7ado e teve suas fun\xE7\xF5es comprometidas?"
+      intensa seguido por dispneia. Um fragmento de um dente foi  "
+    - "aspirado durante o procedimento, por\xE9m o evento passou despercebido naquele
+      momento. Tr\xEAs dias depois, o paciente deu entrada ao pronto-atendimento
+      com febre, dor tor\xE1cica e dificuldade respirat\xF3ria. O exame f\xEDsico
+      revelou "
+    - "estertores (sons respirat\xF3rios anormais) no hemit\xF3rax direito e a radiografia
+      de t\xF3rax mostrou infiltrado pulmonar sugestivo de pneumonia lobar.  A broncoscopia
+      confirmou a presen\xE7a de "
+    - "fragmento dent\xE1rio impactado em um br\xF4nquio segmentar inferior direito.
+      O paciente recebeu tratamento antibi\xF3tico e o corpo estranho foi removido.
+      Com base nesse contexto, qual \xF3rg\xE3o foi mais amea\xE7ado e teve suas
+      fun\xE7\xF5es comprometidas?"
   - perguntaFracionada:
     - "Um jovem de 17 anos, deu entrada no pronto-atendimento ap\xF3s sofrer uma
       queda durante uma partida de futebol. Segundo relato, o paciente caiu de queixo
@@ -642,22 +645,22 @@ MonoBehaviour:
       est\xE1 associada neste tipo de les\xE3o?"
   - perguntaFracionada:
     - "Uma paciente do sexo feminino, 27 anos, compareceu ao pronto-socorro com febre
-      persistente, fadiga, calafrios e dores musculares h\xE1 cerca de 10 dias. "
-    - "Durante a anamnese, relatou que havia realizado recentemente um procedimento
-      odontol\xF3gico para tratar c\xE1ries profundas em dois molares inferiores,
-      mas n\xE3o seguiu a orienta\xE7\xE3o de completar o ciclo do antibi\xF3tico
-      prescrito. "
-    - "Ao exame f\xEDsico, apresentava sopro card\xEDaco e pequenas les\xF5es avermelhadas
-      nas extremidades dos dedos (les\xF5es de Janeway). O ecocardiograma revelou
-      vegeta\xE7\xF5es aderidas \xE0 v\xE1lvula mitral, confirmando o diagn\xF3stico
-      de endocardite infecciosa. Qual estrutura anat\xF4mica foi acometida por tal
-      condi\xE7\xE3o?"
+      persistente, fadiga, calafrios e dores musculares h\xE1 cerca de 10 dias. Durante
+      a anamnese, relatou que havia realizado recentemente um procedimento odontol\xF3gico
+      para "
+    - "tratar c\xE1ries profundas em dois molares inferiores, mas n\xE3o seguiu a
+      orienta\xE7\xE3o de completar o ciclo do antibi\xF3tico prescrito. Ao exame
+      f\xEDsico, apresentava sopro card\xEDaco e pequenas les\xF5es avermelhadas
+      nas extremidades dos dedos (les\xF5es de Janeway)."
+    - "O ecocardiograma revelou vegeta\xE7\xF5es aderidas \xE0 v\xE1lvula mitral,
+      confirmando o diagn\xF3stico de endocardite infecciosa. Qual estrutura anat\xF4mica
+      foi acometida por tal condi\xE7\xE3o?"
   - perguntaFracionada:
     - "Um paciente de 70 anos apresenta epis\xF3dios recorrentes de fraqueza s\xFAbita
       no lado direito do corpo e dificuldade para falar que duram cerca de 10 minutos
       e se resolvem espontaneamente. O ultrassom Doppler revela estenose (obstru\xE7\xE3o)
-      cr\xEDtica da art\xE9ria car\xF3tida interna esquerda. Qual \xF3rg\xE3o est\xE1
-      sendo diretamente afetado por essa condi\xE7\xE3o? "
+      cr\xEDtica da art\xE9ria car\xF3tida interna esquerda. "
+    - "Qual \xF3rg\xE3o est\xE1 sendo diretamente afetado por essa condi\xE7\xE3o? "
   _questoesMultiplaEscolha:
   - pergunta: "Qual a principal caracter\xEDstica anat\xF4mica do br\xF4nquio principal
       direito que facilita a aspira\xE7\xE3o de corpos estranhos?"
@@ -1019,7 +1022,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -0.0010147, y: 121}
+  m_AnchoredPosition: {x: -0.0010147, y: 103}
   m_SizeDelta: {x: 875.13, y: 281.14}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &152880657
@@ -1046,8 +1049,9 @@ MonoBehaviour:
 
     Pergunta'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: b3ba996c0ca8cee418b9aa7b2b292efd, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 03e588ce7c755d34ba8ba10336c5a727, type: 2}
+  m_sharedMaterial: {fileID: 2585009162121402879, guid: 03e588ce7c755d34ba8ba10336c5a727,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1071,8 +1075,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 70
-  m_fontSizeBase: 70
+  m_fontSize: 65
+  m_fontSizeBase: 65
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1110,7 +1114,7 @@ MonoBehaviour:
   m_margin: {x: -66.392914, y: 35.409447, z: -61.966583, w: 39.835815}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 1
+  m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &152880658
@@ -1292,8 +1296,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -0.000011444, y: 154}
-  m_SizeDelta: {x: 500, y: 240}
+  m_AnchoredPosition: {x: -0.000011444, y: 224}
+  m_SizeDelta: {x: 550, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!111 &408824862
 Animation:
@@ -1464,8 +1468,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0.0000085831, y: 286.99994}
-  m_SizeDelta: {x: 900, y: 280}
+  m_AnchoredPosition: {x: 1.849, y: 261}
+  m_SizeDelta: {x: 800, y: 260}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &434144697
 MonoBehaviour:
@@ -1772,8 +1776,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -540.21}
   m_AnchorMin: {x: 0.82500005, y: 0.23875001}
   m_AnchorMax: {x: 0.82500005, y: 0.23875001}
-  m_AnchoredPosition: {x: -44, y: -110.000015}
-  m_SizeDelta: {x: 250, y: 175}
+  m_AnchoredPosition: {x: -48, y: -110.000015}
+  m_SizeDelta: {x: 210, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!111 &582031011
 Animation:
@@ -2164,7 +2168,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 9.334595, y: 9.723751, z: 11.410767, w: -354.97067}
+  m_margin: {x: 75.89371, y: 36.07431, z: 81.66757, w: -480.6934}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -2897,7 +2901,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
   m_AnchoredPosition: {x: 0, y: -805}
-  m_SizeDelta: {x: 1100, y: 800}
+  m_SizeDelta: {x: 875, y: 800}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1482858255
 MonoBehaviour:
@@ -3271,7 +3275,7 @@ MonoBehaviour:
 '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b3ba996c0ca8cee418b9aa7b2b292efd, type: 2}
-  m_sharedMaterial: {fileID: 1259080317815633518, guid: a7ccf6473bfc9cc45978e865d2e80549,
+  m_sharedMaterial: {fileID: -382725467732819660, guid: b3ba996c0ca8cee418b9aa7b2b292efd,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -3332,7 +3336,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 25.776642, y: 65.67446, z: 33.473633, w: -1064.485}
+  m_margin: {x: 113.61197, y: 65.67446, z: 108.13379, w: -1130.3615}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 1
@@ -3383,8 +3387,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -317, y: 81}
-  m_SizeDelta: {x: 250, y: 175}
+  m_AnchoredPosition: {x: -242, y: 81}
+  m_SizeDelta: {x: 210, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!111 &1762442730
 Animation:
@@ -3552,8 +3556,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -289}
-  m_SizeDelta: {x: 1100, y: 280}
+  m_AnchoredPosition: {x: 0, y: -316.73285}
+  m_SizeDelta: {x: 875, y: 355.466}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1770035668
 MonoBehaviour:
@@ -3631,8 +3635,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -0.000011444, y: 1183}
-  m_SizeDelta: {x: 900, y: 280}
+  m_AnchoredPosition: {x: 1.849, y: 1115}
+  m_SizeDelta: {x: 800, y: 260}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1837002867
 MonoBehaviour:
@@ -3946,8 +3950,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0.000017166, y: 583}
-  m_SizeDelta: {x: 900, y: 280}
+  m_AnchoredPosition: {x: -0.0000083447, y: 542}
+  m_SizeDelta: {x: 800, y: 260}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1998917651
 MonoBehaviour:
