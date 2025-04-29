@@ -33,7 +33,8 @@ public class GameManager : MonoBehaviour
   private bool _botoesHabilitados;         // Controle de interação com botões
   private bool _imageBoxQuestaoImageTargetHabilitada = false;
   private int _paginaAtualQuestaoImageTarget = 0;
-  private int _quantidadeQuestoesPorSecao;
+  private int _totalQuestoesPorSecao;
+  private int _quantidadeQuestoesMultiplaEscolhaPorSecao;
   //-----------------------------
   // Pontuação por Questão
   //-----------------------------
@@ -161,7 +162,8 @@ public class GameManager : MonoBehaviour
   /// </summary>
   private void IniciarJogo()
   {
-    _quantidadeQuestoesPorSecao = ((_questoesMultiplaEscolha.Count / 4) + 1);
+    _quantidadeQuestoesMultiplaEscolhaPorSecao = _questoesMultiplaEscolha.Count / _questoesImageTarget.Count;
+    _totalQuestoesPorSecao = (_quantidadeQuestoesMultiplaEscolhaPorSecao + 1);
     ResetarJogo();
     RandomizarQuestoesPorSecao();
     MostrarProximaQuestao();
@@ -175,7 +177,7 @@ public class GameManager : MonoBehaviour
     _pontos = 0;
     _indiceQuestaoAtual = -1;
     _totalQuestoes = _questoesImageTarget.Count + _questoesMultiplaEscolha.Count;
-    _tempo = 60f;
+    _tempo = 10f;
     _tempoTotal = 0f;
     _statusGame = "Play";
     _targetIdentificado = false;
@@ -199,12 +201,12 @@ public class GameManager : MonoBehaviour
   {
     _indicesRandomizados = new List<List<int>>();
 
-    for (int secao = 0; secao < _questoesMultiplaEscolha.Count / 4; secao++)
+    for (int secao = 0; secao < _questoesMultiplaEscolha.Count / _quantidadeQuestoesMultiplaEscolhaPorSecao; secao++)
     {
       List<int> indicesSecao = new List<int>();
-      for (int i = 0; i < 4; i++)
+      for (int i = 0; i < _quantidadeQuestoesMultiplaEscolhaPorSecao; i++)
       {
-        indicesSecao.Add(secao * 4 + i);
+        indicesSecao.Add(secao * _quantidadeQuestoesMultiplaEscolhaPorSecao + i);
       }
 
       // Embaralha as questões dentro da seção
@@ -232,8 +234,8 @@ public class GameManager : MonoBehaviour
     // Calcula tempo gasto na questão anterior
     if (_indiceQuestaoAtual >= 0 && _indiceQuestaoAtual < _totalQuestoes)
     {
-      float tempoGasto = 60f - _tempo;
-      if (tempoGasto > 0 && tempoGasto <= 60f)
+      float tempoGasto = 10f - _tempo;
+      if (tempoGasto > 0 && tempoGasto <= 10f)
       {
         _tempoTotal += tempoGasto;
         Debug.Log($"Tempo gasto na questão {_indiceQuestaoAtual}: {tempoGasto} segundos");
@@ -243,7 +245,7 @@ public class GameManager : MonoBehaviour
     if (_indiceQuestaoAtual < _totalQuestoes - 1)
     {
       _indiceQuestaoAtual++;
-      _questaoMultiplaEscolha = (_indiceQuestaoAtual % _quantidadeQuestoesPorSecao != 0);
+      _questaoMultiplaEscolha = (_indiceQuestaoAtual % _totalQuestoesPorSecao != 0);
 
       if (_questaoMultiplaEscolha)
       {
@@ -260,7 +262,7 @@ public class GameManager : MonoBehaviour
       return;
     }
 
-    _tempo = 60f;
+    _tempo = 10f;
     _targetIdentificado = false;
     IniciarContagemRegressiva();
     AtualizarHUD();
@@ -268,10 +270,10 @@ public class GameManager : MonoBehaviour
 
   private void ConfigurarQuestaoMultiplaEscolha()
   {
-    int indiceSecao = (_indiceQuestaoAtual / _quantidadeQuestoesPorSecao);
-    int indiceQuestaoNaSecao = ((_indiceQuestaoAtual % _quantidadeQuestoesPorSecao) - 1);
+    int indiceSecao = (_indiceQuestaoAtual / _totalQuestoesPorSecao);
+    int indiceQuestaoNaSecao = ((_indiceQuestaoAtual % _totalQuestoesPorSecao) - 1);
 
-    if (indiceSecao < _indicesRandomizados.Count && indiceQuestaoNaSecao < 4)
+    if (indiceSecao < _indicesRandomizados.Count && indiceQuestaoNaSecao < _quantidadeQuestoesMultiplaEscolhaPorSecao)
     {
       int indiceQuestao = _indicesRandomizados[indiceSecao][indiceQuestaoNaSecao];
 
@@ -298,7 +300,7 @@ public class GameManager : MonoBehaviour
     EsconderPerguntaMultiplaEscolha();
     MostrarBotaoToggleQuestaoImageTarget();
     if (_targetAtual != null) Destroy(_targetAtual);
-    _targetAtual = Instantiate(_imageTargets[_indiceQuestaoAtual / _quantidadeQuestoesPorSecao], Vector3.zero, Quaternion.identity);
+    _targetAtual = Instantiate(_imageTargets[_indiceQuestaoAtual / _totalQuestoesPorSecao], Vector3.zero, Quaternion.identity);
   }
 
   private void FinalizarJogo()
@@ -323,7 +325,7 @@ public class GameManager : MonoBehaviour
 
       if (_audioSource != null) _audioSource.Play();
 
-      int questaoAtual = _indiceQuestaoAtual / _quantidadeQuestoesPorSecao;
+      int questaoAtual = _indiceQuestaoAtual / _totalQuestoesPorSecao;
       if (_pontosPorQuestao[questaoAtual] < 10)
       {
         _pontosPorQuestao[questaoAtual] += 10;
@@ -354,10 +356,10 @@ public class GameManager : MonoBehaviour
       _botoesHabilitados = false;
       PararContagemRegressiva();
 
-      int indiceSecao = (_indiceQuestaoAtual / _quantidadeQuestoesPorSecao);
-      int indiceQuestaoNaSecao = (_indiceQuestaoAtual % _quantidadeQuestoesPorSecao - 1);
+      int indiceSecao = (_indiceQuestaoAtual / _totalQuestoesPorSecao);
+      int indiceQuestaoNaSecao = (_indiceQuestaoAtual % _totalQuestoesPorSecao - 1);
 
-      if (indiceSecao < _indicesRandomizados.Count && indiceQuestaoNaSecao < 4)
+      if (indiceSecao < _indicesRandomizados.Count && indiceQuestaoNaSecao < _quantidadeQuestoesMultiplaEscolhaPorSecao)
       {
         int indiceQuestao = _indicesRandomizados[indiceSecao][indiceQuestaoNaSecao];
 
@@ -590,12 +592,12 @@ public class GameManager : MonoBehaviour
   private void UpdateTextsQuestaoImageTarget()
   {
     _textQuestaoImageTarget.text =
-      _questoesImageTarget[_indiceQuestaoAtual / _quantidadeQuestoesPorSecao]
+      _questoesImageTarget[_indiceQuestaoAtual / _totalQuestoesPorSecao]
       .perguntaFracionada[_paginaAtualQuestaoImageTarget];
     _textPaginaAtualQuestaoImageTarget.text =
       (_paginaAtualQuestaoImageTarget + 1) +
       "/" +
-      _questoesImageTarget[_indiceQuestaoAtual / _quantidadeQuestoesPorSecao].perguntaFracionada.Length;
+      _questoesImageTarget[_indiceQuestaoAtual / _totalQuestoesPorSecao].perguntaFracionada.Length;
   }
 
   private void MostrarBotoesQuestaoMultiplaEscolha()
@@ -652,7 +654,7 @@ public class GameManager : MonoBehaviour
   {
     if (
       _imageBoxQuestaoImageTargetHabilitada &&
-      _paginaAtualQuestaoImageTarget < _questoesImageTarget[_indiceQuestaoAtual / _quantidadeQuestoesPorSecao].perguntaFracionada.Length - 1)
+      _paginaAtualQuestaoImageTarget < _questoesImageTarget[_indiceQuestaoAtual / _totalQuestoesPorSecao].perguntaFracionada.Length - 1)
     {
       _paginaAtualQuestaoImageTarget++;
       UpdateTextsQuestaoImageTarget();
