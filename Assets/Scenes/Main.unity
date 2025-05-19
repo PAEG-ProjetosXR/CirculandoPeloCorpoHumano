@@ -610,8 +610,8 @@ MonoBehaviour:
   - {fileID: 25225617}
   - {fileID: 1998917649}
   - {fileID: 434144695}
-  _corAcerto: {r: 0, g: 1, b: 0, a: 1}
-  _corErro: {r: 1, g: 0, b: 0, a: 1}
+  _corAcerto: {r: 0.38431373, g: 1, b: 0.47843137, a: 1}
+  _corErro: {r: 1, g: 0.1254902, b: 0.1254902, a: 1}
   _audioSource: {fileID: 85620592}
   _somAcerto: {fileID: 8300000, guid: 60d7b6901d67bbe40831ea63a83c95dc, type: 3}
   _somErro: {fileID: 8300000, guid: f3bac615c5cd5744c9562dbb1bf04706, type: 3}
