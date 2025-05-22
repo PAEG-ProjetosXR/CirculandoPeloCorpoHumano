@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -18,6 +19,17 @@ public class SceneGameOverManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI _result2Text;    // Exibe o resultado do 2º colocado
     [SerializeField] private TextMeshProUGUI _result3Text;    // Exibe o resultado do 3º colocado
     [SerializeField] private TextMeshProUGUI _result4Text;    // Exibe o resultado do 4º colocado
+
+    //-----------------------------
+    // Classes auxiliares
+    //-----------------------------
+    public class Resultado
+    {
+        public string playerName;
+        public int playerScore;
+        public int playerTime;
+    }
+
     //-----------------------------
     // Métodos Unity
     //-----------------------------
@@ -51,13 +63,16 @@ public class SceneGameOverManager : MonoBehaviour
         float totalTimeSpent = GameManager.Instance.GetTotalTime();
 
         // Atualiza os resultados dos jogadores
-        if (_result1Text != null) 
+        if (_result1Text != null)
         {
+            List<Resultado> resultados = new List<Resultado>();
+            GetRandomResults(totalScore, resultados);
+            int i = 0;
             //Aqui os jogadores ainda estão com nomes genéricos
             _result1Text.text = $"1º: Jogador 1 / Tempo: {Mathf.FloorToInt(totalTimeSpent)} / Pontuação: {totalScore}";
-            _result2Text.text = $"2º: Jogador 2 / Tempo: {GetRandomTime()} / Pontuação: {GetRandomScore(totalScore)}";
-            _result3Text.text = $"3º: Jogador 3 / Tempo: {GetRandomTime()} / Pontuação: {GetRandomScore(totalScore)}";
-            _result4Text.text = $"4º: Jogador 4 / Tempo: {GetRandomTime()} / Pontuação: {GetRandomScore(totalScore)}";
+            _result2Text.text = $"2º: {resultados[0].playerName} / Tempo: {resultados[0].playerTime} / Pontuação: {resultados[0].playerScore}";
+            _result3Text.text = $"3º: {resultados[1].playerName} / Tempo: {resultados[1].playerTime} / Pontuação: {resultados[1].playerScore}";
+            _result4Text.text = $"4º: {resultados[2].playerName} / Tempo: {resultados[2].playerTime} / Pontuação: {resultados[2].playerScore}";
         }
         else 
         {
@@ -76,7 +91,45 @@ public class SceneGameOverManager : MonoBehaviour
         }
     }
 
-    private int GetRandomTime() 
+    //Método para obter resultados aleatórios para os jogadores "genericos"
+    private void GetRandomResults(int totalScore, List<Resultado> resultados)
+    {
+        Resultado resultado1 = new Resultado();
+        Resultado resultado2 = new Resultado();
+        Resultado resultado3 = new Resultado();
+
+        resultado1.playerName = "Jogador 2";
+        resultado1.playerScore = GetRandomScore(totalScore);
+        resultado1.playerTime = GetRandomTime();
+        resultado2.playerName = "Jogador 3";
+        resultado2.playerScore = GetRandomScore(totalScore);
+        resultado2.playerTime = GetRandomTime();
+        resultado3.playerName = "Jogador 4";
+        resultado3.playerScore = GetRandomScore(totalScore);
+        resultado3.playerTime = GetRandomTime();
+
+        // Adiciona os resultados à lista de resultados
+        resultados.Add(resultado1);
+        resultados.Add(resultado2);
+        resultados.Add(resultado3);
+
+        // Ordena a lista de resultados com base na pontuação, com desempate baseado no tempo
+        OrderRandomResults(resultados);
+    }
+
+    //Método para ordenar os resultados aleatórios gerados em GetRandomResults
+    private void OrderRandomResults(List<Resultado> resultados)
+    {
+        resultados.Sort((a, b) =>
+        {
+            int comparison = b.playerScore.CompareTo(a.playerScore);    //Ordena em ordem decrescente de pontuação
+            if (comparison != 0)
+                return comparison;
+            return a.playerTime.CompareTo(b.playerTime);    //Em caso de empate, ordena em ordem crescente de tempo
+        });
+    }
+    
+    private int GetRandomTime()
     {
         return 600 + Random.Range(0, 1320);  // Simula um tempo aleatório
     }

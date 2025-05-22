@@ -678,6 +678,14 @@ MonoBehaviour:
     - "Laringe, traqueia, br\xF4nquio lobar, traqueia, br\xF4nquio principal"
     - "Faringe, laringe, traqueia, br\xF4nquio lobar, br\xF4nquio principal"
     indiceRespostaCorreta: 0
+  - pergunta: "Qual estrutura anat\xF4mica pode atuar como uma barreira parcial contra
+      a entrada de um fragmento dent\xE1rio ou corpo estranho na via a\xE9rea inferior?"
+    alternativas:
+    - "\xDAvula palatina do palato mole"
+    - "Cartilagem cric\xF3ide da laringe"
+    - Carina da traqueia
+    - "Cartilagem epigl\xF3tica da laringe"
+    indiceRespostaCorreta: 3
   - pergunta: "O pulm\xE3o direito \xE9 dividido em quantos lobos, e qual a principal
       diferen\xE7a em rela\xE7\xE3o ao pulm\xE3o esquerdo?"
     alternativas:
@@ -685,6 +693,15 @@ MonoBehaviour:
     - 2 lobos, sendo mais curto que o esquerdo
     - 3 lobos, sendo mais alongado que o esquerdo
     - "2 lobos, tendo menor di\xE2metro que o esquerdo"
+    indiceRespostaCorreta: 0
+  - pergunta: "Se a extra\xE7\xE3o dent\xE1ria for de um molar superior, h\xE1 possibilidade
+      de comunica\xE7\xE3o buco-sinusal, ou seja, uma comunica\xE7\xE3o da cavidade
+      oral com o seio:"
+    alternativas:
+    - Maxilar
+    - Esfenoidal
+    - Mandibular
+    - Etmoidal
     indiceRespostaCorreta: 0
   - pergunta: "O dente 31 assim como os demais dentes se unem \xE0 mand\xEDbula ou
       \xE0 maxila por meio de qual tipo de articula\xE7\xE3o?"
@@ -702,14 +719,30 @@ MonoBehaviour:
     - "Neurocr\xE2nio"
     - Cintura escapular
     indiceRespostaCorreta: 1
-  - pergunta: "Qual a articula\xE7\xE3o que conecta a mand\xEDbula ao osso temporal
-      e permite os movimentos de mastiga\xE7\xE3o?"
+  - pergunta: "Qual a articula\xE7\xE3o sinovial que conecta a mand\xEDbula ao osso
+      temporal e permite os movimentos de mastiga\xE7\xE3o?"
     alternativas:
     - Sutura lambdoide
     - "Articula\xE7\xE3o zigom\xE1tica"
     - "Articula\xE7\xE3o temporomandibular "
     - Sutura coronal
     indiceRespostaCorreta: 2
+  - pergunta: "O M. temporal, importante m\xFAsculo da mastiga\xE7\xE3o, tem inser\xE7\xE3o
+      na mand\xEDbula. Considerando sua morfologia, pode ser melhor classificado
+      como m\xFAsculo:"
+    alternativas:
+    - Largo
+    - Circular
+    - "Dig\xE1strico"
+    - Policaudado
+    indiceRespostaCorreta: 0
+  - pergunta: "A mand\xEDbula \xE9 um osso que n\xE3o apresenta:"
+    alternativas:
+    - Cartilagem articular
+    - Osso Esponjoso
+    - Forames para estruturas neurovasculares
+    - Seios paranasais
+    indiceRespostaCorreta: 3
   - pergunta: "A valva mitral regula o fluxo sangu\xEDneo entre:"
     alternativas:
     - "\xC1trio direito e Ventr\xEDculo direito"
@@ -725,14 +758,34 @@ MonoBehaviour:
     - "Peric\xE1rdio fibroso"
     - "Sulco coron\xE1rio"
     indiceRespostaCorreta: 1
-  - pergunta: "A partir de qual cavidade card\xEDaca o sangue oxigenado \xE9 ejetado
-      para a circula\xE7\xE3o sist\xEAmica?"
+  - pergunta: "Na endocardite infecciosa, \xEAmbolos s\xE9pticos desprendidos da
+      valva mitral podem alcan\xE7ar pequenos vasos perif\xE9ricos, onde se depositam
+      e causam manifesta\xE7\xF5es cut\xE2neas t\xEDpicas das les\xF5es de Janeway.
+      Qual estrutura vascular est\xE1 envolvida com o transporte desses \xEAmbolos
+      antes de chegarem \xE0 microcircula\xE7\xE3o perif\xE9rica?"
     alternativas:
-    - "\xC1trio esquerdo"
-    - "\xC1trio direito"
-    - "Ventr\xEDculo esquerdo"
-    - "Ventr\xEDculo direito"
-    indiceRespostaCorreta: 2
+    - Aorta
+    - "Art\xE9ria pulmonar "
+    - 'Veia cava superior  '
+    - Veia porta
+    indiceRespostaCorreta: 0
+  - pergunta: "Qual \xE9 a correta organiza\xE7\xE3o das camadas que comp\xF5em a
+      parede card\xEDaca, da regi\xE3o mais interna at\xE9 a mais externa?"
+    alternativas:
+    - "Epic\xE1rdio, mioc\xE1rdio e endoc\xE1rdio"
+    - "Mioc\xE1rdio, endoc\xE1rdio e peric\xE1rdio"
+    - "Peric\xE1rdio, epic\xE1rdio e mioc\xE1rdio"
+    - "Endoc\xE1rdio, mioc\xE1rdio e epic\xE1rdio"
+    indiceRespostaCorreta: 3
+  - pergunta: "Os dentes molares inferiores acometidos por c\xE1rie da paciente recebem
+      suprimento sangu\xEDneo por meio de ramos da A. maxilar que \xE9 um ramo da
+      art\xE9ria:"
+    alternativas:
+    - "Coron\xE1ria"
+    - "Car\xF3tida externa"
+    - "Car\xF3tida interna"
+    - "Subcl\xE1via"
+    indiceRespostaCorreta: 1
   - pergunta: "O c\xF3rtex cerebral pode ser dividido em lobos. Em qual deles h\xE1
       comprometimento no suprimento sangu\xEDneo afetando uma \xE1rea fundamental
       para a fala?"
@@ -751,15 +804,32 @@ MonoBehaviour:
     - Cerebelo
     - "Mesenc\xE9falo"
     indiceRespostaCorreta: 1
-  - pergunta: "Qual estrutura do enc\xE9falo \xE9 respons\xE1vel pela coordena\xE7\xE3o
-      e corre\xE7\xE3o dos movimentos, al\xE9m de auxiliar na manuten\xE7\xE3o do
-      equil\xEDbrio?"
+  - pergunta: "Em qual regi\xE3o do sistema nervoso ocorre a decussa\xE7\xE3o das
+      pir\xE2mides, onde a maioria das fibras motoras do trato corticoespinhal cruza
+      para o lado oposto antes de seguir para a medula espinhal, explicando a rela\xE7\xE3o
+      entre les\xF5es cerebrais e fraqueza no lado contralateral do corpo?"
+    alternativas:
+    - "Mesenc\xE9falo"
+    - Ponte
+    - Bulbo
+    - Cerebelo
+    indiceRespostaCorreta: 2
+  - pergunta: "Por quais estruturas anat\xF4micas as fibras motoras chegam \xE0s
+      fibras musculares esquel\xE9ticas para promover a contra\xE7\xE3o muscular?"
+    alternativas:
+    - Nervos cranianos e nervos espinais
+    - "Nervos simp\xE1ticos e nervos parassimp\xE1ticos"
+    - "G\xE2nglios nervosos e interneur\xF4nios"
+    - "Jun\xE7\xF5es neuromusculares e tronco simp\xE1tico "
+    indiceRespostaCorreta: 0
+  - pergunta: "Qual regi\xE3o do enc\xE9falo \xE9 respons\xE1vel por regular fun\xE7\xF5es
+      essenciais, como respira\xE7\xE3o, batimentos card\xEDacos e press\xE3o arterial?"
     alternativas:
     - "Tronco encef\xE1lico"
-    - "Dienc\xE9falo"
-    - "Telenc\xE9falo"
     - Cerebelo
-    indiceRespostaCorreta: 3
+    - "C\xF3rtex cerebral"
+    - "Dienc\xE9falo"
+    indiceRespostaCorreta: 0
   _imageTargets:
   - {fileID: 7913789876734188256, guid: ae1328b0d45ab9f418730a0402b09131, type: 3}
   - {fileID: 2722186806748002848, guid: 66bd5cd840fed8c4a9e185f1a60a2baa, type: 3}
