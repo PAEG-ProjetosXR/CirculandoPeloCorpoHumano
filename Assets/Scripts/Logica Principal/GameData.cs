@@ -4,9 +4,11 @@ using Firebase.Firestore;
 public class GameData
 {
   [FirestoreProperty]
-  public string Nome { get; set; }
+  public string[] Nomes { get; set; }
   [FirestoreProperty]
   public int Pontos { get; set; }
   [FirestoreProperty]
   public int Tempo { get; set; }
+  [FirestoreProperty]
+  public string Equipe { get; set; }
 }
