@@ -3,15 +3,11 @@ using Firebase.Firestore;
 using System.Collections.Generic;
 using TMPro;
 using System.Diagnostics;
+using System.Linq;
 
 public class SetGameData : MonoBehaviour
 {
-  [SerializeField] private string _standardDataPath;
-  [SerializeField] public List<TextMeshProUGUI> _nomes;
-  [SerializeField] public TextMeshProUGUI _equipe;
-  [SerializeField] public TextMeshProUGUI _pontos;
-  [SerializeField] public TextMeshProUGUI _tempo;
-
+  [SerializeField] public string _standardDataPath;
   private FirebaseFirestore _firestore;
 
   public void Start()
@@ -19,34 +15,28 @@ public class SetGameData : MonoBehaviour
     _firestore = FirebaseFirestore.DefaultInstance;
   }
 
-  public void HandleSave()
+  public void HandleSave(string[] nomes, string equipe, int pontos, int tempo)
   {
     string dataPath;
-    List<string> arrayNomes = new List<string>();
-
-    if (_nomes.Count > 0)
-      foreach (TextMeshProUGUI textMeshProUGUI in _nomes) arrayNomes.Add(textMeshProUGUI.text);
-
-    int pontos = int.Parse(_pontos.text);
-    int tempo = int.Parse(_tempo.text);
     long currentTime = Stopwatch.GetTimestamp();
 
-    for (int i = 0; i < arrayNomes.Count; i++)
+    for (int i = 0; i < nomes.Length; i++)
     {
-      dataPath = _equipe == null
-        ? _standardDataPath + arrayNomes[i] + "-" + currentTime.ToString()
-        : _standardDataPath + arrayNomes[i] + "-" + _equipe.text + "-" + currentTime.ToString();
+      dataPath = equipe.Equals("")
+        ? _standardDataPath + nomes[i] + "-" + currentTime.ToString()
+        : _standardDataPath + nomes[i] + "-" + equipe + "-" + currentTime.ToString();
 
       var gameData = new GameData
       {
-        Nomes = arrayNomes.ToArray(),
+        Nomes = nomes,
         Pontos = pontos,
         Tempo = tempo,
-        Equipe = _equipe.text
+        Equipe = equipe
       };
       SaveToCloud(dataPath, gameData);
     }
   }
+
   private void SaveToCloud(string path, GameData data)
   {
     _firestore.Document(path).SetAsync(data);
