@@ -1,16 +1,16 @@
 using UnityEngine;
 using Firebase.Firestore;
-using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using System.Diagnostics;
 
 public class SetGameData : MonoBehaviour
 {
-  [SerializeField] private TextMeshProUGUI _standardDataPath;
+  [SerializeField] private string _standardDataPath;
   [SerializeField] public List<TextMeshProUGUI> _nomes;
-  [SerializeField] public TextMeshProUGUI _equipe = "";
-  [SerializeField] public TextMeshProUGUI _pontos = "0";
-  [SerializeField] public TextMeshProUGUI _tempo = "0";
+  [SerializeField] public TextMeshProUGUI _equipe;
+  [SerializeField] public TextMeshProUGUI _pontos;
+  [SerializeField] public TextMeshProUGUI _tempo;
 
   private FirebaseFirestore _firestore;
 
@@ -21,30 +21,33 @@ public class SetGameData : MonoBehaviour
 
   public void HandleSave()
   {
-    var dataPath;
-    var arrayNomes = _nomes.ToArray();
-    int pontos = Int32.Parse(_pontos.text);
-    int tempo = Int32.Parse(_tempo.text);
+    string dataPath;
+    List<string> arrayNomes = new List<string>();
 
-    string currentTime = GetTimestamp(DateTime.Now);
+    if (_nomes.Count > 0)
+      foreach (TextMeshProUGUI textMeshProUGUI in _nomes) arrayNomes.Add(textMeshProUGUI.text);
 
-    for (int i = 0; i < arrayNomes.Length; i++)
+    int pontos = int.Parse(_pontos.text);
+    int tempo = int.Parse(_tempo.text);
+    long currentTime = Stopwatch.GetTimestamp();
+
+    for (int i = 0; i < arrayNomes.Count; i++)
     {
-      dataPath = _equipe.text.Equals("")
-        ? _standardDataPath.text + arrayNomes[i] + "-" + currentTime
-        : _standardDataPath.text + arrayNomes[i] + "-" + _equipe.text + "-" + currentTime;
+      dataPath = _equipe == null
+        ? _standardDataPath + arrayNomes[i] + "-" + currentTime.ToString()
+        : _standardDataPath + arrayNomes[i] + "-" + _equipe.text + "-" + currentTime.ToString();
 
       var gameData = new GameData
       {
-        Nomes = arrayNomes,
+        Nomes = arrayNomes.ToArray(),
         Pontos = pontos,
         Tempo = tempo,
         Equipe = _equipe.text
       };
-      SaveToCloud(dataPath, gameData)
+      SaveToCloud(dataPath, gameData);
     }
   }
-  private void SaveToCloud(path, data)
+  private void SaveToCloud(string path, GameData data)
   {
     _firestore.Document(path).SetAsync(data);
   }
