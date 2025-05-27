@@ -1,24 +1,38 @@
 using UnityEngine;
-using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using System.Linq;
 
-public class TeamManager
+public class TeamManager : MonoBehaviour
 {
-  [SerializeField] public GameObject _imageBoxContainer;
-  [SerializeField] public TextMeshProUGUI _textEnunciado;
-  [SerializeField] public TextMeshProUGUI _textMensagem;
-  [SerializeField] public TMP_InputField _inputNomeJogador;
-  [SerializeField] public List<GameObject> _imageBoxListJogadores;
-  private string _jogadores;
-
-  public void AdicionarJogador()
+  [SerializeField] public GameObject imageBoxPrincipal;
+  [SerializeField] public TextMeshProUGUI textEnunciado;
+  [SerializeField] public TextMeshProUGUI textMensagemInformacao;
+  [SerializeField] public TMP_InputField inputJogadorOuEquipe;
+  [SerializeField] public GameObject buttonAdicionarAdicionarJogador;
+  [SerializeField] public List<CardNome> cardsJogadores;
+  [SerializeField] public CardNome cardEquipe;
+  private int _quantidadeJogadoresAtual = 0;
+  private bool _toggleInputEquipe = false;
+  public void AdicionarJogadorOuEquipe()
   {
-    // verificar se _jogadores está cheio. Se sim: ExibirMensagem("Nao pode haver mais que {_imageBoxListJogadores.size} jogadores!");
-    // adicionar o nome à lista de jogadores
-    // Limpar texto do input  
-    // SetActive(true) em uma das caixinhas de jogadores, com o
-    // texto atual de _inputNomeJogador;
+    if (!_toggleInputEquipe)
+    {
+      if (_quantidadeJogadoresAtual < cardsJogadores.Count)
+      {
+        cardsJogadores.ElementAt(_quantidadeJogadoresAtual).imageBoxCardNome.SetActive(true);
+        cardsJogadores.ElementAt(_quantidadeJogadoresAtual).textNome.text = inputJogadorOuEquipe.text;
+        inputJogadorOuEquipe.text = "";
+        _quantidadeJogadoresAtual++;
+
+        if (_quantidadeJogadoresAtual == cardsJogadores.Count) buttonAdicionarAdicionarJogador.SetActive(false);
+      }
+    }
+    else
+    {
+      cardEquipe.imageBoxCardNome.SetActive(true);
+      cardEquipe.textNome.text = inputJogadorOuEquipe.text;
+    }
   }
 
   public void ExibirMensagem(string mensagem)
@@ -28,11 +42,31 @@ public class TeamManager
 
   public void Confirmar()
   {
-    // se _jogadores.size > 1, pedir nome da equipe
+    if (_quantidadeJogadoresAtual < 1)
+    {
+      // exibir mensagem
+    }
+    if (_quantidadeJogadoresAtual == 1)
+    {
+      // ir para outra tela
+    }
+    else if (_quantidadeJogadoresAtual > 1)
+    {
+      _toggleInputEquipe = true;
+      textEnunciado.text = "Informe o nome da sua equipe!";
+      buttonAdicionarAdicionarJogador.SetActive(true);
+    }
   }
 
   public void Cancelar()
   {
 
   }
+}
+
+[System.Serializable]
+public class CardNome
+{
+  public GameObject imageBoxCardNome;
+  public TextMeshProUGUI textNome;
 }
