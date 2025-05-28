@@ -19,11 +19,18 @@ public class TeamManager : MonoBehaviour
   [SerializeField] public GameObject buttonAdicionar;
   [SerializeField] public List<CardNome> cardsJogadores;
   [SerializeField] public CardNome cardEquipe;
-  private int _quantidadeJogadoresAtual = 0;
-  private bool _inputNoModoEquipe = false;
-  private SetGameData setGameData = new SetGameData();
+  private int _quantidadeJogadoresAtual;
+  private bool _inputNoModoEquipe;
+  private SetGameData setGameData;
   private const int CENA_JOGO = 4;
   private const int CENA_MENU = 8;
+
+  public void Start()
+  {
+    _quantidadeJogadoresAtual = 0;
+    _inputNoModoEquipe = false;
+    setGameData = new();
+  }
 
   public void AdicionarJogadorOuEquipe()
   {
@@ -63,10 +70,17 @@ public class TeamManager : MonoBehaviour
     {
       List<string> nomesJogadores = new List<string>();
       if (_quantidadeJogadoresAtual > 0)
-        foreach (CardNome card in cardsJogadores) nomesJogadores.Add(card.textNome.text);
+        foreach (CardNome card in cardsJogadores)
+          if (!card.textNome.text.Equals(""))
+            nomesJogadores.Add(card.textNome.text);
 
-      // Se não houver equipe, colocar seu texto como nulo <----
-      setGameData.HandleSave(nomesJogadores.ToArray(), cardEquipe.textNome.text, 0, 0);
+      string nomeEquipe = cardEquipe != null
+        ? cardEquipe.textNome.text
+        : "";
+      setGameData.HandleSave(
+        nomesJogadores.ToArray(),
+        nomeEquipe,
+        0, 0);
       SceneManager.LoadScene(CENA_JOGO);
     }
     else
