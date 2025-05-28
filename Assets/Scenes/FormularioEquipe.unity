@@ -392,58 +392,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 162382351}
   m_CullTransparentMesh: 1
---- !u!1 &226696069
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 226696071}
-  - component: {fileID: 226696070}
-  m_Layer: 0
-  m_Name: SetGameData
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &226696070
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 226696069}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e61876d297a67b841be355727a24ed10, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _standardDataPath: 27-05
-  _nomes:
-  - {fileID: 379975243}
-  - {fileID: 34223020}
-  - {fileID: 663649667}
-  _equipe: {fileID: 0}
-  _pontos: {fileID: 0}
-  _tempo: {fileID: 0}
---- !u!4 &226696071
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 226696069}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 152.52466, y: 277.91772, z: -0.7780117}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &291907341
 GameObject:
   m_ObjectHideFlags: 0
@@ -565,13 +513,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 315715121}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+      - m_Target: {fileID: 315715122}
+        m_TargetAssemblyTypeName: TeamManager, Assembly-CSharp
+        m_MethodName: Cancelar
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -606,11 +554,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e57c1e1225df9714083c1cd57fe2808b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  imageBoxPrincipal: {fileID: 1770806603}
   textEnunciado: {fileID: 1323453176}
   textMensagemInformacao: {fileID: 0}
   inputJogadorOuEquipe: {fileID: 699947126}
-  buttonAdicionarAdicionarJogador: {fileID: 1584766121}
+  buttonAdicionar: {fileID: 1584766121}
   cardsJogadores:
   - imageBoxCardNome: {fileID: 638429244}
     textNome: {fileID: 379975243}
@@ -2385,7 +2332,7 @@ GameObject:
   - component: {fileID: 1584766122}
   - component: {fileID: 1584766123}
   m_Layer: 5
-  m_Name: ButtonAdicionarJogadorOuEquipe
+  m_Name: ButtonAdicionar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2971,5 +2918,4 @@ SceneRoots:
   - {fileID: 1782201074}
   - {fileID: 379983707}
   - {fileID: 1692669423}
-  - {fileID: 226696071}
   - {fileID: 315715123}
