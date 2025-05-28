@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "295258017226",
+    "project_id": "circulando-pelo-corpo-humano",
+    "storage_bucket": "circulando-pelo-corpo-humano.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:295258017226:android:6758078697a3937a34d333",
+        "android_client_info": {
+          "package_name": "com.labz107.circulandopelocorpohumano"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCMLUhOA7RzBT0FyDj_8zQaV9FIj6QU1ZY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
