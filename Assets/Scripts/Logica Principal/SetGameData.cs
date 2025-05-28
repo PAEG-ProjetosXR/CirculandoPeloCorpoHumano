@@ -1,30 +1,44 @@
-using UnityEngine;
 using Firebase.Firestore;
-using System.Collections.Generic;
-using TMPro;
+using System;
 using System.Diagnostics;
-using System.Linq;
 
-public class SetGameData : MonoBehaviour
+public class SetGameData
 {
-  [SerializeField] public string _standardDataPath;
+  private string _standardDataPath;
   private FirebaseFirestore _firestore;
 
-  public void Start()
+  public SetGameData()
   {
-    _firestore = FirebaseFirestore.DefaultInstance;
+    Firestore = FirebaseFirestore.DefaultInstance;
+    StandardDataPath = DateTime.Today.ToString("d").Replace("/", "-") + "/";
+  }
+
+  public string StandardDataPath
+  {
+    get { return _standardDataPath; }
+    set
+    {
+      _standardDataPath = value;
+    }
+  }
+
+  public FirebaseFirestore Firestore
+  {
+    get { return _firestore; }
+    set
+    {
+      _firestore = value;
+    }
   }
 
   public void HandleSave(string[] nomes, string equipe, int pontos, int tempo)
   {
-    string dataPath;
     long currentTime = Stopwatch.GetTimestamp();
-
     for (int i = 0; i < nomes.Length; i++)
     {
-      dataPath = equipe.Equals("")
-        ? _standardDataPath + nomes[i] + "-" + currentTime.ToString()
-        : _standardDataPath + nomes[i] + "-" + equipe + "-" + currentTime.ToString();
+      string dataPath = equipe.Equals("")
+    ? StandardDataPath + nomes[i] + "-" + currentTime.ToString()
+    : StandardDataPath + nomes[i] + "-" + equipe + "-" + currentTime.ToString();
 
       var gameData = new GameData
       {
