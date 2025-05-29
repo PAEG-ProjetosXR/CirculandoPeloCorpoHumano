@@ -14,7 +14,8 @@ public class CardNome
 public class TeamManager : MonoBehaviour
 {
   [SerializeField] public TextMeshProUGUI textEnunciado;
-  [SerializeField] public TextMeshProUGUI textMensagemInformacao;
+  [SerializeField] public TextMeshProUGUI textMensagemInformativa;
+  [SerializeField] public GameObject imageBoxMensagemInformativa;
   [SerializeField] public TMP_InputField inputJogadorOuEquipe;
   [SerializeField] public GameObject buttonAdicionar;
   [SerializeField] public List<CardNome> cardsJogadores;
@@ -23,7 +24,7 @@ public class TeamManager : MonoBehaviour
   private bool _inputNoModoEquipe;
   private SetGameData setGameData;
   private const int CENA_JOGO = 4;
-  private const int CENA_MENU = 8;
+  private const int CENA_MENU = 1;
 
   public void Start()
   {
@@ -34,8 +35,16 @@ public class TeamManager : MonoBehaviour
 
   public void AdicionarJogadorOuEquipe()
   {
+    if (inputJogadorOuEquipe.text.Equals(""))
+    {
+      ExibirMensagem("Adicione um nome na caixa de texto");
+      return;
+    }
+    imageBoxMensagemInformativa.SetActive(false);
+    textMensagemInformativa.text = "";
     if (!_inputNoModoEquipe)
     {
+      inputJogadorOuEquipe.characterLimit = 9;
       if (_quantidadeJogadoresAtual < cardsJogadores.Count)
       {
         cardsJogadores.ElementAt(_quantidadeJogadoresAtual).imageBoxCardNome.SetActive(true);
@@ -47,6 +56,8 @@ public class TeamManager : MonoBehaviour
     }
     else
     {
+
+      inputJogadorOuEquipe.characterLimit = 13;
       cardEquipe.imageBoxCardNome.SetActive(true);
       cardEquipe.textNome.text = inputJogadorOuEquipe.text;
 
@@ -61,7 +72,11 @@ public class TeamManager : MonoBehaviour
 
   public void ExibirMensagem(string mensagem)
   {
-    // setactive no gameobject _textMensagem
+    if (mensagem.Length <= 42)
+    {
+      imageBoxMensagemInformativa.SetActive(true);
+      textMensagemInformativa.text = mensagem;
+    }
   }
 
   public void Confirmar()
@@ -87,7 +102,7 @@ public class TeamManager : MonoBehaviour
     {
       if (_quantidadeJogadoresAtual < 1)
       {
-        ExibirMensagem("É necessário adicionar pelo menos um usuário!");
+        ExibirMensagem("É necessário informar pelo menos um usuário");
       }
       else if (_quantidadeJogadoresAtual > 1)
       {
