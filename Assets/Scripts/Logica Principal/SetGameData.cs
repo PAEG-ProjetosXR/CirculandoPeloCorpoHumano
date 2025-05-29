@@ -4,21 +4,24 @@ using System.Diagnostics;
 
 public class SetGameData
 {
-  private string _standardDataPath;
   private FirebaseFirestore _firestore;
+  private string _nomeCollection;
+  private string _codigoSessao;
 
+#nullable enable
   public SetGameData()
   {
+    CodigoSessao = "";
     Firestore = FirebaseFirestore.DefaultInstance;
-    StandardDataPath = DateTime.Today.ToString("d").Replace("/", "-") + "/";
+    NomeCollection = $"{DateTime.Today.ToString("d").Replace("/", "-")}";
   }
 
-  public string StandardDataPath
+  public string NomeCollection
   {
-    get { return _standardDataPath; }
+    get { return _nomeCollection; }
     set
     {
-      _standardDataPath = value;
+      _nomeCollection = value;
     }
   }
 
@@ -31,14 +34,23 @@ public class SetGameData
     }
   }
 
+  public string CodigoSessao
+  {
+    get { return _codigoSessao; }
+    set
+    {
+      _codigoSessao = value;
+    }
+  }
+
   public void HandleSave(string[] nomes, string equipe, int pontos, int tempo)
   {
     long currentTime = Stopwatch.GetTimestamp();
     for (int i = 0; i < nomes.Length; i++)
     {
       string dataPath = equipe.Equals("")
-    ? StandardDataPath + nomes[i] + "-" + currentTime.ToString()
-    : StandardDataPath + nomes[i] + "-" + equipe + "-" + currentTime.ToString();
+    ? $"{NomeCollection}-{CodigoSessao}/{nomes[i]}-{currentTime}"
+    : $"{NomeCollection}-{CodigoSessao}/{nomes[i]}-{equipe}-{currentTime}";
 
       var gameData = new GameData
       {
