@@ -1,6 +1,6 @@
 using Firebase.Firestore;
 using System;
-using System.Diagnostics;
+using System.Collections.Generic;
 
 public class SetGameData
 {
@@ -43,28 +43,53 @@ public class SetGameData
     }
   }
 
-  public void HandleSave(string[] nomes, string equipe, int pontos, int tempo)
+  public void HandleSave(string[] nomes, string equipe, int pontos, int tempo, string timestamp)
   {
-    long currentTime = Stopwatch.GetTimestamp();
     for (int i = 0; i < nomes.Length; i++)
     {
-      string dataPath = equipe.Equals("")
-    ? $"{NomeCollection}-{CodigoSessao}/{nomes[i]}-{currentTime}"
-    : $"{NomeCollection}-{CodigoSessao}/{nomes[i]}-{equipe}-{currentTime}";
+      string _dataPath = equipe.Equals("")
+    ? $"{NomeCollection}-{CodigoSessao}/{nomes[i]}-{timestamp}"
+    : $"{NomeCollection}-{CodigoSessao}/{nomes[i]}-{equipe}-{timestamp}";
 
-      var gameData = new GameData
+      var _gameData = new GameData
       {
         Nomes = nomes,
         Pontos = pontos,
         Tempo = tempo,
         Equipe = equipe
       };
-      SaveToCloud(dataPath, gameData);
+      SaveToCloud(_dataPath, _gameData);
     }
   }
 
+  public List<GameData> HandleLoad(string[] nomes, string equipe, string timestamp)
+  {
+    List<GameData> _documentsFound = new();
+    for (int i = 0; i < nomes.Length; i++)
+    {
+      string _dataPath = equipe.Equals("")
+      ? $"{NomeCollection}-{CodigoSessao}/{nomes[i]}-{timestamp}"
+      : $"{NomeCollection}-{CodigoSessao}/{nomes[i]}-{equipe}-{timestamp}";
+
+      _documentsFound.Add(LoadFromCloud(_dataPath));
+    }
+    return _documentsFound;
+  }
   private void SaveToCloud(string path, GameData data)
   {
     _firestore.Document(path).SetAsync(data);
+  }
+
+  private GameData LoadFromCloud(string path)
+  {
+    GameData loadedData = new GameData();
+    _firestore.Document(path).GetSnapshotAsync().ContinueWith(task =>
+    {
+      if (task.Result.Exists)
+      {
+        loadedData = task.Result.ConvertTo<GameData>();
+      }
+    });
+    return loadedData;
   }
 }

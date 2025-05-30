@@ -3,7 +3,7 @@ using UnityEngine.SceneManagement;
 using System.Collections.Generic;
 using TMPro;
 using System.Linq;
-using UnityEngine.UI;
+using System.Diagnostics;
 
 [System.Serializable]
 public class CardNome
@@ -120,20 +120,25 @@ public class TeamManager : MonoBehaviour
 
   public void PrepararSalvarDados()
   {
-    setGameData.CodigoSessao = cardCodigo.textNome.text;
-    List<string> nomesJogadores = new List<string>();
     if (_quantidadeJogadoresAtual > 0)
+    {
+      long _currentTime = Stopwatch.GetTimestamp();
+      List<string> _nomesJogadores = new List<string>();
+      string _nomeEquipe = cardEquipe != null
+        ? cardEquipe.textNome.text
+        : "";
+
+      setGameData.CodigoSessao = cardCodigo.textNome.text;
       foreach (CardNome card in cardsJogadores)
         if (!card.textNome.text.Equals(""))
-          nomesJogadores.Add(card.textNome.text);
+          _nomesJogadores.Add(card.textNome.text);
 
-    string nomeEquipe = cardEquipe != null
-      ? cardEquipe.textNome.text
-      : "";
-    setGameData.HandleSave(
-      nomesJogadores.ToArray(),
-      nomeEquipe,
-      0, 0);
+      setGameData.HandleSave(
+        _nomesJogadores.ToArray(),
+        _nomeEquipe,
+        0, 0,
+        _currentTime.ToString());
+    }
   }
 
   public void Confirmar()
