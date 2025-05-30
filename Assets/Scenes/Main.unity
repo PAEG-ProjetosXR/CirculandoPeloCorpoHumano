@@ -604,6 +604,8 @@ MonoBehaviour:
   _imageBoxQuestaoMultiplaEscolha: {fileID: 1770035666}
   _imageBoxQuestaoImageTarget: {fileID: 1482858253}
   _buttonToggleQuestaoImageTarget: {fileID: 408824860}
+  _pontosSO: {fileID: 11400000, guid: fb1a283a8d4b8fa4792c65b264a9ec74, type: 2}
+  _tempoSO: {fileID: 0}
   _fundo: {fileID: 1977181533}
   _botoes:
   - {fileID: 1837002865}
