@@ -21,8 +21,7 @@ public class GameManager : MonoBehaviour
 
   //-----------------------------
   // Variáveis de Estado do Jogo
-  //-----------------------------
-  private int _pontos;                     // Pontuação total do jogador
+  //-----------------------------           
   private string _statusGame;              // Estado atual ("Play", "GameOver")
   private float _tempo;                    // Tempo restante por questão
   private float _tempoTotal;               // Tempo acumulado no jogo
@@ -52,6 +51,8 @@ public class GameManager : MonoBehaviour
   [SerializeField] private GameObject _imageBoxQuestaoMultiplaEscolha;
   [SerializeField] private GameObject _imageBoxQuestaoImageTarget;
   [SerializeField] private GameObject _buttonToggleQuestaoImageTarget;
+  [SerializeField] private IntegerScriptableObject _pontosSO;
+  [SerializeField] private IntegerScriptableObject _tempoSO;
   private GameObject _telaCarregamento;
   private TextMeshProUGUI _textoCarregamento;
   [SerializeField] private GameObject _fundo;
@@ -174,7 +175,7 @@ public class GameManager : MonoBehaviour
   /// </summary>
   private void ResetarJogo()
   {
-    _pontos = 0;
+    _pontosSO.Value = 0;
     _indiceQuestaoAtual = -1;
     _totalQuestoes = _questoesImageTarget.Count + _questoesMultiplaEscolha.Count;
     _tempo = 10f;
@@ -329,7 +330,7 @@ public class GameManager : MonoBehaviour
       if (_pontosPorQuestao[questaoAtual] < 10)
       {
         _pontosPorQuestao[questaoAtual] += 10;
-        _pontos += 10;
+        _pontosSO.Value += 10;
         AtualizarHUD();
         Debug.Log($"Pontos ganhos para a questão {questaoAtual}: {_pontosPorQuestao[questaoAtual]}");
       }
@@ -440,14 +441,14 @@ public class GameManager : MonoBehaviour
 
   public void AumentarPontuacao(int valor)
   {
-    _pontos += valor;
+    _pontosSO.Value += valor;
     AtualizarHUD();
   }
 
   private void AtualizarHUD()
   {
     if (_textPontos != null)
-      _textPontos.text = $"PONTOS: {_pontos}";
+      _textPontos.text = $"PONTOS: {_pontosSO.Value}";
 
     if (_textTempo != null)
       _textTempo.text = $"TEMPO: {Mathf.CeilToInt(_tempo)}";
@@ -531,7 +532,7 @@ public class GameManager : MonoBehaviour
 
   public void SalvarJogo()
   {
-    PlayerPrefs.SetInt("Pontos", _pontos);
+    PlayerPrefs.SetInt("Pontos", _pontosSO.Value);
     PlayerPrefs.SetFloat("TotalTimeSpent", _tempoTotal);
     PlayerPrefs.Save();
     Debug.Log("Jogo salvo!");
@@ -548,7 +549,7 @@ public class GameManager : MonoBehaviour
 
   public int GetPontos()
   {
-    return _pontos;
+    return _pontosSO.Value;
   }
 
   public bool IsTargetIdentificado()
@@ -583,7 +584,7 @@ public class GameManager : MonoBehaviour
   /// <summary>
   /// Versão em inglês de GetPontos para compatibilidade
   /// </summary>
-  public int GetPoints() => _pontos;
+  public int GetPoints() => _pontosSO.Value;
 
   //-----------------------------
   // Controle de UI
