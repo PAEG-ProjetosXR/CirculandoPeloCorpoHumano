@@ -1,3 +1,5 @@
+using System.Threading.Tasks;
+using Firebase.Extensions;
 using Firebase.Firestore;
 
 public class SetGameData
@@ -30,9 +32,9 @@ public class SetGameData
     }
   }
 
-  public void HandleUpdate(string path, GameData data)
+  public async void HandleUpdate(string path, GameData data)
   {
-    GameData _dadoSalvoAtual = LoadFromCloud(path);
+    GameData _dadoSalvoAtual = await LoadFromCloud(path);
     if (data.Nomes.Length == 0) data.Nomes = _dadoSalvoAtual.Nomes;
     if (data.Equipe.Equals("")) data.Equipe = _dadoSalvoAtual.Equipe;
     SaveToCloud(path, data);
@@ -43,10 +45,10 @@ public class SetGameData
     _firestore.Document(path).SetAsync(data);
   }
 
-  public GameData LoadFromCloud(string path)
+  public async Task<GameData> LoadFromCloud(string path)
   {
     GameData _loadedData = new GameData();
-    _firestore.Document(path).GetSnapshotAsync().ContinueWith(task =>
+    await _firestore.Document(path).GetSnapshotAsync().ContinueWithOnMainThread(task =>
     {
       if (task.Result.Exists)
       {
