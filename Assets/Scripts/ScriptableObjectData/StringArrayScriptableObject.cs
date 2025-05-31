@@ -8,6 +8,10 @@ public class StringArrayScriptableObject : ScriptableObject
   public string[] Value
   {
     get { return _value; }
-    set { _value = value; }
+    set
+    {
+      _value = value;
+      UnityEditor.EditorUtility.SetDirty(this);
+    }
   }
 }
