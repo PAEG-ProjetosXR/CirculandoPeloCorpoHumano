@@ -126,8 +126,8 @@ public class TeamManager : MonoBehaviour
   public void PrepararSalvarDados()
   {
     long _timestamp = Stopwatch.GetTimestamp();
-    string[] _nomesJogadores = { };
-    string[] _documentsPaths = { };
+    List<string> _nomesJogadores = new();
+    List<string> _documentsPaths = new();
 
     bool _existeEquipe = cardEquipe.textNome.text.Equals("")
       ? false
@@ -141,10 +141,9 @@ public class TeamManager : MonoBehaviour
     string _codigoSessao = cardCodigo.textNome.text;
     setGameData.NomeCollection = $"{_dataAtual}-{_codigoSessao}";
     collectionNameSO.Value = setGameData.NomeCollection;
-
     foreach (CardNome card in cardsJogadores)
       if (!card.textNome.text.Equals(""))
-        _nomesJogadores.Append(card.textNome.text);
+        _nomesJogadores.Add(card.textNome.text);
 
     foreach (string jogador in _nomesJogadores)
     {
@@ -152,19 +151,19 @@ public class TeamManager : MonoBehaviour
         ? $"{jogador}-{cardEquipe.textNome.text}-{_timestamp}"
         : $"{jogador}-{_timestamp}";
 
-      _documentsPaths.Append(_documentName);
+      _documentsPaths.Add(_documentName);
 
       _gamePath = $"{setGameData.NomeCollection}/{_documentName}";
       _gameData = new GameData
       {
-        Nomes = _nomesJogadores,
+        Nomes = _nomesJogadores.ToArray(),
         Equipe = cardEquipe.textNome.text ?? "",
         Pontos = 0,
         Tempo = 0,
       };
       setGameData.SaveToCloud(_gamePath, _gameData);
     }
-    documentsSO.Value = _documentsPaths;
+    documentsSO.Value = _documentsPaths.ToArray();
   }
 
   public void Confirmar()
