@@ -5,43 +5,25 @@ using TMPro;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-/// <summary>
-/// Classe principal que gerencia toda a lógica do jogo, incluindo:
-/// - Pontuação e tempo
-/// - Controle de questões (múltipla escolha e image targets)
-/// - Navegação entre cenas
-/// - Sistema de salvamento
-/// </summary>
 public class GameManager : MonoBehaviour
 {
-  //-----------------------------
-  // Singleton Instance
-  //-----------------------------
   public static GameManager Instance;
 
-  //-----------------------------
-  // Variáveis de Estado do Jogo
-  //-----------------------------           
-  private string _statusGame;              // Estado atual ("Play", "GameOver")
-  private float _tempo;                    // Tempo restante por questão
-  private float _tempoTotal;               // Tempo acumulado no jogo
-  private int _indiceQuestaoAtual;         // Índice da questão atual
-  private int _totalQuestoes;              // Quantidade total de questões
-  private bool _targetIdentificado;        // Flag para controle de image targets
-  private bool _questaoMultiplaEscolha;    // Tipo da questão atual
-  private bool _botoesHabilitados;         // Controle de interação com botões
+  private string _statusGame;
+  private float _tempo;
+  private float _tempoPorQuestao;
+  private int _indiceQuestaoAtual;
+  private int _totalQuestoes;
+  private bool _targetIdentificado;
+  private bool _questaoMultiplaEscolha;
+  private bool _botoesHabilitados;
   private bool _imageBoxQuestaoImageTargetHabilitada = false;
-  private int _paginaAtualQuestaoImageTarget = 0;
+  private int _paginaAtualQuestaoImageTarget;
   private int _totalQuestoesPorSecao;
   private int _quantidadeQuestoesMultiplaEscolhaPorSecao;
-  //-----------------------------
-  // Pontuação por Questão
-  //-----------------------------
-  private int[] _pontosPorQuestao;         // Pontos ganhos por questão de image target
 
-  //-----------------------------
-  // Referências de UI
-  //-----------------------------
+  private int[] _pontosPorQuestao;
+
   [Header("Configurações de UI")]
   [SerializeField] private TextMeshProUGUI _textQuestaoMultiplaEscolha;
   [SerializeField] private TextMeshProUGUI _textQuestaoImageTarget;
@@ -52,49 +34,31 @@ public class GameManager : MonoBehaviour
   [SerializeField] private GameObject _imageBoxQuestaoImageTarget;
   [SerializeField] private GameObject _buttonToggleQuestaoImageTarget;
   [SerializeField] private IntegerScriptableObject _pontosSO;
-  [SerializeField] private IntegerScriptableObject _tempoSO;
+  [SerializeField] private FloatScriptableObject _tempoSO;
   private GameObject _telaCarregamento;
   private TextMeshProUGUI _textoCarregamento;
   [SerializeField] private GameObject _fundo;
 
-  //-----------------------------
-  // Botões e Cores
-  //-----------------------------
   [Header("Configurações de Botões")]
   [SerializeField] private GameObject[] _botoes;
   [SerializeField] private Color _corAcerto = Color.green;
   [SerializeField] private Color _corErro = Color.red;
 
-  //-----------------------------
-  // Áudio
-  //-----------------------------
   [Header("Configurações de Áudio")]
   [SerializeField] private AudioSource _audioSource;
   [SerializeField] private AudioClip _somAcerto;
   [SerializeField] private AudioClip _somErro;
 
-  //-----------------------------
-  // Questões e Targets
-  //-----------------------------
   [Header("Banco de Questões")]
   [SerializeField] private List<QuestaoImageTarget> _questoesImageTarget;
   [SerializeField] private List<QuestaoMultiplaEscolha> _questoesMultiplaEscolha;
   [SerializeField] private List<GameObject> _imageTargets;
   private GameObject _targetAtual;
 
-  //-----------------------------
-  // Randomização
-  //-----------------------------
   private List<List<int>> _indicesRandomizados;
 
-  //-----------------------------
-  // Corrotinas
-  //-----------------------------
   private IEnumerator _corrotinaTempo;
 
-  //-----------------------------
-  // Classes Auxiliares
-  //-----------------------------
   [System.Serializable]
   public class QuestaoMultiplaEscolha
   {
@@ -108,10 +72,6 @@ public class GameManager : MonoBehaviour
   {
     public string[] perguntaFracionada;
   }
-
-  //-----------------------------
-  // Inicialização
-  //-----------------------------
 
   private void Awake()
   {
@@ -128,6 +88,8 @@ public class GameManager : MonoBehaviour
 
   private void Start()
   {
+    _paginaAtualQuestaoImageTarget = 0;
+    _tempoPorQuestao = 4f;
     IniciarJogo();
     ResetarCoresBotoes();
   }
@@ -142,25 +104,16 @@ public class GameManager : MonoBehaviour
     SceneManager.sceneLoaded -= AoCarregarCena;
   }
 
-  //-----------------------------
-  // Controle de Cenas
-  //-----------------------------
 
   private void AoCarregarCena(Scene cena, LoadSceneMode modo)
   {
-    if (cena.buildIndex == 1) // Cena do jogo
+    if (cena.buildIndex == 1)
     {
       IniciarJogo();
     }
   }
 
-  //-----------------------------
-  // Lógica Principal do Jogo
-  //-----------------------------
 
-  /// <summary>
-  /// Inicia ou reinicia o jogo com os valores padrão
-  /// </summary>
   private void IniciarJogo()
   {
     _quantidadeQuestoesMultiplaEscolhaPorSecao = _questoesMultiplaEscolha.Count / _questoesImageTarget.Count;
@@ -170,22 +123,18 @@ public class GameManager : MonoBehaviour
     MostrarProximaQuestao();
   }
 
-  /// <summary>
-  /// Reseta todas as variáveis de estado do jogo
-  /// </summary>
   private void ResetarJogo()
   {
     _pontosSO.Value = 0;
     _indiceQuestaoAtual = -1;
     _totalQuestoes = _questoesImageTarget.Count + _questoesMultiplaEscolha.Count;
-    _tempo = 10f;
-    _tempoTotal = 0f;
+    _tempo = _tempoPorQuestao;
+    _tempoSO.Value = 0f;
     _statusGame = "Play";
     _targetIdentificado = false;
     _questaoMultiplaEscolha = false;
     _botoesHabilitados = true;
 
-    // Inicializa pontos por questão
     _pontosPorQuestao = new int[_questoesImageTarget.Count];
     for (int i = 0; i < _pontosPorQuestao.Length; i++)
     {
@@ -195,9 +144,6 @@ public class GameManager : MonoBehaviour
     AtualizarHUD();
   }
 
-  /// <summary>
-  /// Randomiza a ordem das questões de múltipla escolha por seção
-  /// </summary>
   private void RandomizarQuestoesPorSecao()
   {
     _indicesRandomizados = new List<List<int>>();
@@ -210,7 +156,6 @@ public class GameManager : MonoBehaviour
         indicesSecao.Add(secao * _quantidadeQuestoesMultiplaEscolhaPorSecao + i);
       }
 
-      // Embaralha as questões dentro da seção
       for (int i = 0; i < indicesSecao.Count; i++)
       {
         int indiceRandomico = Random.Range(i, indicesSecao.Count);
@@ -223,22 +168,14 @@ public class GameManager : MonoBehaviour
     }
   }
 
-  //-----------------------------
-  // Controle de Questões
-  //-----------------------------
-
-  /// <summary>
-  /// Avança para a próxima questão ou finaliza o jogo
-  /// </summary>
   public void MostrarProximaQuestao()
   {
-    // Calcula tempo gasto na questão anterior
     if (_indiceQuestaoAtual >= 0 && _indiceQuestaoAtual < _totalQuestoes)
     {
-      float tempoGasto = 10f - _tempo;
-      if (tempoGasto > 0 && tempoGasto <= 10f)
+      float tempoGasto = _tempoPorQuestao - _tempo;
+      if (tempoGasto > 0 && tempoGasto <= _tempoPorQuestao)
       {
-        _tempoTotal += tempoGasto;
+        _tempoSO.Value += tempoGasto;
         Debug.Log($"Tempo gasto na questão {_indiceQuestaoAtual}: {tempoGasto} segundos");
       }
     }
@@ -246,7 +183,7 @@ public class GameManager : MonoBehaviour
     if (_indiceQuestaoAtual < _totalQuestoes - 1)
     {
       _indiceQuestaoAtual++;
-      _questaoMultiplaEscolha = (_indiceQuestaoAtual % _totalQuestoesPorSecao != 0);
+      _questaoMultiplaEscolha = _indiceQuestaoAtual % _totalQuestoesPorSecao != 0;
 
       if (_questaoMultiplaEscolha)
       {
@@ -263,7 +200,7 @@ public class GameManager : MonoBehaviour
       return;
     }
 
-    _tempo = 10f;
+    _tempo = _tempoPorQuestao;
     _targetIdentificado = false;
     IniciarContagemRegressiva();
     AtualizarHUD();
@@ -271,8 +208,8 @@ public class GameManager : MonoBehaviour
 
   private void ConfigurarQuestaoMultiplaEscolha()
   {
-    int indiceSecao = (_indiceQuestaoAtual / _totalQuestoesPorSecao);
-    int indiceQuestaoNaSecao = ((_indiceQuestaoAtual % _totalQuestoesPorSecao) - 1);
+    int indiceSecao = _indiceQuestaoAtual / _totalQuestoesPorSecao;
+    int indiceQuestaoNaSecao = (_indiceQuestaoAtual % _totalQuestoesPorSecao) - 1;
 
     if (indiceSecao < _indicesRandomizados.Count && indiceQuestaoNaSecao < _quantidadeQuestoesMultiplaEscolhaPorSecao)
     {
@@ -310,13 +247,6 @@ public class GameManager : MonoBehaviour
     CarregarCenaComTelaCarregamento(5); // Cena de Game Over
   }
 
-  //-----------------------------
-  // Controle de Image Targets
-  //-----------------------------
-
-  /// <summary>
-  /// Chamado quando o jogador identifica um image target
-  /// </summary>
   public void TargetIdentificado()
   {
     if (!_targetIdentificado && !_questaoMultiplaEscolha)
@@ -343,13 +273,6 @@ public class GameManager : MonoBehaviour
     }
   }
 
-  //-----------------------------
-  // Controle de Respostas
-  //-----------------------------
-
-  /// <summary>
-  /// Verifica a resposta selecionada em questões de múltipla escolha
-  /// </summary>
   public void VerificarResposta(int indiceBotao)
   {
     if (_questaoMultiplaEscolha && _botoesHabilitados)
@@ -357,8 +280,8 @@ public class GameManager : MonoBehaviour
       _botoesHabilitados = false;
       PararContagemRegressiva();
 
-      int indiceSecao = (_indiceQuestaoAtual / _totalQuestoesPorSecao);
-      int indiceQuestaoNaSecao = (_indiceQuestaoAtual % _totalQuestoesPorSecao - 1);
+      int indiceSecao = _indiceQuestaoAtual / _totalQuestoesPorSecao;
+      int indiceQuestaoNaSecao = _indiceQuestaoAtual % _totalQuestoesPorSecao - 1;
 
       if (indiceSecao < _indicesRandomizados.Count && indiceQuestaoNaSecao < _quantidadeQuestoesMultiplaEscolhaPorSecao)
       {
@@ -382,10 +305,6 @@ public class GameManager : MonoBehaviour
       }
     }
   }
-
-  //-----------------------------
-  // Métodos Auxiliares
-  //-----------------------------
 
   private void AtualizarBotoesMultiplaEscolha(int indiceQuestao)
   {
@@ -454,10 +373,6 @@ public class GameManager : MonoBehaviour
       _textTempo.text = $"TEMPO: {Mathf.CeilToInt(_tempo)}";
   }
 
-  //-----------------------------
-  // Controle de Tempo
-  //-----------------------------
-
   private void IniciarContagemRegressiva()
   {
     PararContagemRegressiva();
@@ -495,10 +410,6 @@ public class GameManager : MonoBehaviour
     }
   }
 
-  //-----------------------------
-  // Controle de Cenas
-  //-----------------------------
-
   public void CarregarCenaComTelaCarregamento(int indiceCena)
   {
     StartCoroutine(CarregarCenaAssincrona(indiceCena));
@@ -526,25 +437,17 @@ public class GameManager : MonoBehaviour
     }
   }
 
-  //-----------------------------
-  // Sistema de Salvamento
-  //-----------------------------
-
   public void SalvarJogo()
   {
     PlayerPrefs.SetInt("Pontos", _pontosSO.Value);
-    PlayerPrefs.SetFloat("TotalTimeSpent", _tempoTotal);
+    PlayerPrefs.SetFloat("TotalTimeSpent", _tempoSO.Value);
     PlayerPrefs.Save();
     Debug.Log("Jogo salvo!");
   }
 
-  //-----------------------------
-  // Getters
-  //-----------------------------
-
   public float GetTempoTotal()
   {
-    return _tempoTotal;
+    return _tempoSO.Value;
   }
 
   public int GetPontos()
@@ -557,38 +460,15 @@ public class GameManager : MonoBehaviour
     return _targetIdentificado;
   }
 
-  //-----------------------------
-  // Aliases para compatibilidade (sem alterar o resto do código)
-  //-----------------------------
+  public float GetTotalTime() => _tempoSO.Value;
 
-  /// <summary>
-  /// Versão em inglês de GetTempoTotal para compatibilidade
-  /// </summary>
-  public float GetTotalTime() => _tempoTotal;
-
-  /// <summary>
-  /// Versão em inglês de IsTargetIdentificado para compatibilidade
-  /// </summary>
   public bool IsTargetIdentified() => _targetIdentificado;
 
-  /// <summary>
-  /// Versão em inglês de TargetIdentificado para compatibilidade
-  /// </summary>
   public void TargetIdentified() => TargetIdentificado();
 
-  /// <summary>
-  /// Versão em inglês de SalvarJogo para compatibilidade
-  /// </summary>
   public void SaveGame() => SalvarJogo();
 
-  /// <summary>
-  /// Versão em inglês de GetPontos para compatibilidade
-  /// </summary>
   public int GetPoints() => _pontosSO.Value;
-
-  //-----------------------------
-  // Controle de UI
-  //-----------------------------
 
   private void UpdateTextsQuestaoImageTarget()
   {
@@ -596,7 +476,7 @@ public class GameManager : MonoBehaviour
       _questoesImageTarget[_indiceQuestaoAtual / _totalQuestoesPorSecao]
       .perguntaFracionada[_paginaAtualQuestaoImageTarget];
     _textPaginaAtualQuestaoImageTarget.text =
-      (_paginaAtualQuestaoImageTarget + 1) +
+      _paginaAtualQuestaoImageTarget + 1 +
       "/" +
       _questoesImageTarget[_indiceQuestaoAtual / _totalQuestoesPorSecao].perguntaFracionada.Length;
   }
@@ -669,47 +549,5 @@ public class GameManager : MonoBehaviour
       _paginaAtualQuestaoImageTarget--;
       UpdateTextsQuestaoImageTarget();
     }
-  }
-  // No GameManager.cs, adicione isso:
-  // Variável privada para armazenar as iniciais do jogador durante a sessão atual.
-  // O uso de '_' no prefixo é uma convenção comum para campos privados.
-  private string _playerInitials; // Variável para guardar as iniciais
-
-  /// <summary>
-  /// Método público para definir/salvar as iniciais do jogador.
-  /// Pode ser chamado por outros scripts (ex: SceneGameOverManager).
-  /// </summary>
-  /// <param name="initials">Iniciais inseridas pelo jogador (3 letras)</param>
-  public void SetPlayerInitials(string initials)
-  {
-    // Converte as iniciais para MAIÚSCULAS para padronização:
-    // - Evita diferenças entre "aaa", "AAA", "Aaa"
-    // - Melhora a consistência visual em placares
-    _playerInitials = initials.ToUpper();
-
-    // Debug opcional para verificação no Console:
-    // - Útil durante desenvolvimento para garantir que o método está sendo chamado corretamente
-    // - Pode ser removido na versão final do jogo
-    Debug.Log("Iniciais salvas: " + _playerInitials);
-
-    // Exemplo de como persistir os dados entre sessões (descomente se necessário):
-    // PlayerPrefs.SetString("PlayerInitials", _playerInitials); // Salva no sistema
-    // PlayerPrefs.Save(); // Garante a escrita imediata
-    // Observação: PlayerPrefs é ideal para dados simples, mas para sistemas complexos
-    // (como placares com múltiplos registros), considere usar JSON ou um banco de dados.
-  }
-
-  /// <summary>
-  /// Método público para recuperar as iniciais salvas.
-  /// Permite que outros scripts acessem os dados sem manipular a variável diretamente.
-  /// </summary>
-  /// <returns>Iniciais em formato MAIÚSCULO ou string vazia se não definidas</returns>
-  public string GetPlayerInitials()
-  {
-    // Retorna o valor armazenado (ou string vazia se nunca foi definido)
-    return _playerInitials;
-
-    // Versão alternativa com PlayerPrefs (caso tenha usado a persistência):
-    // return PlayerPrefs.GetString("PlayerInitials", "AAA"); // "AAA" é valor padrão
   }
 }
