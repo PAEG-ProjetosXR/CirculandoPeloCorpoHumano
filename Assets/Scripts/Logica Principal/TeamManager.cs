@@ -1,11 +1,12 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System;
+using System.Linq;
+using System.Diagnostics;
 using System.Collections.Generic;
 using TMPro;
-using System.Linq;
-using UnityEngine.UI;
 
-[System.Serializable]
+[Serializable]
 public class CardNome
 {
   public GameObject imageBoxCardNome;
@@ -30,6 +31,10 @@ public class TeamManager : MonoBehaviour
   [SerializeField] public List<CardNome> cardsJogadores;
   [SerializeField] public CardNome cardEquipe;
   [SerializeField] public CardNome cardCodigo;
+
+  [SerializeField] public StringScriptableObject collectionNameSO;
+  [SerializeField] public StringArrayScriptableObject documentsSO;
+
 
   private int _quantidadeJogadoresAtual;
   private int _dadoEsperadoNoInput;
@@ -120,20 +125,45 @@ public class TeamManager : MonoBehaviour
 
   public void PrepararSalvarDados()
   {
-    setGameData.CodigoSessao = cardCodigo.textNome.text;
-    List<string> nomesJogadores = new List<string>();
-    if (_quantidadeJogadoresAtual > 0)
-      foreach (CardNome card in cardsJogadores)
-        if (!card.textNome.text.Equals(""))
-          nomesJogadores.Add(card.textNome.text);
+    long _timestamp = Stopwatch.GetTimestamp();
+    List<string> _nomesJogadores = new();
+    List<string> _documentsPaths = new();
 
-    string nomeEquipe = cardEquipe != null
-      ? cardEquipe.textNome.text
-      : "";
-    setGameData.HandleSave(
-      nomesJogadores.ToArray(),
-      nomeEquipe,
-      0, 0);
+    bool _existeEquipe = cardEquipe.textNome.text.Equals("")
+      ? false
+      : true;
+
+    GameData _gameData;
+    string _gamePath;
+    string _documentName;
+
+    string _dataAtual = $"{DateTime.Today.ToString("d").Replace("/", "-")}";
+    string _codigoSessao = cardCodigo.textNome.text;
+    setGameData.NomeCollection = $"{_dataAtual}-{_codigoSessao}";
+    collectionNameSO.Value = setGameData.NomeCollection;
+    foreach (CardNome card in cardsJogadores)
+      if (!card.textNome.text.Equals(""))
+        _nomesJogadores.Add(card.textNome.text);
+
+    foreach (string jogador in _nomesJogadores)
+    {
+      _documentName = _existeEquipe
+        ? $"{jogador}-{cardEquipe.textNome.text}-{_timestamp}"
+        : $"{jogador}-{_timestamp}";
+
+      _documentsPaths.Add(_documentName);
+
+      _gamePath = $"{setGameData.NomeCollection}/{_documentName}";
+      _gameData = new GameData
+      {
+        Nomes = _nomesJogadores.ToArray(),
+        Equipe = cardEquipe.textNome.text ?? "",
+        Pontos = 0,
+        Tempo = 0,
+      };
+      setGameData.SaveToCloud(_gamePath, _gameData);
+    }
+    documentsSO.Value = _documentsPaths.ToArray();
   }
 
   public void Confirmar()
@@ -162,7 +192,8 @@ public class TeamManager : MonoBehaviour
     }
     else if (_dadoEsperadoNoInput == (int)DadosAceitosNoInput.CODIGO)
     {
-      PrepararSalvarDados();
+      if (_quantidadeJogadoresAtual > 0)
+        PrepararSalvarDados();
       SceneManager.LoadScene(CENA_JOGO);
     }
   }

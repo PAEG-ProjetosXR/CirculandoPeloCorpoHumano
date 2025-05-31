@@ -1,19 +1,17 @@
+using System.Threading.Tasks;
+using Firebase.Extensions;
 using Firebase.Firestore;
-using System;
-using System.Diagnostics;
 
 public class SetGameData
 {
   private FirebaseFirestore _firestore;
   private string _nomeCollection;
-  private string _codigoSessao;
 
 #nullable enable
   public SetGameData()
   {
-    CodigoSessao = "";
     Firestore = FirebaseFirestore.DefaultInstance;
-    NomeCollection = $"{DateTime.Today.ToString("d").Replace("/", "-")}";
+    NomeCollection = "";
   }
 
   public string NomeCollection
@@ -34,37 +32,29 @@ public class SetGameData
     }
   }
 
-  public string CodigoSessao
+  public async void HandleUpdate(string path, GameData data)
   {
-    get { return _codigoSessao; }
-    set
-    {
-      _codigoSessao = value;
-    }
+    GameData _dadoSalvoAtual = await LoadFromCloud(path);
+    if (data.Nomes.Length == 0) data.Nomes = _dadoSalvoAtual.Nomes;
+    if (data.Equipe.Equals("")) data.Equipe = _dadoSalvoAtual.Equipe;
+    SaveToCloud(path, data);
   }
 
-  public void HandleSave(string[] nomes, string equipe, int pontos, int tempo)
-  {
-    long currentTime = Stopwatch.GetTimestamp();
-    for (int i = 0; i < nomes.Length; i++)
-    {
-      string dataPath = equipe.Equals("")
-    ? $"{NomeCollection}-{CodigoSessao}/{nomes[i]}-{currentTime}"
-    : $"{NomeCollection}-{CodigoSessao}/{nomes[i]}-{equipe}-{currentTime}";
-
-      var gameData = new GameData
-      {
-        Nomes = nomes,
-        Pontos = pontos,
-        Tempo = tempo,
-        Equipe = equipe
-      };
-      SaveToCloud(dataPath, gameData);
-    }
-  }
-
-  private void SaveToCloud(string path, GameData data)
+  public void SaveToCloud(string path, GameData data)
   {
     _firestore.Document(path).SetAsync(data);
+  }
+
+  public async Task<GameData> LoadFromCloud(string path)
+  {
+    GameData _loadedData = new GameData();
+    await _firestore.Document(path).GetSnapshotAsync().ContinueWithOnMainThread(task =>
+    {
+      if (task.Result.Exists)
+      {
+        _loadedData = task.Result.ConvertTo<GameData>();
+      }
+    });
+    return _loadedData;
   }
 }
