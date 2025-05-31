@@ -1,11 +1,12 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using System.Collections.Generic;
-using TMPro;
+using System;
 using System.Linq;
 using System.Diagnostics;
+using System.Collections.Generic;
+using TMPro;
 
-[System.Serializable]
+[Serializable]
 public class CardNome
 {
   public GameObject imageBoxCardNome;
@@ -122,22 +123,38 @@ public class TeamManager : MonoBehaviour
   {
     if (_quantidadeJogadoresAtual > 0)
     {
-      long _currentTime = Stopwatch.GetTimestamp();
+      long _timestamp = Stopwatch.GetTimestamp();
       List<string> _nomesJogadores = new List<string>();
       string _nomeEquipe = cardEquipe != null
         ? cardEquipe.textNome.text
         : "";
 
-      setGameData.CodigoSessao = cardCodigo.textNome.text;
+      GameData _gameData;
+      string _gamePath;
+
+      string _dataAtual = $"{DateTime.Today.ToString("d").Replace("/", "-")}";
+      string _codigoSessao = cardCodigo.textNome.text;
+      setGameData.NomeCollection = $"{_dataAtual}-{_codigoSessao}";
+
       foreach (CardNome card in cardsJogadores)
         if (!card.textNome.text.Equals(""))
           _nomesJogadores.Add(card.textNome.text);
 
-      setGameData.HandleSave(
-        _nomesJogadores.ToArray(),
-        _nomeEquipe,
-        0, 0,
-        _currentTime.ToString());
+      foreach (string jogador in _nomesJogadores)
+      {
+        _gamePath = _nomeEquipe.Equals("")
+          ? $"{setGameData.NomeCollection}/{jogador}-{_timestamp}"
+          : $"{setGameData.NomeCollection}/{jogador}-{_nomeEquipe}-{_timestamp}";
+
+        _gameData = new GameData
+        {
+          Nomes = _nomesJogadores.ToArray(),
+          Equipe = _nomeEquipe,
+          Pontos = 0,
+          Tempo = 0,
+        };
+        setGameData.SaveToCloud(_gamePath, _gameData);
+      }
     }
   }
 
