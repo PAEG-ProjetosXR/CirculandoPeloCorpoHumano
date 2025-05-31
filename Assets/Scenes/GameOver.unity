@@ -1270,6 +1270,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _timerGameText: {fileID: 1586807747}
   _scoreGameText: {fileID: 1924794744}
+  _textsPontuacoes:
+  - {fileID: 306099426}
+  - {fileID: 1707608645}
+  - {fileID: 570549823}
+  - {fileID: 1891875329}
+  _pontosSO: {fileID: 11400000, guid: fb1a283a8d4b8fa4792c65b264a9ec74, type: 2}
+  _tempoSO: {fileID: 11400000, guid: b789cafbc34170e45aa56ac7da30e42d, type: 2}
+  _collectionNameSO: {fileID: 11400000, guid: cb3a3943b76bb9842b00baed42a0b722, type: 2}
+  _documentsSO: {fileID: 11400000, guid: ad70bab315edee447a34dbd6127c7c1f, type: 2}
 --- !u!4 &685077396
 Transform:
   m_ObjectHideFlags: 0
