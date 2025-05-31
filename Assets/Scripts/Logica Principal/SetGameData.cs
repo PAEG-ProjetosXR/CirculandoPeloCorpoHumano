@@ -1,11 +1,9 @@
 using Firebase.Firestore;
-using System.Collections.Generic;
 
 public class SetGameData
 {
   private FirebaseFirestore _firestore;
   private string _nomeCollection;
-  private string _codigoSessao;
 
 #nullable enable
   public SetGameData()
@@ -32,34 +30,29 @@ public class SetGameData
     }
   }
 
-  public List<GameData> HandleLoad(string[] nomes, string equipe, string timestamp)
+  public void HandleUpdate(string path, GameData data)
   {
-    List<GameData> _documentsFound = new();
-    for (int i = 0; i < nomes.Length; i++)
-    {
-      string _dataPath = equipe.Equals("")
-      ? $"{NomeCollection}/{nomes[i]}-{timestamp}"
-      : $"{NomeCollection}/{nomes[i]}-{equipe}-{timestamp}";
-
-      _documentsFound.Add(LoadFromCloud(_dataPath));
-    }
-    return _documentsFound;
+    GameData _dadoSalvoAtual = LoadFromCloud(path);
+    if (data.Nomes.Length == 0) data.Nomes = _dadoSalvoAtual.Nomes;
+    if (data.Equipe.Equals("")) data.Equipe = _dadoSalvoAtual.Equipe;
+    SaveToCloud(path, data);
   }
+
   public void SaveToCloud(string path, GameData data)
   {
     _firestore.Document(path).SetAsync(data);
   }
 
-  private GameData LoadFromCloud(string path)
+  public GameData LoadFromCloud(string path)
   {
-    GameData loadedData = new GameData();
+    GameData _loadedData = new GameData();
     _firestore.Document(path).GetSnapshotAsync().ContinueWith(task =>
     {
       if (task.Result.Exists)
       {
-        loadedData = task.Result.ConvertTo<GameData>();
+        _loadedData = task.Result.ConvertTo<GameData>();
       }
     });
-    return loadedData;
+    return _loadedData;
   }
 }

@@ -1,8 +1,8 @@
 using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.Collections.Generic;
 
 class Resultado
 {
@@ -33,17 +33,22 @@ class ObjetoPontuacao
 
 public class SceneGameOverManager : MonoBehaviour
 {
-  //-----------------------------
-  // Referências UI (Configuradas no Inspector)
-  //-----------------------------
-  [SerializeField] private TextMeshProUGUI _timerGameText;  // Exibe o tempo total de jogo
-  [SerializeField] private TextMeshProUGUI _scoreGameText;  // Exibe a pontuação final
-  // [SerializeField] private List<Resultado> _resultados;
+  [SerializeField] private TextMeshProUGUI _timerGameText;
+  [SerializeField] private TextMeshProUGUI _scoreGameText;
+  [SerializeField] private List<TextMeshProUGUI> _textsPontuacoes;
+
   [SerializeField] private IntegerScriptableObject _pontosSO;
+  [SerializeField] private FloatScriptableObject _tempoSO;
+  [SerializeField] private StringScriptableObject _collectionNameSO;
+  [SerializeField] private StringArrayScriptableObject _documentsSO;
+
+  private SetGameData setGameData;
 
   private void Start()
   {
+    setGameData = new SetGameData();
     UpdateGameOverUI();
+    AtualizarResultados();
   }
 
   private void UpdateGameOverUI()
@@ -57,16 +62,28 @@ public class SceneGameOverManager : MonoBehaviour
     int totalScore = GameManager.Instance.GetPontos();
     float totalTimeSpent = GameManager.Instance.GetTotalTime();
 
-    // foreach (Resultado resultado in _resultados)
-    // {
-    //   // mostrar _resultados
-    // }
+    foreach (TextMeshProUGUI pontuacao in _textsPontuacoes)
+    {
+
+    }
   }
 
   public void AtualizarResultados()
   {
-    // utilizar timestamp, nome da equipe e nome do jogador para atualizar seus resultados
-    // com os assets de tempo e pontos 
+    string _gamePath;
+    GameData _gameData;
+    for (int i = 0; i < _documentsSO.Value.Length; i++)
+    {
+      _gamePath = $"{_collectionNameSO}/{_documentsSO.Value[i]}";
+      _gameData = new GameData
+      {
+        Nomes = new string[0],
+        Equipe = "",
+        Pontos = _pontosSO.Value,
+        Tempo = (int)_tempoSO.Value
+      };
+      setGameData.HandleUpdate(_gamePath, _gameData);
+    }
   }
 
   public void ObterResultados()
