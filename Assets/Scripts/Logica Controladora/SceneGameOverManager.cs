@@ -6,29 +6,24 @@ using System.Collections.Generic;
 
 class Resultado
 {
-  private string _nome;
+  private string _nomeEquipe;
   private int _pontos;
   private int _tempo;
-  public string Nome
+  public string NomeEquipe
   {
-    get { return _nome; }
-    set { Nome = value; }
+    get { return _nomeEquipe; }
+    set { _nomeEquipe = value; }
   }
   public int Pontos
   {
     get { return _pontos; }
-    set { Pontos = value; }
+    set { _pontos = value; }
   }
   public int Tempo
   {
     get { return _tempo; }
-    set { Tempo = value; }
+    set { _tempo = value; }
   }
-}
-
-class ObjetoPontuacao
-{
-  public TextMeshProUGUI textStatus;
 }
 
 public class SceneGameOverManager : MonoBehaviour
@@ -74,7 +69,7 @@ public class SceneGameOverManager : MonoBehaviour
     GameData _gameData;
     for (int i = 0; i < _documentsSO.Value.Length; i++)
     {
-      _gamePath = $"{_collectionNameSO}/{_documentsSO.Value[i]}";
+      _gamePath = $"{_collectionNameSO.Value}/{_documentsSO.Value[i]}";
       _gameData = new GameData
       {
         Nomes = new string[0],
