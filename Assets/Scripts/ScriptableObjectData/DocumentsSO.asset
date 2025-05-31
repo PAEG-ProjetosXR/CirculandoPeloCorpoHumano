@@ -12,4 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2bbd0396f3abc814d887c7988c4c3092, type: 3}
   m_Name: DocumentsSO
   m_EditorClassIdentifier: 
-  _value: []
+  _value:
+  - teste-tine-927626046868
+  - brun-tine-927626046868
