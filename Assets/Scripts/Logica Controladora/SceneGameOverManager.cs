@@ -3,6 +3,11 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.Collections.Generic;
+using Firebase.Firestore;
+using System.ComponentModel;
+using System.Threading.Tasks;
+using System.Linq;
+using System;
 
 class Resultado
 {
@@ -26,11 +31,17 @@ class Resultado
   }
 }
 
+[Serializable]
+public class Pontuacao
+{
+  public TextMeshProUGUI textNome;
+  public TextMeshProUGUI textPontosTempo;
+}
+
 public class SceneGameOverManager : MonoBehaviour
 {
-  [SerializeField] private TextMeshProUGUI _timerGameText;
-  [SerializeField] private TextMeshProUGUI _scoreGameText;
-  [SerializeField] private List<TextMeshProUGUI> _textsPontuacoes;
+  [SerializeField] private List<Pontuacao> _pontuacoes;
+  [SerializeField] private Pontuacao _pontuacaoLocal;
 
   [SerializeField] private IntegerScriptableObject _pontosSO;
   [SerializeField] private FloatScriptableObject _tempoSO;
@@ -42,24 +53,37 @@ public class SceneGameOverManager : MonoBehaviour
   private void Start()
   {
     setGameData = new SetGameData();
-    UpdateGameOverUI();
     AtualizarResultados();
+    UpdateGameOverUI();
   }
 
-  private void UpdateGameOverUI()
+  private async void UpdateGameOverUI()
   {
-    if (GameManager.Instance == null)
+    Dictionary<int, Resultado> _resultados = await ObterResultados();
+    int[] _arrayPontosPorTempo = _resultados.Keys.ToArray();
+    Array.Sort(_arrayPontosPorTempo);
+    Array.Reverse(_arrayPontosPorTempo);
+    int _contadorDeColocados = 0;
+
+    GameData _resultadoLocal = await setGameData.LoadFromCloud($"{_collectionNameSO.Value}/{_documentsSO.Value[0]}");
+    _pontuacaoLocal.textNome.text = _resultadoLocal.Equipe.Equals("")
+      ? _resultadoLocal.Nomes[0]
+      : _resultadoLocal.Equipe;
+    _pontuacaoLocal.textPontosTempo.text = $"{_resultadoLocal.Pontos}/{_resultadoLocal.Tempo}";
+
+    Debug.Log("Equipe: " + _pontuacaoLocal.textNome.text + " \nPontos: " + _pontuacaoLocal.textPontosTempo.text);
+
+    foreach (Pontuacao pontuacao in _pontuacoes)
     {
-      Debug.LogError("GameManager não encontrado!");
-      return;
-    }
+      if (_contadorDeColocados < _arrayPontosPorTempo.Length)
+      {
+        Resultado _resultadoAtual = _resultados[_arrayPontosPorTempo[_contadorDeColocados]];
+        pontuacao.textNome.text = _resultadoAtual.NomeEquipe;
+        pontuacao.textPontosTempo.text = $"{_resultadoAtual.Pontos}/{_resultadoAtual.Tempo}";
+        _contadorDeColocados++;
 
-    int totalScore = GameManager.Instance.GetPontos();
-    float totalTimeSpent = GameManager.Instance.GetTotalTime();
-
-    foreach (TextMeshProUGUI pontuacao in _textsPontuacoes)
-    {
-
+        Debug.Log("Equipe: " + pontuacao.textNome.text + " \nPontos: " + pontuacao.textPontosTempo.text);
+      }
     }
   }
 
@@ -81,9 +105,26 @@ public class SceneGameOverManager : MonoBehaviour
     }
   }
 
-  public void ObterResultados()
+  private async Task<Dictionary<int, Resultado>> ObterResultados()
   {
-
+    Dictionary<int, Resultado> _resultados = new Dictionary<int, Resultado>();
+    GameData _documentoAtual;
+    var _documents = await setGameData.LoadDocumentsFromCollectionFromCloud(_collectionNameSO.Value);
+    foreach (DocumentSnapshot documentSnapshot in _documents)
+    {
+      _documentoAtual = documentSnapshot.ConvertTo<GameData>();
+      int _pontosPorTempo = _documentoAtual.Tempo == 0 ? 0 : _documentoAtual.Pontos / _documentoAtual.Tempo;
+      if (!_resultados.ContainsKey(_pontosPorTempo))
+        _resultados.Add(
+          _pontosPorTempo,
+          new Resultado
+          {
+            NomeEquipe = _documentoAtual.Equipe.Equals("") ? _documentoAtual.Nomes[0] : _documentoAtual.Equipe,
+            Pontos = _documentoAtual.Pontos,
+            Tempo = _documentoAtual.Tempo
+          });
+    }
+    return _resultados;
   }
 
   public void ReturnToMenu()
