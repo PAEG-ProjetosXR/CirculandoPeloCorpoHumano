@@ -50,23 +50,19 @@ public class SceneGameOverManager : MonoBehaviour
 
   private SetGameData setGameData;
 
-  private async void Start()
+  private void Start()
   {
     setGameData = new SetGameData();
-    await UpdateGameOverUI();
     AtualizarResultados();
+    UpdateGameOverUI();
   }
 
-  private async Task UpdateGameOverUI()
+  private async void UpdateGameOverUI()
   {
-    if (GameManager.Instance == null)
-    {
-      Debug.LogError("GameManager não encontrado!");
-      return;
-    }
     Dictionary<int, Resultado> _resultados = await ObterResultados();
     int[] _arrayPontosPorTempo = _resultados.Keys.ToArray();
     Array.Sort(_arrayPontosPorTempo);
+    Array.Reverse(_arrayPontosPorTempo);
     int _contadorDeColocados = 0;
 
     GameData _resultadoLocal = await setGameData.LoadFromCloud($"{_collectionNameSO.Value}/{_documentsSO.Value[0]}");
@@ -74,6 +70,8 @@ public class SceneGameOverManager : MonoBehaviour
       ? _resultadoLocal.Nomes[0]
       : _resultadoLocal.Equipe;
     _pontuacaoLocal.textPontosTempo.text = $"{_resultadoLocal.Pontos}/{_resultadoLocal.Tempo}";
+
+    Debug.Log("Equipe: " + _pontuacaoLocal.textNome.text + " \nPontos: " + _pontuacaoLocal.textPontosTempo.text);
 
     foreach (Pontuacao pontuacao in _pontuacoes)
     {
@@ -83,6 +81,8 @@ public class SceneGameOverManager : MonoBehaviour
         pontuacao.textNome.text = _resultadoAtual.NomeEquipe;
         pontuacao.textPontosTempo.text = $"{_resultadoAtual.Pontos}/{_resultadoAtual.Tempo}";
         _contadorDeColocados++;
+
+        Debug.Log("Equipe: " + pontuacao.textNome.text + " \nPontos: " + pontuacao.textPontosTempo.text);
       }
     }
   }
@@ -113,15 +113,16 @@ public class SceneGameOverManager : MonoBehaviour
     foreach (DocumentSnapshot documentSnapshot in _documents)
     {
       _documentoAtual = documentSnapshot.ConvertTo<GameData>();
-      int _pontosPorTempo = _documentoAtual.Pontos / _documentoAtual.Tempo;
-      _resultados.Add(
-        _pontosPorTempo,
-        new Resultado
-        {
-          NomeEquipe = _documentoAtual.Equipe.Equals("") ? _documentoAtual.Nomes[0] : _documentoAtual.Equipe,
-          Pontos = _documentoAtual.Pontos,
-          Tempo = _documentoAtual.Pontos
-        });
+      int _pontosPorTempo = _documentoAtual.Tempo == 0 ? 0 : _documentoAtual.Pontos / _documentoAtual.Tempo;
+      if (!_resultados.ContainsKey(_pontosPorTempo))
+        _resultados.Add(
+          _pontosPorTempo,
+          new Resultado
+          {
+            NomeEquipe = _documentoAtual.Equipe.Equals("") ? _documentoAtual.Nomes[0] : _documentoAtual.Equipe,
+            Pontos = _documentoAtual.Pontos,
+            Tempo = _documentoAtual.Tempo
+          });
     }
     return _resultados;
   }

@@ -1269,13 +1269,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3c8c88c5eba352468be294b999427f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _timerGameText: {fileID: 0}
-  _scoreGameText: {fileID: 0}
-  _textsPontuacoes:
-  - {fileID: 306099426}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  _pontuacoes:
+  - textNome: {fileID: 306099426}
+    textPontosTempo: {fileID: 788053401}
+  - textNome: {fileID: 861070567}
+    textPontosTempo: {fileID: 1318715456}
+  - textNome: {fileID: 1064449301}
+    textPontosTempo: {fileID: 1400629988}
+  _pontuacaoLocal:
+    textNome: {fileID: 411168007}
+    textPontosTempo: {fileID: 1079531586}
   _pontosSO: {fileID: 11400000, guid: fb1a283a8d4b8fa4792c65b264a9ec74, type: 2}
   _tempoSO: {fileID: 11400000, guid: b789cafbc34170e45aa56ac7da30e42d, type: 2}
   _collectionNameSO: {fileID: 11400000, guid: cb3a3943b76bb9842b00baed42a0b722, type: 2}
