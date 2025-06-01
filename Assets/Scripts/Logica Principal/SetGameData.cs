@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using Firebase.Extensions;
 using Firebase.Firestore;
@@ -43,6 +44,13 @@ public class SetGameData
   public void SaveToCloud(string path, GameData data)
   {
     _firestore.Document(path).SetAsync(data);
+  }
+
+  public async Task<IEnumerable<DocumentSnapshot>> LoadDocumentsFromCollectionFromCloud(string path)
+  {
+    CollectionReference _collection = _firestore.Collection(path);
+    QuerySnapshot _collectionSnapshot = await _collection.GetSnapshotAsync();
+    return _collectionSnapshot.Documents;
   }
 
   public async Task<GameData> LoadFromCloud(string path)
