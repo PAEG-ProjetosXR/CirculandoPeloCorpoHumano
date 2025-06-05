@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEditor;
 
 [CreateAssetMenu]
 public class StringArrayScriptableObject : ScriptableObject
@@ -11,7 +12,7 @@ public class StringArrayScriptableObject : ScriptableObject
     set
     {
       _value = value;
-      UnityEditor.EditorUtility.SetDirty(this);
+      EditorUtility.SetDirty(this);
     }
   }
 }

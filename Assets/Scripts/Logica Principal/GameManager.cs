@@ -19,6 +19,7 @@ public class GameManager : MonoBehaviour
   private bool _botoesHabilitados;
   private bool _imageBoxQuestaoImageTargetHabilitada = false;
   private int _paginaAtualQuestaoImageTarget;
+  private int _maximoCaracteresQuestoesMultiplaEscolha;
   private int _totalQuestoesPorSecao;
   private int _quantidadeQuestoesMultiplaEscolhaPorSecao;
 
@@ -85,7 +86,8 @@ public class GameManager : MonoBehaviour
   private void Start()
   {
     _paginaAtualQuestaoImageTarget = 0;
-    _tempoPorQuestao = 4f;
+    _tempoPorQuestao = 60f;
+    _maximoCaracteresQuestoesMultiplaEscolha = 144;
     IniciarJogo();
     ResetarCoresBotoes();
   }
@@ -113,7 +115,7 @@ public class GameManager : MonoBehaviour
   private void IniciarJogo()
   {
     _quantidadeQuestoesMultiplaEscolhaPorSecao = _questoesMultiplaEscolha.Count / _questoesImageTarget.Count;
-    _totalQuestoesPorSecao = (_quantidadeQuestoesMultiplaEscolhaPorSecao + 1);
+    _totalQuestoesPorSecao = _quantidadeQuestoesMultiplaEscolhaPorSecao + 1;
     ResetarJogo();
     RandomizarQuestoesPorSecao();
     MostrarProximaQuestao();
@@ -214,6 +216,11 @@ public class GameManager : MonoBehaviour
       if (indiceQuestao < _questoesMultiplaEscolha.Count)
       {
         if (_fundo != null) _fundo.SetActive(true);
+
+        if (_questoesMultiplaEscolha[indiceQuestao].pergunta.Length > _maximoCaracteresQuestoesMultiplaEscolha)
+          _textQuestaoMultiplaEscolha.fontSize = 42;
+        else
+          _textQuestaoMultiplaEscolha.fontSize = 55;
 
         _textQuestaoMultiplaEscolha.text = _questoesMultiplaEscolha[indiceQuestao].pergunta;
         MostrarBotoesQuestaoMultiplaEscolha();

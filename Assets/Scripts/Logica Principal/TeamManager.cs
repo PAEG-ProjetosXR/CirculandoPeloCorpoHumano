@@ -175,6 +175,7 @@ public class TeamManager : MonoBehaviour
         _dadoEsperadoNoInput = (int)DadosAceitosNoInput.CODIGO;
         textEnunciado.text = "Informe o código da sessão";
         inputFieldUnico.characterLimit = 5;
+        buttonConfirmar.SetActive(false);
       }
       else
       {
