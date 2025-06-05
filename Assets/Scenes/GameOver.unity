@@ -1277,7 +1277,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 685077395}
         m_TargetAssemblyTypeName: SceneGameOverManager, Assembly-CSharp
-        m_MethodName: UpdateGameOverUI
+        m_MethodName: ReloadRankManually
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

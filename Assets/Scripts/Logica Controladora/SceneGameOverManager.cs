@@ -50,14 +50,20 @@ public class SceneGameOverManager : MonoBehaviour
 
   private SetGameData setGameData;
 
-  private void Start()
+  private async void Start()
   {
+    Debug.Log("Start iniciado, sem async");
     setGameData = new SetGameData();
-    AtualizarResultados();
+    await AtualizarResultados();
+    await UpdateGameOverUI();
+  }
+
+  public void ReloadRankManually()
+  {
     UpdateGameOverUI();
   }
 
-  private async void UpdateGameOverUI()
+  public async Task UpdateGameOverUI()
   {
     Dictionary<int, Resultado> _resultados = await ObterResultados();
     int[] _arrayPontosPorTempo = _resultados.Keys.ToArray();
@@ -87,7 +93,7 @@ public class SceneGameOverManager : MonoBehaviour
     }
   }
 
-  public void AtualizarResultados()
+  public async Task AtualizarResultados()
   {
     string _gamePath;
     GameData _gameData;
@@ -101,7 +107,7 @@ public class SceneGameOverManager : MonoBehaviour
         Pontos = _pontosSO.Value,
         Tempo = (int)_tempoSO.Value
       };
-      setGameData.HandleUpdate(_gamePath, _gameData);
+      await setGameData.HandleUpdate(_gamePath, _gameData);
     }
   }
 

@@ -33,7 +33,7 @@ public class SetGameData
     }
   }
 
-  public async void HandleUpdate(string path, GameData data)
+  public async Task HandleUpdate(string path, GameData data)
   {
     GameData _dadoSalvoAtual = await LoadFromCloud(path);
     if (data.Nomes.Length == 0) data.Nomes = _dadoSalvoAtual.Nomes;
