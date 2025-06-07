@@ -1,31 +1,27 @@
 apply plugin: 'com.android.library'
-**APPLY_PLUGINS**
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
+  implementation fileTree(dir: 'libs', include: ['*.jar'])
 // Android Resolver Dependencies Start
-    implementation 'com.google.android.gms:play-services-base:18.6.0' // Packages/com.google.firebase.app/Firebase/Editor/AppDependencies.xml:17
-    implementation 'com.google.firebase:firebase-analytics:22.4.0' // Packages/com.google.firebase.auth/Firebase/Editor/AuthDependencies.xml:15
-    implementation 'com.google.firebase:firebase-app-unity:12.8.0' // Packages/com.google.firebase.app/Firebase/Editor/AppDependencies.xml:22
-    implementation 'com.google.firebase:firebase-auth:23.2.0' // Packages/com.google.firebase.auth/Firebase/Editor/AuthDependencies.xml:13
-    implementation 'com.google.firebase:firebase-auth-unity:12.8.0' // Packages/com.google.firebase.auth/Firebase/Editor/AuthDependencies.xml:20
-    implementation 'com.google.firebase:firebase-common:21.0.0' // Packages/com.google.firebase.app/Firebase/Editor/AppDependencies.xml:13
-    implementation 'com.google.firebase:firebase-firestore:25.1.3' // Packages/com.google.firebase.firestore/Firebase/Editor/FirestoreDependencies.xml:13
-    implementation 'com.google.firebase:firebase-firestore-unity:12.8.0' // Packages/com.google.firebase.firestore/Firebase/Editor/FirestoreDependencies.xml:20
-// Android Resolver Dependencies End
-**DEPS**}
-
-// Android Resolver Exclusions Start
-android {
-  packagingOptions {
-      exclude ('/lib/armeabi/*' + '*')
-      exclude ('/lib/armeabi-v7a/*' + '*')
-      exclude ('/lib/mips/*' + '*')
-      exclude ('/lib/mips64/*' + '*')
-      exclude ('/lib/x86/*' + '*')
-      exclude ('/lib/x86_64/*' + '*')
-  }
+  implementation 'com.google.android.gms:play-services-base:18.6.0' // Packages/com.google.firebase.app/Firebase/Editor/AppDependencies.xml:17
+  implementation 'com.google.firebase:firebase-analytics:21.2.0' // Packages/com.google.firebase.auth/Firebase/Editor/AuthDependencies.xml:15
+  //implementation 'com.google.firebase:firebase-app-unity:12.8.0' // Packages/com.google.firebase.app/Firebase/Editor/AppDependencies.xml:22
+  implementation ('com.google.firebase:firebase-auth:21.1.0'){
+        // Prevent Firebase from pulling in the unity-specific dependencies
+        exclude group: 'com.google.firebase', module: 'firebase-auth-unity'
+    } // Packages/com.google.firebase.auth/Firebase/Editor/AuthDependencies.xml:13
+  //implementation 'com.google.firebase:firebase-auth-unity:12.8.0' // Packages/com.google.firebase.auth/Firebase/Editor/AuthDependencies.xml:20
+  implementation 'com.google.firebase:firebase-common:21.0.0' // Packages/com.google.firebase.app/Firebase/Editor/AppDependencies.xml:13
+  implementation ('com.google.firebase:firebase-firestore:25.1.3') {
+        exclude group: 'com.google.firebase', module: 'firebase-firestore-unity'
+    } // Packages/com.google.firebase.firestore/Firebase/Editor/FirestoreDependencies.xml:13
+  //implementation 'com.google.firebase:firebase-firestore-unity:12.8.0' // Packages/com.google.firebase.firestore/Firebase/Editor/FirestoreDependencies.xml:20
+  implementation 'com.google.ar:core:1.36.0'
+  implementation 'androidx.multidex:multidex:2.0.1'
+  implementation "org.jetbrains.kotlin:kotlin-stdlib:1.6.21"
+**DEPS**
 }
+
 // Android Resolver Exclusions End
 android {
     namespace "com.unity3d.player"
@@ -38,7 +34,7 @@ android {
         targetCompatibility JavaVersion.VERSION_11
     }
 
-    defaultConfig {
+     defaultConfig {
         minSdkVersion **MINSDKVERSION**
         targetSdkVersion **TARGETSDKVERSION**
         ndk {
@@ -47,6 +43,7 @@ android {
         versionCode **VERSIONCODE**
         versionName '**VERSIONNAME**'
         consumerProguardFiles 'proguard-unity.txt'**USER_PROGUARD**
+        multiDexEnabled true
     }
 
     lintOptions {
@@ -57,7 +54,45 @@ android {
         noCompress = **BUILTIN_NOCOMPRESS** + unityStreamingAssets.tokenize(', ')
         ignoreAssetsPattern = "!.svn:!.git:!.ds_store:!*.scc:!CVS:!thumbs.db:!picasa.ini:!*~"
     }**PACKAGING_OPTIONS**
+
+    packagingOptions {
+      exclude ('/lib/armeabi/*' + '*')
+      exclude ('/lib/armeabi-v7a/*' + '*')
+      exclude ('/lib/mips/*' + '*')
+      exclude ('/lib/mips64/*' + '*')
+      exclude ('/lib/x86/*' + '*')
+      exclude ('/lib/x86_64/*' + '*')
+  }
 }
+
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+        jcenter() // Optional but helpful for legacy packages
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:7.0.4'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.6.21"
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+        flatDir {
+         dirs "${project(':unityLibrary').projectDir}/libs"
+        }
+    }
+}
+
+tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile).configureEach {
+  kotlinOptions {
+      jvmTarget = '11'
+  }
+}
+
 **IL_CPP_BUILD_SETUP**
 **SOURCE_BUILD_SETUP**
 **EXTERNAL_SOURCES**
