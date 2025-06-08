@@ -5,6 +5,8 @@ using System.Linq;
 using System.Diagnostics;
 using System.Collections.Generic;
 using TMPro;
+using System.Threading.Tasks;
+using Firebase.Extensions;
 
 [Serializable]
 public class CardNome
@@ -123,7 +125,7 @@ public class TeamManager : MonoBehaviour
     textMensagemInformativa.text = "";
   }
 
-  public void PrepararSalvarDados()
+  public async Task PrepararSalvarDadosAsync()
   {
     long _timestamp = Stopwatch.GetTimestamp();
     List<string> _nomesJogadores = new();
@@ -161,9 +163,31 @@ public class TeamManager : MonoBehaviour
         Pontos = 0,
         Tempo = 0,
       };
-      setGameData.SaveToCloud(_gamePath, _gameData);
+      await setGameData.SaveToCloud(_gamePath, _gameData);
     }
     documentsSO.Value = _documentsPaths.ToArray();
+  }
+
+  public void PrepararSalvarDadosWrapper()
+  {
+    StartCoroutine(PrepararSalvarDadosCoroutine());
+  }
+
+  private System.Collections.IEnumerator PrepararSalvarDadosCoroutine()
+  {
+    Task saveTask = PrepararSalvarDadosAsync();
+
+    yield return new WaitUntil(() => saveTask.IsCompleted);
+
+    if (saveTask.Exception != null)
+    {
+      UnityEngine.Debug.LogError("Error saving data to Firestore: " + saveTask.Exception);
+    }
+    else
+    {
+      UnityEngine.Debug.Log("Data saved successfully.");
+      SceneManager.LoadScene(CENA_JOGO); // only change scenes after confirming success
+    }
   }
 
   public void Confirmar()
@@ -193,9 +217,21 @@ public class TeamManager : MonoBehaviour
     }
     else if (_dadoEsperadoNoInput == (int)DadosAceitosNoInput.CODIGO)
     {
-      if (_quantidadeJogadoresAtual > 0)
-        PrepararSalvarDados();
-      SceneManager.LoadScene(CENA_JOGO);
+
+      Firebase.FirebaseApp.CheckAndFixDependenciesAsync().ContinueWithOnMainThread(task =>
+      {
+        var dependencyStatus = task.Result;
+        if (dependencyStatus == Firebase.DependencyStatus.Available)
+        {
+          // Firebase ready
+          PrepararSalvarDadosWrapper();
+          SceneManager.LoadScene(CENA_JOGO);
+        }
+        else
+        {
+          ExibirMensagem($"Firebase dependency error: {dependencyStatus}");
+        }
+      });
     }
   }
   public void Cancelar()

@@ -38,12 +38,12 @@ public class SetGameData
     GameData _dadoSalvoAtual = await LoadFromCloud(path);
     if (data.Nomes.Length == 0) data.Nomes = _dadoSalvoAtual.Nomes;
     if (data.Equipe.Equals("")) data.Equipe = _dadoSalvoAtual.Equipe;
-    SaveToCloud(path, data);
+    await SaveToCloud(path, data);
   }
 
-  public void SaveToCloud(string path, GameData data)
+  public async Task SaveToCloud(string path, GameData data)
   {
-    _firestore.Document(path).SetAsync(data);
+    await _firestore.Document(path).SetAsync(data);
   }
 
   public async Task<IEnumerable<DocumentSnapshot>> LoadDocumentsFromCollectionFromCloud(string path)

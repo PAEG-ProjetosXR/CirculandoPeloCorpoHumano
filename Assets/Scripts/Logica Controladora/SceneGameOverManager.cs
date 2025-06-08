@@ -8,6 +8,7 @@ using System.ComponentModel;
 using System.Threading.Tasks;
 using System.Linq;
 using System;
+using Firebase.Extensions;
 
 class Resultado
 {
@@ -60,7 +61,25 @@ public class SceneGameOverManager : MonoBehaviour
 
   public void ReloadRankManually()
   {
-    UpdateGameOverUI();
+    try
+    {
+      UpdateGameOverUIWrapper();
+    }
+    catch (Exception e)
+    {
+      Debug.LogError(e.ToString());
+    }
+  }
+
+  public void UpdateGameOverUIWrapper()
+  {
+    StartCoroutine(UpdateGameOverUICoroutine());
+  }
+
+  private IEnumerator UpdateGameOverUICoroutine()
+  {
+    Task saveTask = UpdateGameOverUI();
+    yield return new WaitUntil(() => saveTask.IsCompleted);
   }
 
   public async Task UpdateGameOverUI()
@@ -70,14 +89,22 @@ public class SceneGameOverManager : MonoBehaviour
     Array.Sort(_arrayPontosPorTempo);
     Array.Reverse(_arrayPontosPorTempo);
     int _contadorDeColocados = 0;
-
-    GameData _resultadoLocal = await setGameData.LoadFromCloud($"{_collectionNameSO.Value}/{_documentsSO.Value[0]}");
-    _pontuacaoLocal.textNome.text = _resultadoLocal.Equipe.Equals("")
-      ? _resultadoLocal.Nomes[0]
-      : _resultadoLocal.Equipe;
-    _pontuacaoLocal.textPontosTempo.text = $"{_resultadoLocal.Pontos}/{_resultadoLocal.Tempo}";
-
-    Debug.Log("Equipe: " + _pontuacaoLocal.textNome.text + " \nPontos: " + _pontuacaoLocal.textPontosTempo.text);
+    await Firebase.FirebaseApp.CheckAndFixDependenciesAsync().ContinueWithOnMainThread(async task =>
+    {
+      var dependencyStatus = task.Result;
+      if (dependencyStatus == Firebase.DependencyStatus.Available)
+      {
+        GameData _resultadoLocal = await setGameData.LoadFromCloud($"{_collectionNameSO.Value}/{_documentsSO.Value[0]}");
+        _pontuacaoLocal.textNome.text = _resultadoLocal.Equipe.Equals("")
+          ? _resultadoLocal.Nomes[0]
+          : _resultadoLocal.Equipe;
+        _pontuacaoLocal.textPontosTempo.text = $"{_resultadoLocal.Pontos}/{_resultadoLocal.Tempo}";
+      }
+      else
+      {
+        Debug.Log($"Firebase dependency error: {dependencyStatus}");
+      }
+    });
 
     foreach (Pontuacao pontuacao in _pontuacoes)
     {
