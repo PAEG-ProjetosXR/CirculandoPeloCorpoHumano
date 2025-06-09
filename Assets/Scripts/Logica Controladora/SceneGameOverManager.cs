@@ -6,6 +6,7 @@ public class SceneGameOverManager : MonoBehaviour
 {
   [SerializeField] private TextMeshProUGUI _timerGameText;
   [SerializeField] private TextMeshProUGUI _scoreGameText;
+  private const int CENA_CARREGAMENTO = 12;
 
   private void Start()
   {
@@ -41,7 +42,7 @@ public class SceneGameOverManager : MonoBehaviour
 
   private IEnumerator LoadMenuAfterDelay()
   {
-    SceneManager.LoadScene(1);
+    SceneManager.LoadScene(CENA_CARREGAMENTO);
     yield return new WaitForSeconds(3f);
     SceneManager.LoadScene(0);
   }

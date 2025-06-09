@@ -428,7 +428,7 @@ MonoBehaviour:
   m_margin: {x: 224.26056, y: 1328.6609, z: 231.91681, w: -1328.3169}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 1
+  m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &61123210
@@ -604,15 +604,13 @@ MonoBehaviour:
   _imageBoxQuestaoMultiplaEscolha: {fileID: 1770035666}
   _imageBoxQuestaoImageTarget: {fileID: 1482858253}
   _buttonToggleQuestaoImageTarget: {fileID: 408824860}
-  _pontosSO: {fileID: 11400000, guid: fb1a283a8d4b8fa4792c65b264a9ec74, type: 2}
-  _tempoSO: {fileID: 11400000, guid: b789cafbc34170e45aa56ac7da30e42d, type: 2}
   _fundo: {fileID: 1977181533}
   _botoes:
   - {fileID: 1837002865}
   - {fileID: 25225617}
   - {fileID: 1998917649}
   - {fileID: 434144695}
-  _corAcerto: {r: 0.38431373, g: 1, b: 0.47843137, a: 1}
+  _corAcerto: {r: 0, g: 1, b: 0.015686275, a: 0.8509804}
   _corErro: {r: 1, g: 0.1254902, b: 0.1254902, a: 1}
   _audioSource: {fileID: 85620592}
   _somAcerto: {fileID: 8300000, guid: 60d7b6901d67bbe40831ea63a83c95dc, type: 3}
@@ -3376,7 +3374,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 1
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -3408,7 +3406,7 @@ MonoBehaviour:
   m_margin: {x: 113.61197, y: 65.67446, z: 108.13379, w: -1130.3615}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 1
+  m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1532819042

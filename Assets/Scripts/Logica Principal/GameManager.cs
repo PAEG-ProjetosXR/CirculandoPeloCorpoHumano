@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
 {
   public static GameManager Instance;
 
+  private const int CENA_CARREGAMENTO = 11;
   private string _statusGame;
   private int _pontos;
   private float _tempo;
@@ -246,7 +247,7 @@ public class GameManager : MonoBehaviour
   private void FinalizarJogo()
   {
     _statusGame = "GameOver";
-    CarregarCenaComTelaCarregamento(5); // Cena de Game Over
+    CarregarCenaComTelaCarregamento(CENA_CARREGAMENTO); // Cena de Game Over
   }
 
   public void TargetIdentificado()
