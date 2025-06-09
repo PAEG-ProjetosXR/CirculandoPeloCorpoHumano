@@ -217,21 +217,18 @@ public class TeamManager : MonoBehaviour
     }
     else if (_dadoEsperadoNoInput == (int)DadosAceitosNoInput.CODIGO)
     {
-
-      Firebase.FirebaseApp.CheckAndFixDependenciesAsync().ContinueWithOnMainThread(task =>
+      
+      try
       {
-        var dependencyStatus = task.Result;
-        if (dependencyStatus == Firebase.DependencyStatus.Available)
-        {
-          // Firebase ready
-          PrepararSalvarDadosWrapper();
-          SceneManager.LoadScene(CENA_JOGO);
-        }
-        else
-        {
-          ExibirMensagem($"Firebase dependency error: {dependencyStatus}");
-        }
-      });
+        // Firebase ready
+        PrepararSalvarDadosWrapper();
+        SceneManager.LoadScene(CENA_JOGO);
+      }
+      catch (Exception e)
+      {
+        ExibirMensagem($"Firebase error: {e.Message}");
+      }
+      
     }
   }
   public void Cancelar()

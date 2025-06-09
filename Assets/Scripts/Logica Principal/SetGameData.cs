@@ -11,7 +11,15 @@ public class SetGameData
 #nullable enable
   public SetGameData()
   {
-    Firestore = FirebaseFirestore.DefaultInstance;
+    FirebaseApp.CheckAndFixDependenciesAsync().ContinueWith(task => {
+        var dependencyStatus = task.Result;
+        if (dependencyStatus == DependencyStatus.Available) {
+            Firestore = FirebaseFirestore.DefaultInstance;
+            Debug.Log("Firebase pronto!");
+        } else {
+            Debug.LogError($"Firebase não disponível: {dependencyStatus}");
+        }
+    });
     NomeCollection = "";
   }
 
