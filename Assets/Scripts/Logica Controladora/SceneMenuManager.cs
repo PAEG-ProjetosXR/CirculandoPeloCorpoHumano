@@ -20,8 +20,8 @@ public class SceneMenuManager : MonoBehaviour
   private const string URL_YOUTUBE = "https://youtube.com/@labpeem?si=90b1K1I6JiDOzU9T";
   private const string URL_DOCUMENTO = "https://docs.google.com/document/d/1Phe72vCEwR2hdSF-3QvBxamerGJeoMtz/edit";
 
+  private const int CENA_MAIN = 2;
   private const int CENA_JOGO = 4;      // Índice da cena principal do jogo
-  private const int CENA_FORMULARIO = 10;  // Índice da cena de formulario das equipes
   private const int CENA_TUTORIAL = 7;  // Índice da cena de tutorial
 
   //-----------------------------
@@ -34,7 +34,7 @@ public class SceneMenuManager : MonoBehaviour
   /// </summary>
   public void IniciarJogo()
   {
-    StartCoroutine(CarregarCenaComDelay(CENA_FORMULARIO));
+    StartCoroutine(CarregarCenaComDelay(CENA_MAIN));
   }
 
   /// <summary>
