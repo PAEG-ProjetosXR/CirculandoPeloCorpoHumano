@@ -22,6 +22,7 @@ public class SceneMenuManager : MonoBehaviour
 
   private const int CENA_MAIN = 2;
   private const int CENA_JOGO = 4;      // Índice da cena principal do jogo
+  private const int CENA_CARREGAMENTO = 10;
   private const int CENA_TUTORIAL = 7;  // Índice da cena de tutorial
 
   //-----------------------------
@@ -34,7 +35,7 @@ public class SceneMenuManager : MonoBehaviour
   /// </summary>
   public void IniciarJogo()
   {
-    StartCoroutine(CarregarCenaComDelay(CENA_MAIN));
+    StartCoroutine(CarregarCenaComDelay(CENA_CARREGAMENTO));
   }
 
   /// <summary>
