@@ -1269,20 +1269,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3c8c88c5eba352468be294b999427f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _pontuacoes:
-  - textNome: {fileID: 0}
-    textPontosTempo: {fileID: 0}
-  - textNome: {fileID: 0}
-    textPontosTempo: {fileID: 0}
-  - textNome: {fileID: 0}
-    textPontosTempo: {fileID: 0}
-  _pontuacaoLocal:
-    textNome: {fileID: 0}
-    textPontosTempo: {fileID: 0}
-  _pontosSO: {fileID: 11400000, guid: fb1a283a8d4b8fa4792c65b264a9ec74, type: 2}
-  _tempoSO: {fileID: 11400000, guid: b789cafbc34170e45aa56ac7da30e42d, type: 2}
-  _collectionNameSO: {fileID: 11400000, guid: cb3a3943b76bb9842b00baed42a0b722, type: 2}
-  _documentsSO: {fileID: 11400000, guid: ad70bab315edee447a34dbd6127c7c1f, type: 2}
+  _timerGameText: {fileID: 1953995194}
+  _scoreGameText: {fileID: 490213569}
 --- !u!4 &685077396
 Transform:
   m_ObjectHideFlags: 0
@@ -2263,7 +2251,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: 216}
+  m_AnchoredPosition: {x: 0, y: 250}
   m_SizeDelta: {x: 180, y: 180}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!111 &1885020611

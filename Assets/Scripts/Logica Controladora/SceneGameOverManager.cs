@@ -21,12 +21,12 @@ public class SceneGameOverManager : MonoBehaviour
     }
 
     int totalScore = GameManager.Instance.GetPontos();
-    _scoreGameText.text = $"PONTOS: {totalScore}";
+    _scoreGameText.text = $"{totalScore}";
 
     if (_timerGameText != null)
     {
       float totalTimeSpent = GameManager.Instance.GetTotalTime();
-      _timerGameText.text = $"TEMPO: {Mathf.FloorToInt(totalTimeSpent)}";
+      _timerGameText.text = $"{Mathf.FloorToInt(totalTimeSpent)}";
     }
     else
     {
@@ -41,7 +41,7 @@ public class SceneGameOverManager : MonoBehaviour
 
   private IEnumerator LoadMenuAfterDelay()
   {
-    SceneManager.LoadScene(7);
+    SceneManager.LoadScene(1);
     yield return new WaitForSeconds(3f);
     SceneManager.LoadScene(0);
   }
