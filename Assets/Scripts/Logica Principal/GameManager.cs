@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour
   private int _pontos;
   private float _tempo;
   private float _tempoPorQuestao;
+  private float _tempoTotal;
   private int _indiceQuestaoAtual;
   private int _totalQuestoes;
   private bool _targetIdentificado;
@@ -86,7 +87,7 @@ public class GameManager : MonoBehaviour
   private void Start()
   {
     _paginaAtualQuestaoImageTarget = 0;
-    _tempoPorQuestao = 90f;
+    _tempoPorQuestao = 60f;
     _maximoCaracteresQuestoesMultiplaEscolha = 144;
     IniciarJogo();
     ResetarCoresBotoes();
@@ -127,7 +128,7 @@ public class GameManager : MonoBehaviour
     _indiceQuestaoAtual = -1;
     _totalQuestoes = _questoesImageTarget.Count + _questoesMultiplaEscolha.Count;
     _tempo = _tempoPorQuestao;
-    _tempo = 0f;
+    _tempoTotal = 0f;
     _statusGame = "Play";
     _targetIdentificado = false;
     _questaoMultiplaEscolha = false;
@@ -173,7 +174,7 @@ public class GameManager : MonoBehaviour
       float tempoGasto = _tempoPorQuestao - _tempo;
       if (tempoGasto > 0 && tempoGasto <= _tempoPorQuestao)
       {
-        _tempo += tempoGasto;
+        _tempoTotal += tempoGasto;
         Debug.Log($"Tempo gasto na questão {_indiceQuestaoAtual}: {tempoGasto} segundos");
       }
     }
@@ -443,14 +444,14 @@ public class GameManager : MonoBehaviour
   public void SalvarJogo()
   {
     PlayerPrefs.SetInt("Pontos", _pontos);
-    PlayerPrefs.SetFloat("TotalTimeSpent", _tempo);
+    PlayerPrefs.SetFloat("TotalTimeSpent", _tempoTotal);
     PlayerPrefs.Save();
     Debug.Log("Jogo salvo!");
   }
 
   public float GetTempoTotal()
   {
-    return _tempo;
+    return _tempoTotal;
   }
 
   public int GetPontos()
@@ -463,7 +464,7 @@ public class GameManager : MonoBehaviour
     return _targetIdentificado;
   }
 
-  public float GetTotalTime() => _tempo;
+  public float GetTotalTime() => _tempoTotal;
 
   public bool IsTargetIdentified() => _targetIdentificado;
 
