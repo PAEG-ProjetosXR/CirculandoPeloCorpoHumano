@@ -24,6 +24,7 @@ public class SceneTutorial : MonoBehaviour
   // Estado Interno
   //-----------------------------
   private int _indiceImagemAtual = 0;  // Controla a imagem sendo exibida
+  private const int CENA_MENU = 14;
 
   [System.Serializable]
   public class DictionaryExibicaoPorPagina
@@ -98,7 +99,7 @@ public class SceneTutorial : MonoBehaviour
   /// </summary>
   public void VoltarAoMenu()
   {
-    StartCoroutine(CarregarCenaComDelay(8));  // Cena 8 = Menu
+    StartCoroutine(CarregarCenaComDelay(CENA_MENU));  // Cena 8 = Menu
   }
 
   /// <summary>
