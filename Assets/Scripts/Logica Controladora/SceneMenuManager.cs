@@ -18,7 +18,7 @@ public class SceneMenuManager : MonoBehaviour
   //-----------------------------
   private const string URL_INSTAGRAM = "https://www.instagram.com/labpeem";
   private const string URL_YOUTUBE = "https://youtube.com/@labpeem?si=90b1K1I6JiDOzU9T";
-  private const string URL_DOCUMENTO = "https://docs.google.com/document/d/1Phe72vCEwR2hdSF-3QvBxamerGJeoMtz/edit";
+  private const string URL_DOCUMENTO = "https://docs.google.com/document/d/1rA7bolBm9Hzc0JmQpJn0eXjl9hT-c_d-/edit?usp=sharing&ouid=114580377516191155934&rtpof=true&sd=true";
 
   private const int CENA_MAIN = 2;
   private const int CENA_JOGO = 4;      // Índice da cena principal do jogo

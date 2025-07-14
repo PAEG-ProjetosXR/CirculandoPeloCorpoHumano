@@ -35,12 +35,17 @@ public class SceneGameOverManager : MonoBehaviour
     }
   }
 
-  public void ReturnToMenu()
+    public void ReturnToMenu()
   {
+    if (GameManager.Instance != null)
+    {
+        Destroy(GameManager.Instance.gameObject);
+    }
+
     StartCoroutine(LoadMenuAfterDelay());
   }
 
-  private IEnumerator LoadMenuAfterDelay()
+    private IEnumerator LoadMenuAfterDelay()
   {
     SceneManager.LoadScene(CENA_CARREGAMENTO);
     yield return new WaitForSeconds(3f);
