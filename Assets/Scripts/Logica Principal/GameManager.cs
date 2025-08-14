@@ -87,7 +87,7 @@ public class GameManager : MonoBehaviour
   private void Start()
   {
     _paginaAtualQuestaoImageTarget = 0;
-    _tempoPorQuestao = 60f;
+    _tempoPorQuestao = 90f;
     _maximoCaracteresQuestoesMultiplaEscolha = 144;
     IniciarJogo();
     ResetarCoresBotoes();
@@ -273,7 +273,7 @@ public class GameManager : MonoBehaviour
         Debug.Log("Pontos máximos já alcançados para essa questão.");
       }
 
-      StartCoroutine(EsperarEProximaQuestao(3f));
+      StartCoroutine(EsperarEProximaQuestao(5f));
     }
   }
 

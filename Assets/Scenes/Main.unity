@@ -703,46 +703,6 @@ MonoBehaviour:
     - Mandibular
     - Etmoidal
     indiceRespostaCorreta: 0
-  - pergunta: "O dente 31 assim como os demais dentes se unem \xE0 mand\xEDbula ou
-      \xE0 maxila por meio de qual tipo de articula\xE7\xE3o?"
-    alternativas:
-    - Sinovial
-    - "S\xEDnfise"
-    - Sutura
-    - Gonfose
-    indiceRespostaCorreta: 3
-  - pergunta: "A mand\xEDbula \xE9 classificada como parte de qual divis\xE3o do
-      esqueleto humano?"
-    alternativas:
-    - Esqueleto apendicular
-    - Esqueleto axial
-    - "Neurocr\xE2nio"
-    - Cintura escapular
-    indiceRespostaCorreta: 1
-  - pergunta: "Qual a articula\xE7\xE3o sinovial que conecta a mand\xEDbula ao osso
-      temporal e permite os movimentos de mastiga\xE7\xE3o?"
-    alternativas:
-    - Sutura lambdoide
-    - "Articula\xE7\xE3o zigom\xE1tica"
-    - "Articula\xE7\xE3o temporomandibular "
-    - Sutura coronal
-    indiceRespostaCorreta: 2
-  - pergunta: "O M. temporal, importante m\xFAsculo da mastiga\xE7\xE3o, tem inser\xE7\xE3o
-      na mand\xEDbula. Considerando sua morfologia, pode ser melhor classificado
-      como m\xFAsculo:"
-    alternativas:
-    - Largo
-    - Circular
-    - "Dig\xE1strico"
-    - Policaudado
-    indiceRespostaCorreta: 0
-  - pergunta: "A mand\xEDbula \xE9 um osso que n\xE3o apresenta:"
-    alternativas:
-    - Cartilagem articular
-    - Osso Esponjoso
-    - Forames para estruturas neurovasculares
-    - Seios paranasais
-    indiceRespostaCorreta: 3
   - pergunta: "A valva mitral regula o fluxo sangu\xEDneo entre:"
     alternativas:
     - "\xC1trio direito e Ventr\xEDculo direito"
@@ -786,6 +746,46 @@ MonoBehaviour:
     - "Car\xF3tida interna"
     - "Subcl\xE1via"
     indiceRespostaCorreta: 1
+  - pergunta: "O dente 31 assim como os demais dentes se unem \xE0 mand\xEDbula ou
+      \xE0 maxila por meio de qual tipo de articula\xE7\xE3o?"
+    alternativas:
+    - Sinovial
+    - "S\xEDnfise"
+    - Sutura
+    - Gonfose
+    indiceRespostaCorreta: 3
+  - pergunta: "A mand\xEDbula \xE9 classificada como parte de qual divis\xE3o do
+      esqueleto humano?"
+    alternativas:
+    - Esqueleto apendicular
+    - Esqueleto axial
+    - "Neurocr\xE2nio"
+    - Cintura escapular
+    indiceRespostaCorreta: 1
+  - pergunta: "Qual a articula\xE7\xE3o sinovial que conecta a mand\xEDbula ao osso
+      temporal e permite os movimentos de mastiga\xE7\xE3o?"
+    alternativas:
+    - Sutura lambdoide
+    - "Articula\xE7\xE3o zigom\xE1tica"
+    - "Articula\xE7\xE3o temporomandibular "
+    - Sutura coronal
+    indiceRespostaCorreta: 2
+  - pergunta: "O M. temporal, importante m\xFAsculo da mastiga\xE7\xE3o, tem inser\xE7\xE3o
+      na mand\xEDbula. Considerando sua morfologia, pode ser melhor classificado
+      como m\xFAsculo:"
+    alternativas:
+    - Largo
+    - Circular
+    - "Dig\xE1strico"
+    - Policaudado
+    indiceRespostaCorreta: 0
+  - pergunta: "A mand\xEDbula \xE9 um osso que n\xE3o apresenta:"
+    alternativas:
+    - Cartilagem articular
+    - Osso Esponjoso
+    - Forames para estruturas neurovasculares
+    - Seios paranasais
+    indiceRespostaCorreta: 3
   - pergunta: "O c\xF3rtex cerebral pode ser dividido em lobos. Em qual deles h\xE1
       comprometimento no suprimento sangu\xEDneo afetando uma \xE1rea fundamental
       para a fala?"
