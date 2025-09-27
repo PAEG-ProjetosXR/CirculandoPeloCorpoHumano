@@ -1,0 +1,343 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: Alternativas_en
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: en
+  m_SharedData: {fileID: 11400000, guid: ebbec323defe55c4b8c6cce379c88479, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 6323572736
+    m_Localized: "Greater length compared to the left\r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19757928448
+    m_Localized: Presence of more secondary (lobar) branches
+    m_Metadata:
+      m_Items: []
+  - m_Id: 29140586496
+    m_Localized: "Larger diameter and more vertical inclination\r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 35486568448
+    m_Localized: Closeness to the heart
+    m_Metadata:
+      m_Items: []
+  - m_Id: 40033193984
+    m_Localized: Pharynx, larynx, trachea, main bronchus, lobar bronchus
+    m_Metadata:
+      m_Items: []
+  - m_Id: 46668582912
+    m_Localized: Larynx, pharynx, main bronchus, trachea, lobar bronchus
+    m_Metadata:
+      m_Items: []
+  - m_Id: 52402196480
+    m_Localized: Larynx, trachea, lobar bronchus, trachea, main bronchus
+    m_Metadata:
+      m_Items: []
+  - m_Id: 59587039232
+    m_Localized: Pharynx, larynx, trachea, lobar bronchus, main bronchus
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9851567214592
+    m_Localized: Palatine uvula of the soft palate
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9851567214593
+    m_Localized: Cricoid cartilage of the larynx
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9851567214594
+    m_Localized: Carina of the trachea
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9851567214595
+    m_Localized: Epiglottic cartilage of the larynx
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9851567214596
+    m_Localized: "3 lobes, with a larger volume than the left one\r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9851567214597
+    m_Localized: "2 lobes, one shorter than the left one\r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9851567214598
+    m_Localized: "3 lobes, one longer than the left one\r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9851567214599
+    m_Localized: 2 lobes, smaller in diameter than the left one
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9851567214600
+    m_Localized: Jaw
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9851567214601
+    m_Localized: Sphenoidal
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9851567214602
+    m_Localized: Mandibular
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9851567214603
+    m_Localized: Ethmoidal
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9851567214604
+    m_Localized: Right atrium and right ventricle
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9851567214605
+    m_Localized: Right ventricle and pulmonary trunk
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9851567214606
+    m_Localized: Left atrium and left ventricle
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9851567214607
+    m_Localized: Left ventricle and aorta
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9851567214608
+    m_Localized: Interatrial septum
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9851567214609
+    m_Localized: Interventricular septum
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9851567214610
+    m_Localized: Fibrous pericardium
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9851567214611
+    m_Localized: Coronary sulcus
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9851567214612
+    m_Localized: Aorta
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9851567214613
+    m_Localized: Pulmonary artery
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9851567214614
+    m_Localized: Veia cava superior
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9851567214615
+    m_Localized: Veia porta
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9851567214616
+    m_Localized: Epicardium, myocardium and endocardium
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9851567214617
+    m_Localized: Myocardium, endocardium and pericardium
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9851567214618
+    m_Localized: Pericardium, epicardium and myocardium
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9851567214619
+    m_Localized: Endocardium, myocardium and epicardium
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9851567214620
+    m_Localized: Coronary
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9851567214621
+    m_Localized: External carotid
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9851567214622
+    m_Localized: Internal carotid
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9851567214623
+    m_Localized: Subclavian
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9851567214624
+    m_Localized: Synovial
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9851567214625
+    m_Localized: Symphysis
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9851567214626
+    m_Localized: Suture
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9851567214627
+    m_Localized: Gomphosis
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9851567214628
+    m_Localized: Appendicular skeleton
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9851567214629
+    m_Localized: Axial skeleton
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9851567214630
+    m_Localized: Neurocranium
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9851567214631
+    m_Localized: Shoulder girdle
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9851567214632
+    m_Localized: Lambdoid suture
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9851567214633
+    m_Localized: Zygomatic joint
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9851567214634
+    m_Localized: Temporomandibular joint
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9851567214635
+    m_Localized: Coronal suture
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9851567214636
+    m_Localized: Large
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9851567214637
+    m_Localized: Circular
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9851567214638
+    m_Localized: Digastric
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9851567214639
+    m_Localized: Polycaudate
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9851567214640
+    m_Localized: Articular cartilage
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9851567214641
+    m_Localized: Spongy Bone
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9851567214642
+    m_Localized: Foramina for neurovascular structures
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9851567214643
+    m_Localized: Paranasal sinuses
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9851567214644
+    m_Localized: Frontal lobe
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9851567214645
+    m_Localized: Parietal lobe
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9851571408896
+    m_Localized: Temporal lobe
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9851571408897
+    m_Localized: Occipital lobe
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9851571408898
+    m_Localized: Hypothalamus
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9851571408899
+    m_Localized: Thalamus
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9851571408900
+    m_Localized: Cerebellum
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9851571408901
+    m_Localized: Midbrain
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9851571408902
+    m_Localized: Midbrain
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9851571408903
+    m_Localized: Pons
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9851571408904
+    m_Localized: Bulb
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9851571408905
+    m_Localized: Cerebellum
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9851571408906
+    m_Localized: Cranial nerves and spinal nerves
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9851571408907
+    m_Localized: Sympathetic nerves and parasympathetic nerves
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9851571408908
+    m_Localized: Nerve ganglia and interneurons
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9851571408909
+    m_Localized: Neuromuscular junctions and sympathetic trunk
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9851571408910
+    m_Localized: Brainstem
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9851571408911
+    m_Localized: Cerebellum
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9851571408912
+    m_Localized: Cerebral cortex
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9851571408913
+    m_Localized: Diencephalon
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

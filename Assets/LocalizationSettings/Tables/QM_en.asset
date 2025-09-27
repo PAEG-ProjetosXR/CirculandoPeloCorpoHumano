@@ -1,0 +1,126 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: QM_en
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: en
+  m_SharedData: {fileID: 11400000, guid: 0a983cf8d8ce9a740931826783f881da, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 24698818560
+    m_Localized: What is the main anatomical feature of the right main bronchus that
+      facilitates the aspiration of foreign bodies?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 57485692928
+    m_Localized: Considering the anatomical path of an aspirated foreign body, such
+      as a tooth fragment, what sequence of structures does it traverse?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 165707124736
+    m_Localized: Which anatomical structure can act as a partial barrier against
+      the entry of a tooth fragment or foreign body into the lower airway?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 175836368896
+    m_Localized: The right lung is divided into how many lobes, and what is the main
+      difference compared to the left lung?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 184828956672
+    m_Localized: 'If the tooth extraction is of an upper molar, there is a possibility
+      of bucco-sinusal communication, that is, a communication between the oral cavity
+      and the sinus:'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 195121778688
+    m_Localized: 'The mitral valve regulates blood flow between:'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 209776676864
+    m_Localized: Which anatomical structure divides the heart longitudinally, separating
+      the right and left ventricles?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3313402253312
+    m_Localized: In infective endocarditis, septic emboli detached from the mitral
+      valve can reach small peripheral vessels, where they deposit and cause cutaneous
+      manifestations typical of Janeway lesions. Which vascular structure is involved
+      in the transport of these emboli before they reach the peripheral microcirculation?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3313402253313
+    m_Localized: What is the correct organization of the layers that make up the
+      heart wall, from the innermost to the outermost region?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3313402253314
+    m_Localized: 'The patient''s cariously affected lower molar teeth receive blood
+      supply through branches of the maxillary artery, which is a branch of the artery:'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3313402253315
+    m_Localized: Tooth 31, like the other teeth, joins the mandible or maxilla through
+      which type of joint?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3313402253316
+    m_Localized: The mandible is classified as part of which division of the human
+      skeleton?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3313402253317
+    m_Localized: What synovial joint connects the jaw to the temporal bone and allows
+      chewing movements?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3313402253318
+    m_Localized: 'The temporal muscle, an important muscle of mastication, inserts
+      into the mandible. Considering its morphology, it can best be classified as:'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3313402253319
+    m_Localized: 'The jaw is a bone that does not present:'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3313402253320
+    m_Localized: The cerebral cortex can be divided into lobes. In which lobe is
+      the blood supply compromised, affecting an area crucial for speech?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3313402253321
+    m_Localized: "Which brain structure is known as the \u201Cgateway\u201D to the
+      cerebral cortex, receiving sensory information from the periphery of the body?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3313402253322
+    m_Localized: In which region of the nervous system does the decussation of the
+      pyramids occur, where most of the motor fibers of the corticospinal tract cross
+      to the opposite side before continuing to the spinal cord, explaining the relationship
+      between brain injuries and weakness on the contralateral side of the body?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3313402253323
+    m_Localized: Through which anatomical structures do motor fibers reach skeletal
+      muscle fibers to promote muscle contraction?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3313402253324
+    m_Localized: Which region of the brain is responsible for regulating essential
+      functions such as breathing, heart rate, and blood pressure?
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

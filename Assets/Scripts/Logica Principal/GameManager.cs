@@ -4,6 +4,8 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using UnityEngine.Localization;
+using UnityEngine.Localization.Components;
 
 public class GameManager : MonoBehaviour
 {
@@ -64,16 +66,20 @@ public class GameManager : MonoBehaviour
   [System.Serializable]
   public class QuestaoMultiplaEscolha
   {
-    public string pergunta;
-    public string[] alternativas;
+    public LocalizedString pergunta;
+    public LocalizedString[] alternativas;
     public int indiceRespostaCorreta;
   }
 
   [System.Serializable]
   public class QuestaoImageTarget
   {
-    public string[] perguntaFracionada;
+    public LocalizedString[] perguntaFracionada;
   }
+
+  private LocalizeStringEvent _localizeEvent;
+  private LocalizeStringEvent _localizeEventPergunta;
+  private LocalizeStringEvent[] _localizeEventsAlternativas;
 
   private void Awake()
   {
@@ -82,7 +88,40 @@ public class GameManager : MonoBehaviour
       Instance = this;
       DontDestroyOnLoad(gameObject);
     }
-  }
+    _localizeEvent = _textQuestaoImageTarget.GetComponent<LocalizeStringEvent>();
+    if (_localizeEvent == null)
+    {
+      _localizeEvent = _textQuestaoImageTarget.gameObject.AddComponent<LocalizeStringEvent>();
+    }
+    _localizeEvent.OnUpdateString.AddListener((s) => { _textQuestaoImageTarget.text = s; });
+
+    _localizeEventPergunta = _textQuestaoMultiplaEscolha.GetComponent<LocalizeStringEvent>();
+    if (_localizeEventPergunta == null)
+    {
+        _localizeEventPergunta = _textQuestaoMultiplaEscolha.gameObject.AddComponent<LocalizeStringEvent>();
+    }
+
+    _localizeEventPergunta.OnUpdateString.AddListener((s) => { _textQuestaoMultiplaEscolha.text = s; });
+
+    _localizeEventsAlternativas = new LocalizeStringEvent[_botoes.Length];
+
+    for (int i = 0; i < _botoes.Length; i++)
+    {
+        TextMeshProUGUI textoBotao = _botoes[i].GetComponentInChildren<TextMeshProUGUI>();
+        if (textoBotao != null)
+        {
+            _localizeEventsAlternativas[i] = textoBotao.GetComponent<LocalizeStringEvent>();
+            if (_localizeEventsAlternativas[i] == null)
+            {
+                _localizeEventsAlternativas[i] = textoBotao.gameObject.AddComponent<LocalizeStringEvent>();
+            }
+
+            TextMeshProUGUI texto = textoBotao;
+            _localizeEventsAlternativas[i].OnUpdateString.AddListener((s) => { texto.text = s; });
+        }
+    }
+
+}
 
   private void Start()
   {
@@ -212,24 +251,45 @@ public class GameManager : MonoBehaviour
 
     if (indiceSecao < _indicesRandomizados.Count && indiceQuestaoNaSecao < _quantidadeQuestoesMultiplaEscolhaPorSecao)
     {
-      int indiceQuestao = _indicesRandomizados[indiceSecao][indiceQuestaoNaSecao];
-
+        int indiceQuestao = _indicesRandomizados[indiceSecao][indiceQuestaoNaSecao];
+        Debug.Log($"Configurando Questão: _indiceQuestaoAtual={_indiceQuestaoAtual} -> indiceSecao={indiceSecao}, indiceQuestaoNaSecao={indiceQuestaoNaSecao} -> FINAL indiceQuestao={indiceQuestao}");
       if (indiceQuestao < _questoesMultiplaEscolha.Count)
       {
         if (_fundo != null) _fundo.SetActive(true);
 
-        if (_questoesMultiplaEscolha[indiceQuestao].pergunta.Length > _maximoCaracteresQuestoesMultiplaEscolha)
-          _textQuestaoMultiplaEscolha.fontSize = 42;
-        else
-          _textQuestaoMultiplaEscolha.fontSize = 55;
+        _textQuestaoMultiplaEscolha.text = "";
+        _localizeEventPergunta.StringReference = _questoesMultiplaEscolha[indiceQuestao].pergunta;
 
-        _textQuestaoMultiplaEscolha.text = _questoesMultiplaEscolha[indiceQuestao].pergunta;
         MostrarBotoesQuestaoMultiplaEscolha();
         MostrarPerguntaMultiplaEscolha();
         EsconderBotaoToggleQuestaoImageTarget();
         EsconderPerguntaImageTarget();
         AtualizarBotoesMultiplaEscolha(indiceQuestao);
         _botoesHabilitados = true;
+    /*Código Antigo */
+    /*int indiceSecao = _indiceQuestaoAtual / _totalQuestoesPorSecao;
+        int indiceQuestaoNaSecao = (_indiceQuestaoAtual % _totalQuestoesPorSecao) - 1;
+
+        if (indiceSecao < _indicesRandomizados.Count && indiceQuestaoNaSecao < _quantidadeQuestoesMultiplaEscolhaPorSecao)
+        {
+          int indiceQuestao = _indicesRandomizados[indiceSecao][indiceQuestaoNaSecao];
+
+          if (indiceQuestao < _questoesMultiplaEscolha.Count)
+          {
+            if (_fundo != null) _fundo.SetActive(true);
+
+            if (_questoesMultiplaEscolha[indiceQuestao].pergunta.Length > _maximoCaracteresQuestoesMultiplaEscolha)
+              _textQuestaoMultiplaEscolha.fontSize = 42;
+            else
+              _textQuestaoMultiplaEscolha.fontSize = 55;
+
+            _textQuestaoMultiplaEscolha.text = _questoesMultiplaEscolha[indiceQuestao].pergunta;
+            MostrarBotoesQuestaoMultiplaEscolha();
+            MostrarPerguntaMultiplaEscolha();
+            EsconderBotaoToggleQuestaoImageTarget();
+            EsconderPerguntaImageTarget();
+            AtualizarBotoesMultiplaEscolha(indiceQuestao);
+            _botoesHabilitados = true;*/
       }
     }
   }
@@ -319,10 +379,31 @@ public class GameManager : MonoBehaviour
         if (i < _questoesMultiplaEscolha[indiceQuestao].alternativas.Length)
         {
           TextMeshProUGUI textoBotao = _botoes[i].GetComponentInChildren<TextMeshProUGUI>();
-          if (textoBotao != null) textoBotao.text = _questoesMultiplaEscolha[indiceQuestao].alternativas[i];
+          if (textoBotao != null)
+          {
+            textoBotao.text = "";
+          }
+
+          if (_localizeEventsAlternativas[i] != null)
+          {
+            _localizeEventsAlternativas[i].StringReference = _questoesMultiplaEscolha[indiceQuestao].alternativas[i];
+          }
         }
       }
     }
+    /*Código Antigo*/
+    /*
+    if (indiceQuestao < _questoesMultiplaEscolha.Count)
+    {
+      for (int i = 0; i < _botoes.Length; i++)
+      {
+        if (i < _questoesMultiplaEscolha[indiceQuestao].alternativas.Length)
+        {
+          TextMeshProUGUI textoBotao = _botoes[i].GetComponentInChildren<TextMeshProUGUI>();
+          if (textoBotao != null) textoBotao.text = _questoesMultiplaEscolha[indiceQuestao].alternativas[i];
+        }
+      }
+    }*/
   }
 
   private IEnumerator EsperarEProximaQuestao(float delay)
@@ -371,10 +452,10 @@ public class GameManager : MonoBehaviour
   private void AtualizarHUD()
   {
     if (_textPontos != null)
-      _textPontos.text = $"PONTOS: {_pontos}";
+      _textPontos.text = $": {_pontos}";
 
     if (_textTempo != null)
-      _textTempo.text = $"TEMPO: {Mathf.CeilToInt(_tempo)}";
+      _textTempo.text = $": {Mathf.CeilToInt(_tempo)}";
   }
 
   private void IniciarContagemRegressiva()
@@ -476,13 +557,24 @@ public class GameManager : MonoBehaviour
 
   private void UpdateTextsQuestaoImageTarget()
   {
-    _textQuestaoImageTarget.text =
-      _questoesImageTarget[_indiceQuestaoAtual / _totalQuestoesPorSecao]
+    LocalizedString localizedQuestion = _questoesImageTarget[_indiceQuestaoAtual / _totalQuestoesPorSecao]
+                                        .perguntaFracionada[_paginaAtualQuestaoImageTarget];
+
+    _localizeEvent.StringReference = localizedQuestion;
+
+    _textPaginaAtualQuestaoImageTarget.text =
+        _paginaAtualQuestaoImageTarget + 1 +
+        "/" +
+        _questoesImageTarget[_indiceQuestaoAtual / _totalQuestoesPorSecao].perguntaFracionada.Length;
+
+    /*Código Antigo*/
+    /*_textQuestaoImageTarget.text =
+      _questoesImageTarget[_indiceQuestaoAtual / _totalQuestoesPorSecao]  
       .perguntaFracionada[_paginaAtualQuestaoImageTarget];
     _textPaginaAtualQuestaoImageTarget.text =
       _paginaAtualQuestaoImageTarget + 1 +
       "/" +
-      _questoesImageTarget[_indiceQuestaoAtual / _totalQuestoesPorSecao].perguntaFracionada.Length;
+      _questoesImageTarget[_indiceQuestaoAtual / _totalQuestoesPorSecao].perguntaFracionada.Length;*/
   }
 
   private void MostrarBotoesQuestaoMultiplaEscolha()

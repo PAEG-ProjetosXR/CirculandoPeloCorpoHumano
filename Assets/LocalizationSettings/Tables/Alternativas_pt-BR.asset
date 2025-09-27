@@ -1,0 +1,345 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: Alternativas_pt-BR
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: pt-BR
+  m_SharedData: {fileID: 11400000, guid: ebbec323defe55c4b8c6cce379c88479, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 6323572736
+    m_Localized: "Maior comprimento em rela\xE7\xE3o ao esquerdo"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19757928448
+    m_Localized: "Presen\xE7a de mais ramifica\xE7\xF5es secund\xE1rias (lobares)"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 29140586496
+    m_Localized: "Di\xE2metro maior e inclina\xE7\xE3o mais vertical"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 35486568448
+    m_Localized: "Proximidade com o cora\xE7\xE3o"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 40033193984
+    m_Localized: "Faringe, laringe, traqueia, br\xF4nquio principal, br\xF4nquio
+      lobar"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 46668582912
+    m_Localized: "Laringe, faringe, br\xF4nquio principal, traqueia, br\xF4nquio
+      lobar"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 52402196480
+    m_Localized: "Laringe, traqueia, br\xF4nquio lobar, traqueia, br\xF4nquio principal"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 59587039232
+    m_Localized: "Faringe, laringe, traqueia, br\xF4nquio lobar, br\xF4nquio principal"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9851567214592
+    m_Localized: "\xDAvula palatina do palato mole"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9851567214593
+    m_Localized: "Cartilagem cric\xF3ide da laringe"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9851567214594
+    m_Localized: Carina da traqueia
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9851567214595
+    m_Localized: "Cartilagem epigl\xF3tica da laringe"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9851567214596
+    m_Localized: 3 lobos, tendo maior volume que o esquerdo
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9851567214597
+    m_Localized: 2 lobos, sendo mais curto que o esquerdo
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9851567214598
+    m_Localized: 3 lobos, sendo mais alongado que o esquerdo
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9851567214599
+    m_Localized: "2 lobos, tendo menor di\xE2metro que o esquerdo"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9851567214600
+    m_Localized: Maxilar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9851567214601
+    m_Localized: Esfenoidal
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9851567214602
+    m_Localized: Mandibular
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9851567214603
+    m_Localized: Etmoidal
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9851567214604
+    m_Localized: "\xC1trio direito e Ventr\xEDculo direito"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9851567214605
+    m_Localized: "Ventr\xEDculo direito e Tronco pulmonar"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9851567214606
+    m_Localized: "\xC1trio esquerdo e Ventr\xEDculo esquerdo"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9851567214607
+    m_Localized: "Ventr\xEDculo esquerdo e Aorta"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9851567214608
+    m_Localized: Septo interatrial
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9851567214609
+    m_Localized: Septo interventricular
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9851567214610
+    m_Localized: "Peric\xE1rdio fibroso"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9851567214611
+    m_Localized: "Sulco coron\xE1rio"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9851567214612
+    m_Localized: Aorta
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9851567214613
+    m_Localized: "Art\xE9ria pulmonar "
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9851567214614
+    m_Localized: 'Veia cava superior  '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9851567214615
+    m_Localized: Veia porta
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9851567214616
+    m_Localized: "Epic\xE1rdio, mioc\xE1rdio e endoc\xE1rdio"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9851567214617
+    m_Localized: "Mioc\xE1rdio, endoc\xE1rdio e peric\xE1rdio"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9851567214618
+    m_Localized: "Peric\xE1rdio, epic\xE1rdio e mioc\xE1rdio"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9851567214619
+    m_Localized: "Endoc\xE1rdio, mioc\xE1rdio e epic\xE1rdio"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9851567214620
+    m_Localized: "Coron\xE1ria"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9851567214621
+    m_Localized: "Car\xF3tida externa"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9851567214622
+    m_Localized: "Car\xF3tida interna"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9851567214623
+    m_Localized: "Subcl\xE1via"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9851567214624
+    m_Localized: Sinovial
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9851567214625
+    m_Localized: "S\xEDnfise"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9851567214626
+    m_Localized: Sutura
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9851567214627
+    m_Localized: Gonfose
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9851567214628
+    m_Localized: Esqueleto apendicular
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9851567214629
+    m_Localized: Esqueleto axial
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9851567214630
+    m_Localized: "Neurocr\xE2nio"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9851567214631
+    m_Localized: Cintura escapular
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9851567214632
+    m_Localized: Sutura lambdoide
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9851567214633
+    m_Localized: "Articula\xE7\xE3o zigom\xE1tica"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9851567214634
+    m_Localized: "Articula\xE7\xE3o temporomandibular "
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9851567214635
+    m_Localized: Sutura coronal
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9851567214636
+    m_Localized: Largo
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9851567214637
+    m_Localized: Circular
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9851567214638
+    m_Localized: "Dig\xE1strico"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9851567214639
+    m_Localized: Policaudado
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9851567214640
+    m_Localized: Cartilagem articular
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9851567214641
+    m_Localized: Osso Esponjoso
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9851567214642
+    m_Localized: Forames para estruturas neurovasculares
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9851567214643
+    m_Localized: Seios paranasais
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9851567214644
+    m_Localized: Lobo frontal
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9851567214645
+    m_Localized: Lobo parietal
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9851571408896
+    m_Localized: Lobo temporal
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9851571408897
+    m_Localized: Lobo occipital
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9851571408898
+    m_Localized: "Hipot\xE1lamo"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9851571408899
+    m_Localized: "T\xE1lamo"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9851571408900
+    m_Localized: Cerebelo
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9851571408901
+    m_Localized: "Mesenc\xE9falo"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9851571408902
+    m_Localized: "Mesenc\xE9falo"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9851571408903
+    m_Localized: Ponte
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9851571408904
+    m_Localized: Bulbo
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9851571408905
+    m_Localized: Cerebelo
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9851571408906
+    m_Localized: Nervos cranianos e nervos espinais
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9851571408907
+    m_Localized: "Nervos simp\xE1ticos e nervos parassimp\xE1ticos"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9851571408908
+    m_Localized: "G\xE2nglios nervosos e interneur\xF4nios"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9851571408909
+    m_Localized: "Jun\xE7\xF5es neuromusculares e tronco simp\xE1tico "
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9851571408910
+    m_Localized: "Tronco encef\xE1lico"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9851571408911
+    m_Localized: Cerebelo
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9851571408912
+    m_Localized: "C\xF3rtex cerebral"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9851571408913
+    m_Localized: "Dienc\xE9falo"
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

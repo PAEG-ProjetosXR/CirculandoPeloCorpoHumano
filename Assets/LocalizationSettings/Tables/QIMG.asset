@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5be51871efa6c3e4eae1703925c8f5ac, type: 3}
+  m_Name: QIMG
+  m_EditorClassIdentifier: 
+  m_SharedTableData: {fileID: 11400000, guid: efcebb6c42e8bae4c89fe410ca19cc7e, type: 2}
+  m_Tables:
+  - {fileID: 11400000, guid: ad6b8634458dfd34b9f5b90696a86ec3, type: 2}
+  - {fileID: 11400000, guid: bd2c51270dcc9c8439a41ad0e87f9929, type: 2}
+  m_Extensions: []
+  m_Group: String Table
+  references:
+    version: 2
+    RefIds: []

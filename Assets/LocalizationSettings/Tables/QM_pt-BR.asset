@@ -1,0 +1,133 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: QM_pt-BR
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: pt-BR
+  m_SharedData: {fileID: 11400000, guid: 0a983cf8d8ce9a740931826783f881da, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 24698818560
+    m_Localized: "Qual a principal caracter\xEDstica anat\xF4mica do br\xF4nquio
+      principal direito que facilita a aspira\xE7\xE3o de corpos estranhos?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 57485692928
+    m_Localized: "Considerando o percurso anat\xF4mico de um corpo estranho aspirado,
+      como o fragmento dent\xE1rio, qual sequ\xEAncia de estruturas ele atravessa?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 165707124736
+    m_Localized: "Qual estrutura anat\xF4mica pode atuar como uma barreira parcial
+      contra a entrada de um fragmento dent\xE1rio ou corpo estranho na via a\xE9rea
+      inferior?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 175836368896
+    m_Localized: "O pulm\xE3o direito \xE9 dividido em quantos lobos, e qual a principal
+      diferen\xE7a em rela\xE7\xE3o ao pulm\xE3o esquerdo?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 184828956672
+    m_Localized: "Se a extra\xE7\xE3o dent\xE1ria for de um molar superior, h\xE1
+      possibilidade de comunica\xE7\xE3o buco-sinusal, ou seja, uma comunica\xE7\xE3o
+      da cavidade oral com o seio:"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 195121778688
+    m_Localized: "A valva mitral regula o fluxo sangu\xEDneo entre:"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 209776676864
+    m_Localized: "Qual estrutura anat\xF4mica divide o cora\xE7\xE3o longitudinalmente,
+      separando os ventr\xEDculos direito e esquerdo?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3313402253312
+    m_Localized: "Na endocardite infecciosa, \xEAmbolos s\xE9pticos desprendidos
+      da valva mitral podem alcan\xE7ar pequenos vasos perif\xE9ricos, onde se depositam
+      e causam manifesta\xE7\xF5es cut\xE2neas t\xEDpicas das les\xF5es de Janeway.
+      Qual estrutura vascular est\xE1 envolvida com o transporte desses \xEAmbolos
+      antes de chegarem \xE0 microcircula\xE7\xE3o perif\xE9rica?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3313402253313
+    m_Localized: "Qual \xE9 a correta organiza\xE7\xE3o das camadas que comp\xF5em
+      a parede card\xEDaca, da regi\xE3o mais interna at\xE9 a mais externa?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3313402253314
+    m_Localized: "Os dentes molares inferiores acometidos por c\xE1rie da paciente
+      recebem suprimento sangu\xEDneo por meio de ramos da A. maxilar que \xE9 um
+      ramo da art\xE9ria:"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3313402253315
+    m_Localized: "O dente 31 assim como os demais dentes se unem \xE0 mand\xEDbula
+      ou \xE0 maxila por meio de qual tipo de articula\xE7\xE3o?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3313402253316
+    m_Localized: "A mand\xEDbula \xE9 classificada como parte de qual divis\xE3o
+      do esqueleto humano?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3313402253317
+    m_Localized: "Qual a articula\xE7\xE3o sinovial que conecta a mand\xEDbula ao
+      osso temporal e permite os movimentos de mastiga\xE7\xE3o?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3313402253318
+    m_Localized: "O M. temporal, importante m\xFAsculo da mastiga\xE7\xE3o, tem inser\xE7\xE3o
+      na mand\xEDbula. Considerando sua morfologia, pode ser melhor classificado
+      como m\xFAsculo:"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3313402253319
+    m_Localized: "A mand\xEDbula \xE9 um osso que n\xE3o apresenta:"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3313402253320
+    m_Localized: "O c\xF3rtex cerebral pode ser dividido em lobos. Em qual deles
+      h\xE1 comprometimento no suprimento sangu\xEDneo afetando uma \xE1rea fundamental
+      para a fala?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3313402253321
+    m_Localized: "Qual estrutura do enc\xE9falo \xE9 conhecida como \u201Cporta de
+      entrada\u201D para o c\xF3rtex cerebral, recebendo informa\xE7\xF5es sensoriais
+      provenientes da periferia do corpo?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3313402253322
+    m_Localized: "Em qual regi\xE3o do sistema nervoso ocorre a decussa\xE7\xE3o
+      das pir\xE2mides, onde a maioria das fibras motoras do trato corticoespinhal
+      cruza para o lado oposto antes de seguir para a medula espinhal, explicando
+      a rela\xE7\xE3o entre les\xF5es cerebrais e fraqueza no lado contralateral
+      do corpo?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3313402253323
+    m_Localized: "Por quais estruturas anat\xF4micas as fibras motoras chegam \xE0s
+      fibras musculares esquel\xE9ticas para promover a contra\xE7\xE3o muscular?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3313402253324
+    m_Localized: "Qual regi\xE3o do enc\xE9falo \xE9 respons\xE1vel por regular fun\xE7\xF5es
+      essenciais, como respira\xE7\xE3o, batimentos card\xEDacos e press\xE3o arterial?"
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

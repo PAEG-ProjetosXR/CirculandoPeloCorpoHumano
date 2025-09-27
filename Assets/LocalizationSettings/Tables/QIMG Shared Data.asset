@@ -1,0 +1,77 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: QIMG Shared Data
+  m_EditorClassIdentifier: 
+  m_TableCollectionName: QIMG
+  m_TableCollectionNameGuidString: efcebb6c42e8bae4c89fe410ca19cc7e
+  m_Entries:
+  - m_Id: 3550279766016
+    m_Key: QAR1-0
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3552171397120
+    m_Key: QAR1-1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3553526157312
+    m_Key: QAR1-2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3554918666240
+    m_Key: QAR1-3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7461640212480
+    m_Key: QAR2-0
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7461665378304
+    m_Key: QAR2-1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7461665378305
+    m_Key: QAR2-2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7461669572608
+    m_Key: QAR3-0
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7461669572609
+    m_Key: QAR3-1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7461669572610
+    m_Key: QAR3-2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7461669572611
+    m_Key: QAR4-0
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7461669572612
+    m_Key: QAR4-1
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 5935562351436627974
+  references:
+    version: 2
+    RefIds:
+    - rid: 5935562351436627974
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables,
+        asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1758744705713

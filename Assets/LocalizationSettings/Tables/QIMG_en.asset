@@ -1,0 +1,97 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: QIMG_en
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: en
+  m_SharedData: {fileID: 11400000, guid: efcebb6c42e8bae4c89fe410ca19cc7e, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 3550279766016
+    m_Localized: During dental surgery to extract lower third molars, a 58-year-old
+      male patient experienced an episode of intense coughing followed by dyspnea.
+      A fragment of a tooth was
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3552171397120
+    m_Localized: aspirated during the procedure, but the event went unnoticed at
+      the time. Three days later, the patient was admitted to the emergency room
+      with fever, chest pain, and difficulty breathing. Physical examination revealed
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3553526157312
+    m_Localized: rales (abnormal breath sounds) in the right hemithorax, and a chest
+      X-ray showed a pulmonary infiltrate suggestive of lobar pneumonia. Bronchoscopy
+      confirmed the presence of
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3554918666240
+    m_Localized: A tooth fragment impacted in a right lower segmental bronchus. The
+      patient received antibiotic treatment, and the foreign body was removed. Based
+      on this context, which organ was most threatened and had its functions compromised?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7461640212480
+    m_Localized: A 17-year-old boy was admitted to the emergency room after falling
+      during a soccer match. According to reports, the patient fell chin-first to
+      the ground after being pushed, hitting his lower face. He arrived complaining
+      of severe jaw pain and oral bleeding.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7461665378304
+    m_Localized: He also had swelling in the chin region and difficulty speaking.
+      Clinical and radiographic examination revealed a fracture of tooth 31 (lower
+      left central incisor) and a fracture in the left mandibular body, with slight
+      deviation of the dental arch.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7461665378305
+    m_Localized: The patient was referred for joint evaluation by dentistry and oral
+      and maxillofacial surgery. Given this context, which anatomical structure is
+      associated with this type of injury?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7461669572608
+    m_Localized: A 27-year-old female patient presented to the emergency room with
+      persistent fever, fatigue, chills, and muscle aches for about 10 days. During
+      the medical history, she reported that
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7461669572609
+    m_Localized: had recently undergone a dental procedure to treat deep cavities
+      in two lower molars, but did not follow the instructions to complete the prescribed
+      course of antibiotics.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7461669572610
+    m_Localized: On physical examination, he had a heart murmur and small red lesions
+      on the tips of his fingers (Janeway lesions). An echocardiogram revealed vegetations
+      attached to the mitral valve, confirming the diagnosis of infective endocarditis.
+      Which anatomical structure was affected by this condition?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7461669572611
+    m_Localized: A 70-year-old patient presents with recurrent episodes of sudden
+      weakness on the right side of the body and difficulty speaking that last about
+      10 minutes and resolve spontaneously.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7461669572612
+    m_Localized: "Doppler ultrasound reveals critical stenosis (obstruction) of the
+      left internal carotid artery. Which organ is directly affected by this condition?\r"
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

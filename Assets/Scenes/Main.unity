@@ -599,8 +599,8 @@ MonoBehaviour:
   _textQuestaoMultiplaEscolha: {fileID: 697638238}
   _textQuestaoImageTarget: {fileID: 1532819041}
   _textPaginaAtualQuestaoImageTarget: {fileID: 50868556}
-  _textPontos: {fileID: 941140860}
-  _textTempo: {fileID: 1519749871}
+  _textPontos: {fileID: 1889322518}
+  _textTempo: {fileID: 333197448}
   _imageBoxQuestaoMultiplaEscolha: {fileID: 1770035666}
   _imageBoxQuestaoImageTarget: {fileID: 1482858253}
   _buttonToggleQuestaoImageTarget: {fileID: 408824860}
@@ -617,224 +617,974 @@ MonoBehaviour:
   _somErro: {fileID: 8300000, guid: f3bac615c5cd5744c9562dbb1bf04706, type: 3}
   _questoesImageTarget:
   - perguntaFracionada:
-    - "Durante uma cirurgia odontol\xF3gica para extra\xE7\xE3o de terceiros molares
-      inferiores, um paciente masculino de 58 anos apresentou epis\xF3dio de tosse
-      intensa seguido por dispneia. Um fragmento de um dente foi  "
-    - "aspirado durante o procedimento, por\xE9m o evento passou despercebido naquele
-      momento. Tr\xEAs dias depois, o paciente deu entrada ao pronto-atendimento
-      com febre, dor tor\xE1cica e dificuldade respirat\xF3ria. O exame f\xEDsico
-      revelou "
-    - "estertores (sons respirat\xF3rios anormais) no hemit\xF3rax direito e a radiografia
-      de t\xF3rax mostrou infiltrado pulmonar sugestivo de pneumonia lobar.  A broncoscopia
-      confirmou a presen\xE7a de "
-    - "fragmento dent\xE1rio impactado em um br\xF4nquio segmentar inferior direito.
-      O paciente recebeu tratamento antibi\xF3tico e o corpo estranho foi removido.
-      Com base nesse contexto, qual \xF3rg\xE3o foi mais amea\xE7ado e teve suas
-      fun\xE7\xF5es comprometidas?"
+    - m_TableReference:
+        m_TableCollectionName: GUID:efcebb6c42e8bae4c89fe410ca19cc7e
+      m_TableEntryReference:
+        m_KeyId: 3550279766016
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 1
+      m_LocalVariables: []
+    - m_TableReference:
+        m_TableCollectionName: GUID:efcebb6c42e8bae4c89fe410ca19cc7e
+      m_TableEntryReference:
+        m_KeyId: 3552171397120
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 1
+      m_LocalVariables: []
+    - m_TableReference:
+        m_TableCollectionName: GUID:efcebb6c42e8bae4c89fe410ca19cc7e
+      m_TableEntryReference:
+        m_KeyId: 3553526157312
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 1
+      m_LocalVariables: []
+    - m_TableReference:
+        m_TableCollectionName: GUID:efcebb6c42e8bae4c89fe410ca19cc7e
+      m_TableEntryReference:
+        m_KeyId: 3554918666240
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 1
+      m_LocalVariables: []
   - perguntaFracionada:
-    - "Um jovem de 17 anos, deu entrada no pronto-atendimento ap\xF3s sofrer uma
-      queda durante uma partida de futebol. Segundo relato, o paciente caiu de queixo
-      no ch\xE3o ap\xF3s um empurr\xE3o, atingindo a regi\xE3o inferior do rosto.
-      Chegou com queixa de dor intensa na mand\xEDbula e sangramento oral. "
-    - "Tamb\xE9m apresentava edema na regi\xE3o do queixo e dificuldade para falar.
-      Ao exame cl\xEDnico e radiogr\xE1fico, foi diagnosticada uma fratura do dente
-      31 (incisivo central inferior esquerdo) e uma fratura no corpo mandibular esquerdo,
-      com leve desvio da arcada dent\xE1ria. "
-    - "O paciente foi encaminhado para avalia\xE7\xE3o conjunta com odontologia e
-      cirurgia bucomaxilofacial. Diante deste contexto, qual estrutura anat\xF4mica
-      est\xE1 associada neste tipo de les\xE3o?"
+    - m_TableReference:
+        m_TableCollectionName: GUID:efcebb6c42e8bae4c89fe410ca19cc7e
+      m_TableEntryReference:
+        m_KeyId: 7461640212480
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    - m_TableReference:
+        m_TableCollectionName: GUID:efcebb6c42e8bae4c89fe410ca19cc7e
+      m_TableEntryReference:
+        m_KeyId: 7461665378304
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    - m_TableReference:
+        m_TableCollectionName: GUID:efcebb6c42e8bae4c89fe410ca19cc7e
+      m_TableEntryReference:
+        m_KeyId: 7461665378305
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
   - perguntaFracionada:
-    - "Uma paciente do sexo feminino, 27 anos, compareceu ao pronto-socorro com febre
-      persistente, fadiga, calafrios e dores musculares h\xE1 cerca de 10 dias. Durante
-      a anamnese, relatou que havia realizado recentemente um procedimento odontol\xF3gico
-      para "
-    - "tratar c\xE1ries profundas em dois molares inferiores, mas n\xE3o seguiu a
-      orienta\xE7\xE3o de completar o ciclo do antibi\xF3tico prescrito. Ao exame
-      f\xEDsico, apresentava sopro card\xEDaco e pequenas les\xF5es avermelhadas
-      nas extremidades dos dedos (les\xF5es de Janeway)."
-    - "O ecocardiograma revelou vegeta\xE7\xF5es aderidas \xE0 v\xE1lvula mitral,
-      confirmando o diagn\xF3stico de endocardite infecciosa. Qual estrutura anat\xF4mica
-      foi acometida por tal condi\xE7\xE3o?"
+    - m_TableReference:
+        m_TableCollectionName: GUID:efcebb6c42e8bae4c89fe410ca19cc7e
+      m_TableEntryReference:
+        m_KeyId: 7461669572608
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    - m_TableReference:
+        m_TableCollectionName: GUID:efcebb6c42e8bae4c89fe410ca19cc7e
+      m_TableEntryReference:
+        m_KeyId: 7461669572609
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    - m_TableReference:
+        m_TableCollectionName: GUID:efcebb6c42e8bae4c89fe410ca19cc7e
+      m_TableEntryReference:
+        m_KeyId: 7461669572610
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
   - perguntaFracionada:
-    - "Um paciente de 70 anos apresenta epis\xF3dios recorrentes de fraqueza s\xFAbita
-      no lado direito do corpo e dificuldade para falar que duram cerca de 10 minutos
-      e se resolvem espontaneamente. O ultrassom Doppler revela estenose (obstru\xE7\xE3o)
-      cr\xEDtica da art\xE9ria car\xF3tida interna esquerda. "
-    - "Qual \xF3rg\xE3o est\xE1 sendo diretamente afetado por essa condi\xE7\xE3o? "
+    - m_TableReference:
+        m_TableCollectionName: GUID:efcebb6c42e8bae4c89fe410ca19cc7e
+      m_TableEntryReference:
+        m_KeyId: 7461669572611
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    - m_TableReference:
+        m_TableCollectionName: GUID:efcebb6c42e8bae4c89fe410ca19cc7e
+      m_TableEntryReference:
+        m_KeyId: 7461669572612
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
   _questoesMultiplaEscolha:
-  - pergunta: "Qual a principal caracter\xEDstica anat\xF4mica do br\xF4nquio principal
-      direito que facilita a aspira\xE7\xE3o de corpos estranhos?"
+  - pergunta:
+      m_TableReference:
+        m_TableCollectionName: GUID:0a983cf8d8ce9a740931826783f881da
+      m_TableEntryReference:
+        m_KeyId: 24698818560
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
     alternativas:
-    - "Maior comprimento em rela\xE7\xE3o ao esquerdo"
-    - "Presen\xE7a de mais ramifica\xE7\xF5es secund\xE1rias (lobares)"
-    - "Di\xE2metro maior e inclina\xE7\xE3o mais vertical"
-    - "Proximidade com o cora\xE7\xE3o"
+    - m_TableReference:
+        m_TableCollectionName: GUID:ebbec323defe55c4b8c6cce379c88479
+      m_TableEntryReference:
+        m_KeyId: 6323572736
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    - m_TableReference:
+        m_TableCollectionName: GUID:ebbec323defe55c4b8c6cce379c88479
+      m_TableEntryReference:
+        m_KeyId: 19757928448
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    - m_TableReference:
+        m_TableCollectionName: GUID:ebbec323defe55c4b8c6cce379c88479
+      m_TableEntryReference:
+        m_KeyId: 29140586496
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    - m_TableReference:
+        m_TableCollectionName: GUID:ebbec323defe55c4b8c6cce379c88479
+      m_TableEntryReference:
+        m_KeyId: 35486568448
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
     indiceRespostaCorreta: 2
-  - pergunta: "Considerando o percurso anat\xF4mico de um corpo estranho aspirado,
-      como o fragmento dent\xE1rio, qual sequ\xEAncia de estruturas ele atravessa?"
+  - pergunta:
+      m_TableReference:
+        m_TableCollectionName: GUID:0a983cf8d8ce9a740931826783f881da
+      m_TableEntryReference:
+        m_KeyId: 57485692928
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
     alternativas:
-    - "Faringe, laringe, traqueia, br\xF4nquio principal, br\xF4nquio lobar"
-    - "Laringe, faringe, br\xF4nquio principal, traqueia, br\xF4nquio lobar"
-    - "Laringe, traqueia, br\xF4nquio lobar, traqueia, br\xF4nquio principal"
-    - "Faringe, laringe, traqueia, br\xF4nquio lobar, br\xF4nquio principal"
+    - m_TableReference:
+        m_TableCollectionName: GUID:ebbec323defe55c4b8c6cce379c88479
+      m_TableEntryReference:
+        m_KeyId: 40033193984
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    - m_TableReference:
+        m_TableCollectionName: GUID:ebbec323defe55c4b8c6cce379c88479
+      m_TableEntryReference:
+        m_KeyId: 46668582912
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    - m_TableReference:
+        m_TableCollectionName: GUID:ebbec323defe55c4b8c6cce379c88479
+      m_TableEntryReference:
+        m_KeyId: 52402196480
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    - m_TableReference:
+        m_TableCollectionName: GUID:ebbec323defe55c4b8c6cce379c88479
+      m_TableEntryReference:
+        m_KeyId: 59587039232
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
     indiceRespostaCorreta: 0
-  - pergunta: "Qual estrutura anat\xF4mica pode atuar como uma barreira parcial contra
-      a entrada de um fragmento dent\xE1rio ou corpo estranho na via a\xE9rea inferior?"
+  - pergunta:
+      m_TableReference:
+        m_TableCollectionName: GUID:0a983cf8d8ce9a740931826783f881da
+      m_TableEntryReference:
+        m_KeyId: 165707124736
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
     alternativas:
-    - "\xDAvula palatina do palato mole"
-    - "Cartilagem cric\xF3ide da laringe"
-    - Carina da traqueia
-    - "Cartilagem epigl\xF3tica da laringe"
+    - m_TableReference:
+        m_TableCollectionName: GUID:ebbec323defe55c4b8c6cce379c88479
+      m_TableEntryReference:
+        m_KeyId: 9851567214592
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    - m_TableReference:
+        m_TableCollectionName: GUID:ebbec323defe55c4b8c6cce379c88479
+      m_TableEntryReference:
+        m_KeyId: 9851567214593
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    - m_TableReference:
+        m_TableCollectionName: GUID:ebbec323defe55c4b8c6cce379c88479
+      m_TableEntryReference:
+        m_KeyId: 9851567214594
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    - m_TableReference:
+        m_TableCollectionName: GUID:ebbec323defe55c4b8c6cce379c88479
+      m_TableEntryReference:
+        m_KeyId: 9851567214595
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
     indiceRespostaCorreta: 3
-  - pergunta: "O pulm\xE3o direito \xE9 dividido em quantos lobos, e qual a principal
-      diferen\xE7a em rela\xE7\xE3o ao pulm\xE3o esquerdo?"
+  - pergunta:
+      m_TableReference:
+        m_TableCollectionName: GUID:0a983cf8d8ce9a740931826783f881da
+      m_TableEntryReference:
+        m_KeyId: 175836368896
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
     alternativas:
-    - 3 lobos, tendo maior volume que o esquerdo
-    - 2 lobos, sendo mais curto que o esquerdo
-    - 3 lobos, sendo mais alongado que o esquerdo
-    - "2 lobos, tendo menor di\xE2metro que o esquerdo"
+    - m_TableReference:
+        m_TableCollectionName: GUID:ebbec323defe55c4b8c6cce379c88479
+      m_TableEntryReference:
+        m_KeyId: 9851567214596
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    - m_TableReference:
+        m_TableCollectionName: GUID:ebbec323defe55c4b8c6cce379c88479
+      m_TableEntryReference:
+        m_KeyId: 9851567214597
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    - m_TableReference:
+        m_TableCollectionName: GUID:ebbec323defe55c4b8c6cce379c88479
+      m_TableEntryReference:
+        m_KeyId: 9851567214598
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    - m_TableReference:
+        m_TableCollectionName: GUID:ebbec323defe55c4b8c6cce379c88479
+      m_TableEntryReference:
+        m_KeyId: 9851567214599
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
     indiceRespostaCorreta: 0
-  - pergunta: "Se a extra\xE7\xE3o dent\xE1ria for de um molar superior, h\xE1 possibilidade
-      de comunica\xE7\xE3o buco-sinusal, ou seja, uma comunica\xE7\xE3o da cavidade
-      oral com o seio:"
+  - pergunta:
+      m_TableReference:
+        m_TableCollectionName: GUID:0a983cf8d8ce9a740931826783f881da
+      m_TableEntryReference:
+        m_KeyId: 184828956672
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
     alternativas:
-    - Maxilar
-    - Esfenoidal
-    - Mandibular
-    - Etmoidal
+    - m_TableReference:
+        m_TableCollectionName: GUID:ebbec323defe55c4b8c6cce379c88479
+      m_TableEntryReference:
+        m_KeyId: 9851567214600
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    - m_TableReference:
+        m_TableCollectionName: GUID:ebbec323defe55c4b8c6cce379c88479
+      m_TableEntryReference:
+        m_KeyId: 9851567214601
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    - m_TableReference:
+        m_TableCollectionName: GUID:ebbec323defe55c4b8c6cce379c88479
+      m_TableEntryReference:
+        m_KeyId: 9851567214602
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    - m_TableReference:
+        m_TableCollectionName: GUID:ebbec323defe55c4b8c6cce379c88479
+      m_TableEntryReference:
+        m_KeyId: 9851567214603
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
     indiceRespostaCorreta: 0
-  - pergunta: "A valva mitral regula o fluxo sangu\xEDneo entre:"
+  - pergunta:
+      m_TableReference:
+        m_TableCollectionName: GUID:0a983cf8d8ce9a740931826783f881da
+      m_TableEntryReference:
+        m_KeyId: 195121778688
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
     alternativas:
-    - "\xC1trio direito e Ventr\xEDculo direito"
-    - "Ventr\xEDculo direito e Tronco pulmonar"
-    - "\xC1trio esquerdo e Ventr\xEDculo esquerdo"
-    - "Ventr\xEDculo esquerdo e Aorta"
+    - m_TableReference:
+        m_TableCollectionName: GUID:ebbec323defe55c4b8c6cce379c88479
+      m_TableEntryReference:
+        m_KeyId: 9851567214604
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    - m_TableReference:
+        m_TableCollectionName: GUID:ebbec323defe55c4b8c6cce379c88479
+      m_TableEntryReference:
+        m_KeyId: 9851567214605
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    - m_TableReference:
+        m_TableCollectionName: GUID:ebbec323defe55c4b8c6cce379c88479
+      m_TableEntryReference:
+        m_KeyId: 9851567214606
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    - m_TableReference:
+        m_TableCollectionName: GUID:ebbec323defe55c4b8c6cce379c88479
+      m_TableEntryReference:
+        m_KeyId: 9851567214607
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
     indiceRespostaCorreta: 2
-  - pergunta: "Qual estrutura anat\xF4mica divide o cora\xE7\xE3o longitudinalmente,
-      separando os ventr\xEDculos direito e esquerdo?"
+  - pergunta:
+      m_TableReference:
+        m_TableCollectionName: GUID:0a983cf8d8ce9a740931826783f881da
+      m_TableEntryReference:
+        m_KeyId: 209776676864
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
     alternativas:
-    - Septo interatrial
-    - Septo interventricular
-    - "Peric\xE1rdio fibroso"
-    - "Sulco coron\xE1rio"
+    - m_TableReference:
+        m_TableCollectionName: GUID:ebbec323defe55c4b8c6cce379c88479
+      m_TableEntryReference:
+        m_KeyId: 9851567214608
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    - m_TableReference:
+        m_TableCollectionName: GUID:ebbec323defe55c4b8c6cce379c88479
+      m_TableEntryReference:
+        m_KeyId: 9851567214609
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    - m_TableReference:
+        m_TableCollectionName: GUID:ebbec323defe55c4b8c6cce379c88479
+      m_TableEntryReference:
+        m_KeyId: 9851567214610
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    - m_TableReference:
+        m_TableCollectionName: GUID:ebbec323defe55c4b8c6cce379c88479
+      m_TableEntryReference:
+        m_KeyId: 9851567214611
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
     indiceRespostaCorreta: 1
-  - pergunta: "Na endocardite infecciosa, \xEAmbolos s\xE9pticos desprendidos da
-      valva mitral podem alcan\xE7ar pequenos vasos perif\xE9ricos, onde se depositam
-      e causam manifesta\xE7\xF5es cut\xE2neas t\xEDpicas das les\xF5es de Janeway.
-      Qual estrutura vascular est\xE1 envolvida com o transporte desses \xEAmbolos
-      antes de chegarem \xE0 microcircula\xE7\xE3o perif\xE9rica?"
+  - pergunta:
+      m_TableReference:
+        m_TableCollectionName: GUID:0a983cf8d8ce9a740931826783f881da
+      m_TableEntryReference:
+        m_KeyId: 3313402253312
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
     alternativas:
-    - Aorta
-    - "Art\xE9ria pulmonar "
-    - 'Veia cava superior  '
-    - Veia porta
+    - m_TableReference:
+        m_TableCollectionName: GUID:ebbec323defe55c4b8c6cce379c88479
+      m_TableEntryReference:
+        m_KeyId: 9851567214612
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    - m_TableReference:
+        m_TableCollectionName: GUID:ebbec323defe55c4b8c6cce379c88479
+      m_TableEntryReference:
+        m_KeyId: 9851567214613
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    - m_TableReference:
+        m_TableCollectionName: GUID:ebbec323defe55c4b8c6cce379c88479
+      m_TableEntryReference:
+        m_KeyId: 9851567214614
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    - m_TableReference:
+        m_TableCollectionName: GUID:ebbec323defe55c4b8c6cce379c88479
+      m_TableEntryReference:
+        m_KeyId: 9851567214615
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
     indiceRespostaCorreta: 0
-  - pergunta: "Qual \xE9 a correta organiza\xE7\xE3o das camadas que comp\xF5em a
-      parede card\xEDaca, da regi\xE3o mais interna at\xE9 a mais externa?"
+  - pergunta:
+      m_TableReference:
+        m_TableCollectionName: GUID:0a983cf8d8ce9a740931826783f881da
+      m_TableEntryReference:
+        m_KeyId: 3313402253313
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
     alternativas:
-    - "Epic\xE1rdio, mioc\xE1rdio e endoc\xE1rdio"
-    - "Mioc\xE1rdio, endoc\xE1rdio e peric\xE1rdio"
-    - "Peric\xE1rdio, epic\xE1rdio e mioc\xE1rdio"
-    - "Endoc\xE1rdio, mioc\xE1rdio e epic\xE1rdio"
+    - m_TableReference:
+        m_TableCollectionName: GUID:ebbec323defe55c4b8c6cce379c88479
+      m_TableEntryReference:
+        m_KeyId: 9851567214616
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    - m_TableReference:
+        m_TableCollectionName: GUID:ebbec323defe55c4b8c6cce379c88479
+      m_TableEntryReference:
+        m_KeyId: 9851567214617
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    - m_TableReference:
+        m_TableCollectionName: GUID:ebbec323defe55c4b8c6cce379c88479
+      m_TableEntryReference:
+        m_KeyId: 9851567214618
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    - m_TableReference:
+        m_TableCollectionName: GUID:ebbec323defe55c4b8c6cce379c88479
+      m_TableEntryReference:
+        m_KeyId: 9851567214619
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
     indiceRespostaCorreta: 3
-  - pergunta: "Os dentes molares inferiores acometidos por c\xE1rie da paciente recebem
-      suprimento sangu\xEDneo por meio de ramos da A. maxilar que \xE9 um ramo da
-      art\xE9ria:"
+  - pergunta:
+      m_TableReference:
+        m_TableCollectionName: GUID:0a983cf8d8ce9a740931826783f881da
+      m_TableEntryReference:
+        m_KeyId: 3313402253314
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
     alternativas:
-    - "Coron\xE1ria"
-    - "Car\xF3tida externa"
-    - "Car\xF3tida interna"
-    - "Subcl\xE1via"
+    - m_TableReference:
+        m_TableCollectionName: GUID:ebbec323defe55c4b8c6cce379c88479
+      m_TableEntryReference:
+        m_KeyId: 9851567214620
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    - m_TableReference:
+        m_TableCollectionName: GUID:ebbec323defe55c4b8c6cce379c88479
+      m_TableEntryReference:
+        m_KeyId: 9851567214621
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    - m_TableReference:
+        m_TableCollectionName: GUID:ebbec323defe55c4b8c6cce379c88479
+      m_TableEntryReference:
+        m_KeyId: 9851567214622
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    - m_TableReference:
+        m_TableCollectionName: GUID:ebbec323defe55c4b8c6cce379c88479
+      m_TableEntryReference:
+        m_KeyId: 9851567214623
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
     indiceRespostaCorreta: 1
-  - pergunta: "O dente 31 assim como os demais dentes se unem \xE0 mand\xEDbula ou
-      \xE0 maxila por meio de qual tipo de articula\xE7\xE3o?"
+  - pergunta:
+      m_TableReference:
+        m_TableCollectionName: GUID:0a983cf8d8ce9a740931826783f881da
+      m_TableEntryReference:
+        m_KeyId: 3313402253315
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
     alternativas:
-    - Sinovial
-    - "S\xEDnfise"
-    - Sutura
-    - Gonfose
+    - m_TableReference:
+        m_TableCollectionName: GUID:ebbec323defe55c4b8c6cce379c88479
+      m_TableEntryReference:
+        m_KeyId: 9851567214624
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    - m_TableReference:
+        m_TableCollectionName: GUID:ebbec323defe55c4b8c6cce379c88479
+      m_TableEntryReference:
+        m_KeyId: 9851567214625
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    - m_TableReference:
+        m_TableCollectionName: GUID:ebbec323defe55c4b8c6cce379c88479
+      m_TableEntryReference:
+        m_KeyId: 9851567214626
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    - m_TableReference:
+        m_TableCollectionName: GUID:ebbec323defe55c4b8c6cce379c88479
+      m_TableEntryReference:
+        m_KeyId: 9851567214627
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
     indiceRespostaCorreta: 3
-  - pergunta: "A mand\xEDbula \xE9 classificada como parte de qual divis\xE3o do
-      esqueleto humano?"
+  - pergunta:
+      m_TableReference:
+        m_TableCollectionName: GUID:0a983cf8d8ce9a740931826783f881da
+      m_TableEntryReference:
+        m_KeyId: 3313402253316
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
     alternativas:
-    - Esqueleto apendicular
-    - Esqueleto axial
-    - "Neurocr\xE2nio"
-    - Cintura escapular
+    - m_TableReference:
+        m_TableCollectionName: GUID:ebbec323defe55c4b8c6cce379c88479
+      m_TableEntryReference:
+        m_KeyId: 9851567214628
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    - m_TableReference:
+        m_TableCollectionName: GUID:ebbec323defe55c4b8c6cce379c88479
+      m_TableEntryReference:
+        m_KeyId: 9851567214629
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    - m_TableReference:
+        m_TableCollectionName: GUID:ebbec323defe55c4b8c6cce379c88479
+      m_TableEntryReference:
+        m_KeyId: 9851567214630
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    - m_TableReference:
+        m_TableCollectionName: GUID:ebbec323defe55c4b8c6cce379c88479
+      m_TableEntryReference:
+        m_KeyId: 9851567214631
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
     indiceRespostaCorreta: 1
-  - pergunta: "Qual a articula\xE7\xE3o sinovial que conecta a mand\xEDbula ao osso
-      temporal e permite os movimentos de mastiga\xE7\xE3o?"
+  - pergunta:
+      m_TableReference:
+        m_TableCollectionName: GUID:0a983cf8d8ce9a740931826783f881da
+      m_TableEntryReference:
+        m_KeyId: 3313402253317
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
     alternativas:
-    - Sutura lambdoide
-    - "Articula\xE7\xE3o zigom\xE1tica"
-    - "Articula\xE7\xE3o temporomandibular "
-    - Sutura coronal
+    - m_TableReference:
+        m_TableCollectionName: GUID:ebbec323defe55c4b8c6cce379c88479
+      m_TableEntryReference:
+        m_KeyId: 9851567214632
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    - m_TableReference:
+        m_TableCollectionName: GUID:ebbec323defe55c4b8c6cce379c88479
+      m_TableEntryReference:
+        m_KeyId: 9851567214633
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    - m_TableReference:
+        m_TableCollectionName: GUID:ebbec323defe55c4b8c6cce379c88479
+      m_TableEntryReference:
+        m_KeyId: 9851567214634
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    - m_TableReference:
+        m_TableCollectionName: GUID:ebbec323defe55c4b8c6cce379c88479
+      m_TableEntryReference:
+        m_KeyId: 9851567214635
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
     indiceRespostaCorreta: 2
-  - pergunta: "O M. temporal, importante m\xFAsculo da mastiga\xE7\xE3o, tem inser\xE7\xE3o
-      na mand\xEDbula. Considerando sua morfologia, pode ser melhor classificado
-      como m\xFAsculo:"
+  - pergunta:
+      m_TableReference:
+        m_TableCollectionName: GUID:0a983cf8d8ce9a740931826783f881da
+      m_TableEntryReference:
+        m_KeyId: 3313402253318
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
     alternativas:
-    - Largo
-    - Circular
-    - "Dig\xE1strico"
-    - Policaudado
+    - m_TableReference:
+        m_TableCollectionName: GUID:ebbec323defe55c4b8c6cce379c88479
+      m_TableEntryReference:
+        m_KeyId: 9851567214636
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    - m_TableReference:
+        m_TableCollectionName: GUID:ebbec323defe55c4b8c6cce379c88479
+      m_TableEntryReference:
+        m_KeyId: 9851567214637
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    - m_TableReference:
+        m_TableCollectionName: GUID:ebbec323defe55c4b8c6cce379c88479
+      m_TableEntryReference:
+        m_KeyId: 9851567214638
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    - m_TableReference:
+        m_TableCollectionName: GUID:ebbec323defe55c4b8c6cce379c88479
+      m_TableEntryReference:
+        m_KeyId: 9851567214639
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
     indiceRespostaCorreta: 0
-  - pergunta: "A mand\xEDbula \xE9 um osso que n\xE3o apresenta:"
+  - pergunta:
+      m_TableReference:
+        m_TableCollectionName: GUID:0a983cf8d8ce9a740931826783f881da
+      m_TableEntryReference:
+        m_KeyId: 3313402253319
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
     alternativas:
-    - Cartilagem articular
-    - Osso Esponjoso
-    - Forames para estruturas neurovasculares
-    - Seios paranasais
+    - m_TableReference:
+        m_TableCollectionName: GUID:ebbec323defe55c4b8c6cce379c88479
+      m_TableEntryReference:
+        m_KeyId: 9851567214640
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    - m_TableReference:
+        m_TableCollectionName: GUID:ebbec323defe55c4b8c6cce379c88479
+      m_TableEntryReference:
+        m_KeyId: 9851567214641
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    - m_TableReference:
+        m_TableCollectionName: GUID:ebbec323defe55c4b8c6cce379c88479
+      m_TableEntryReference:
+        m_KeyId: 9851567214642
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    - m_TableReference:
+        m_TableCollectionName: GUID:ebbec323defe55c4b8c6cce379c88479
+      m_TableEntryReference:
+        m_KeyId: 9851567214643
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
     indiceRespostaCorreta: 3
-  - pergunta: "O c\xF3rtex cerebral pode ser dividido em lobos. Em qual deles h\xE1
-      comprometimento no suprimento sangu\xEDneo afetando uma \xE1rea fundamental
-      para a fala?"
+  - pergunta:
+      m_TableReference:
+        m_TableCollectionName: GUID:0a983cf8d8ce9a740931826783f881da
+      m_TableEntryReference:
+        m_KeyId: 3313402253320
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
     alternativas:
-    - Lobo frontal
-    - Lobo parietal
-    - Lobo temporal
-    - Lobo occipital
+    - m_TableReference:
+        m_TableCollectionName: GUID:ebbec323defe55c4b8c6cce379c88479
+      m_TableEntryReference:
+        m_KeyId: 9851567214644
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    - m_TableReference:
+        m_TableCollectionName: GUID:ebbec323defe55c4b8c6cce379c88479
+      m_TableEntryReference:
+        m_KeyId: 9851567214645
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    - m_TableReference:
+        m_TableCollectionName: GUID:ebbec323defe55c4b8c6cce379c88479
+      m_TableEntryReference:
+        m_KeyId: 9851571408896
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    - m_TableReference:
+        m_TableCollectionName: GUID:ebbec323defe55c4b8c6cce379c88479
+      m_TableEntryReference:
+        m_KeyId: 9851571408897
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
     indiceRespostaCorreta: 0
-  - pergunta: "Qual estrutura do enc\xE9falo \xE9 conhecida como \u201Cporta de entrada\u201D
-      para o c\xF3rtex cerebral, recebendo informa\xE7\xF5es sensoriais provenientes
-      da periferia do corpo?"
+  - pergunta:
+      m_TableReference:
+        m_TableCollectionName: GUID:0a983cf8d8ce9a740931826783f881da
+      m_TableEntryReference:
+        m_KeyId: 3313402253321
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
     alternativas:
-    - "Hipot\xE1lamo"
-    - "T\xE1lamo"
-    - Cerebelo
-    - "Mesenc\xE9falo"
+    - m_TableReference:
+        m_TableCollectionName: GUID:ebbec323defe55c4b8c6cce379c88479
+      m_TableEntryReference:
+        m_KeyId: 9851571408898
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    - m_TableReference:
+        m_TableCollectionName: GUID:ebbec323defe55c4b8c6cce379c88479
+      m_TableEntryReference:
+        m_KeyId: 9851571408899
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    - m_TableReference:
+        m_TableCollectionName: GUID:ebbec323defe55c4b8c6cce379c88479
+      m_TableEntryReference:
+        m_KeyId: 9851571408900
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    - m_TableReference:
+        m_TableCollectionName: GUID:ebbec323defe55c4b8c6cce379c88479
+      m_TableEntryReference:
+        m_KeyId: 9851571408901
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
     indiceRespostaCorreta: 1
-  - pergunta: "Em qual regi\xE3o do sistema nervoso ocorre a decussa\xE7\xE3o das
-      pir\xE2mides, onde a maioria das fibras motoras do trato corticoespinhal cruza
-      para o lado oposto antes de seguir para a medula espinhal, explicando a rela\xE7\xE3o
-      entre les\xF5es cerebrais e fraqueza no lado contralateral do corpo?"
+  - pergunta:
+      m_TableReference:
+        m_TableCollectionName: GUID:0a983cf8d8ce9a740931826783f881da
+      m_TableEntryReference:
+        m_KeyId: 3313402253322
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
     alternativas:
-    - "Mesenc\xE9falo"
-    - Ponte
-    - Bulbo
-    - Cerebelo
+    - m_TableReference:
+        m_TableCollectionName: GUID:ebbec323defe55c4b8c6cce379c88479
+      m_TableEntryReference:
+        m_KeyId: 9851571408902
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    - m_TableReference:
+        m_TableCollectionName: GUID:ebbec323defe55c4b8c6cce379c88479
+      m_TableEntryReference:
+        m_KeyId: 9851571408903
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    - m_TableReference:
+        m_TableCollectionName: GUID:ebbec323defe55c4b8c6cce379c88479
+      m_TableEntryReference:
+        m_KeyId: 9851571408904
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    - m_TableReference:
+        m_TableCollectionName: GUID:ebbec323defe55c4b8c6cce379c88479
+      m_TableEntryReference:
+        m_KeyId: 9851571408905
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
     indiceRespostaCorreta: 2
-  - pergunta: "Por quais estruturas anat\xF4micas as fibras motoras chegam \xE0s
-      fibras musculares esquel\xE9ticas para promover a contra\xE7\xE3o muscular?"
+  - pergunta:
+      m_TableReference:
+        m_TableCollectionName: GUID:0a983cf8d8ce9a740931826783f881da
+      m_TableEntryReference:
+        m_KeyId: 3313402253323
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
     alternativas:
-    - Nervos cranianos e nervos espinais
-    - "Nervos simp\xE1ticos e nervos parassimp\xE1ticos"
-    - "G\xE2nglios nervosos e interneur\xF4nios"
-    - "Jun\xE7\xF5es neuromusculares e tronco simp\xE1tico "
+    - m_TableReference:
+        m_TableCollectionName: GUID:ebbec323defe55c4b8c6cce379c88479
+      m_TableEntryReference:
+        m_KeyId: 9851571408906
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    - m_TableReference:
+        m_TableCollectionName: GUID:ebbec323defe55c4b8c6cce379c88479
+      m_TableEntryReference:
+        m_KeyId: 9851571408907
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    - m_TableReference:
+        m_TableCollectionName: GUID:ebbec323defe55c4b8c6cce379c88479
+      m_TableEntryReference:
+        m_KeyId: 9851571408908
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    - m_TableReference:
+        m_TableCollectionName: GUID:ebbec323defe55c4b8c6cce379c88479
+      m_TableEntryReference:
+        m_KeyId: 9851571408909
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
     indiceRespostaCorreta: 0
-  - pergunta: "Qual regi\xE3o do enc\xE9falo \xE9 respons\xE1vel por regular fun\xE7\xF5es
-      essenciais, como respira\xE7\xE3o, batimentos card\xEDacos e press\xE3o arterial?"
+  - pergunta:
+      m_TableReference:
+        m_TableCollectionName: GUID:0a983cf8d8ce9a740931826783f881da
+      m_TableEntryReference:
+        m_KeyId: 3313402253324
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
     alternativas:
-    - "Tronco encef\xE1lico"
-    - Cerebelo
-    - "C\xF3rtex cerebral"
-    - "Dienc\xE9falo"
+    - m_TableReference:
+        m_TableCollectionName: GUID:ebbec323defe55c4b8c6cce379c88479
+      m_TableEntryReference:
+        m_KeyId: 9851571408910
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    - m_TableReference:
+        m_TableCollectionName: GUID:ebbec323defe55c4b8c6cce379c88479
+      m_TableEntryReference:
+        m_KeyId: 9851571408911
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    - m_TableReference:
+        m_TableCollectionName: GUID:ebbec323defe55c4b8c6cce379c88479
+      m_TableEntryReference:
+        m_KeyId: 9851571408912
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    - m_TableReference:
+        m_TableCollectionName: GUID:ebbec323defe55c4b8c6cce379c88479
+      m_TableEntryReference:
+        m_KeyId: 9851571408913
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
     indiceRespostaCorreta: 0
   _imageTargets:
   - {fileID: 7913789876734188256, guid: ae1328b0d45ab9f418730a0402b09131, type: 3}
   - {fileID: 2722186806748002848, guid: 66bd5cd840fed8c4a9e185f1a60a2baa, type: 3}
   - {fileID: 134964798416257270, guid: 5419107751a22d84b8be6f6448a4c787, type: 3}
   - {fileID: 7032276313558791702, guid: 44584d000a4cdde4096f57ec71d2a8ce, type: 3}
+  references:
+    version: 2
+    RefIds: []
 --- !u!4 &85620591
 Transform:
   m_ObjectHideFlags: 0
@@ -1069,6 +1819,7 @@ GameObject:
   - component: {fileID: 152880656}
   - component: {fileID: 152880658}
   - component: {fileID: 152880657}
+  - component: {fileID: 152880659}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -1193,6 +1944,46 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 152880655}
   m_CullTransparentMesh: 1
+--- !u!114 &152880659
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 152880655}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56eb0353ae6e5124bb35b17aff880f16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_StringReference:
+    m_TableReference:
+      m_TableCollectionName: GUID:a35d27430b8b2e34c8a295bb1ac5cd85
+    m_TableEntryReference:
+      m_KeyId: 10121430686109696
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  m_FormatArguments: []
+  m_UpdateString:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 152880657}
+        m_TargetAssemblyTypeName: TMPro.TMP_Text, Unity.TextMeshPro
+        m_MethodName: set_text
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  references:
+    version: 2
+    RefIds: []
 --- !u!1 &160216807
 GameObject:
   m_ObjectHideFlags: 0
@@ -1325,6 +2116,141 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 160216807}
+  m_CullTransparentMesh: 1
+--- !u!1 &333197445
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 333197446}
+  - component: {fileID: 333197449}
+  - component: {fileID: 333197448}
+  m_Layer: 5
+  m_Name: TextTempoValor
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &333197446
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 333197445}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 779459329}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 45, y: -4.507324}
+  m_SizeDelta: {x: 130.8416, y: 43.7814}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &333197448
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 333197445}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: :00
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 4fc6496a05d503f449e75deddef145e4, type: 2}
+  m_sharedMaterial: {fileID: 8988953509644133527, guid: 4fc6496a05d503f449e75deddef145e4,
+    type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 60
+  m_fontSizeBase: 60
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: -83.06704, y: -19.18386, z: -163.6658, w: -9.439678}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &333197449
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 333197445}
   m_CullTransparentMesh: 1
 --- !u!1 &408824860
 GameObject:
@@ -2202,9 +3128,9 @@ MonoBehaviour:
   m_fontSize: 55
   m_fontSizeBase: 55
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 42
+  m_fontSizeMax: 55
   m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
@@ -2280,6 +3206,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 941140859}
+  - {fileID: 1889322516}
   m_Father: {fileID: 130002791}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -2356,6 +3283,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1519749870}
+  - {fileID: 333197446}
   m_Father: {fileID: 130002791}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
@@ -2506,6 +3434,7 @@ GameObject:
   - component: {fileID: 941140859}
   - component: {fileID: 941140861}
   - component: {fileID: 941140860}
+  - component: {fileID: 941140862}
   m_Layer: 5
   m_Name: TextPontos
   m_TagString: Untagged
@@ -2529,7 +3458,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 13.799988, y: -3}
+  m_AnchoredPosition: {x: -50, y: -3}
   m_SizeDelta: {x: 196.3099, y: 53.5522}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &941140860
@@ -2552,7 +3481,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Pontos:000
+  m_text: Pontos
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4fc6496a05d503f449e75deddef145e4, type: 2}
   m_sharedMaterial: {fileID: 8988953509644133527, guid: 4fc6496a05d503f449e75deddef145e4,
@@ -2630,6 +3559,46 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 941140858}
   m_CullTransparentMesh: 1
+--- !u!114 &941140862
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 941140858}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56eb0353ae6e5124bb35b17aff880f16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_StringReference:
+    m_TableReference:
+      m_TableCollectionName: GUID:a35d27430b8b2e34c8a295bb1ac5cd85
+    m_TableEntryReference:
+      m_KeyId: 10129001455161344
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  m_FormatArguments: []
+  m_UpdateString:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 941140860}
+        m_TargetAssemblyTypeName: TMPro.TMP_Text, Unity.TextMeshPro
+        m_MethodName: set_text
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  references:
+    version: 2
+    RefIds: []
 --- !u!1 &1066851714
 GameObject:
   m_ObjectHideFlags: 0
@@ -3156,6 +4125,7 @@ GameObject:
   - component: {fileID: 1519749870}
   - component: {fileID: 1519749872}
   - component: {fileID: 1519749871}
+  - component: {fileID: 1519749873}
   m_Layer: 5
   m_Name: TextTempo
   m_TagString: Untagged
@@ -3179,7 +4149,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -39.024628, y: -4.507324}
+  m_AnchoredPosition: {x: -100, y: -4.507324}
   m_SizeDelta: {x: 130.8416, y: 43.7814}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1519749871
@@ -3202,7 +4172,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Tempo:00
+  m_text: Tempo
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4fc6496a05d503f449e75deddef145e4, type: 2}
   m_sharedMaterial: {fileID: 8988953509644133527, guid: 4fc6496a05d503f449e75deddef145e4,
@@ -3280,6 +4250,46 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1519749869}
   m_CullTransparentMesh: 1
+--- !u!114 &1519749873
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1519749869}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56eb0353ae6e5124bb35b17aff880f16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_StringReference:
+    m_TableReference:
+      m_TableCollectionName: GUID:a35d27430b8b2e34c8a295bb1ac5cd85
+    m_TableEntryReference:
+      m_KeyId: 10129021143224320
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  m_FormatArguments: []
+  m_UpdateString:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1519749871}
+        m_TargetAssemblyTypeName: TMPro.TMP_Text, Unity.TextMeshPro
+        m_MethodName: set_text
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  references:
+    version: 2
+    RefIds: []
 --- !u!1 &1532819039
 GameObject:
   m_ObjectHideFlags: 0
@@ -3837,6 +4847,141 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!1 &1889322515
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1889322516}
+  - component: {fileID: 1889322519}
+  - component: {fileID: 1889322518}
+  m_Layer: 5
+  m_Name: TextPontosValor
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1889322516
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1889322515}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 710524756}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 115, y: -3}
+  m_SizeDelta: {x: 196.3099, y: 53.5522}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1889322518
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1889322515}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: :000
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 4fc6496a05d503f449e75deddef145e4, type: 2}
+  m_sharedMaterial: {fileID: 8988953509644133527, guid: 4fc6496a05d503f449e75deddef145e4,
+    type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 60
+  m_fontSizeBase: 60
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: -114.25406, y: -13.073021, z: -82.675186, w: -6.3770905}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &1889322519
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1889322515}
+  m_CullTransparentMesh: 1
 --- !u!1 &1973854240
 GameObject:
   m_ObjectHideFlags: 0

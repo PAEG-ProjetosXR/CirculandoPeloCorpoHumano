@@ -1,0 +1,101 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: QIMG_pt-BR
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: pt-BR
+  m_SharedData: {fileID: 11400000, guid: efcebb6c42e8bae4c89fe410ca19cc7e, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 3550279766016
+    m_Localized: "Durante uma cirurgia odontol\xF3gica para extra\xE7\xE3o de terceiros
+      molares inferiores, um paciente masculino de 58 anos apresentou epis\xF3dio
+      de tosse intensa seguido por dispneia. Um fragmento de um dente foi  "
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3552171397120
+    m_Localized: "aspirado durante o procedimento, por\xE9m o evento passou despercebido
+      naquele momento. Tr\xEAs dias depois, o paciente deu entrada ao pronto-atendimento
+      com febre, dor tor\xE1cica e dificuldade respirat\xF3ria. O exame f\xEDsico
+      revelou "
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3553526157312
+    m_Localized: "estertores (sons respirat\xF3rios anormais) no hemit\xF3rax direito
+      e a radiografia de t\xF3rax mostrou infiltrado pulmonar sugestivo de pneumonia
+      lobar.  A broncoscopia confirmou a presen\xE7a de "
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3554918666240
+    m_Localized: "fragmento dent\xE1rio impactado em um br\xF4nquio segmentar inferior
+      direito. O paciente recebeu tratamento antibi\xF3tico e o corpo estranho foi
+      removido. Com base nesse contexto, qual \xF3rg\xE3o foi mais amea\xE7ado e
+      teve suas fun\xE7\xF5es comprometidas?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7461640212480
+    m_Localized: "Um jovem de 17 anos, deu entrada no pronto-atendimento ap\xF3s
+      sofrer uma queda durante uma partida de futebol. Segundo relato, o paciente
+      caiu de queixo no ch\xE3o ap\xF3s um empurr\xE3o, atingindo a regi\xE3o inferior
+      do rosto. Chegou com queixa de dor intensa na mand\xEDbula e sangramento oral. "
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7461665378304
+    m_Localized: "Tamb\xE9m apresentava edema na regi\xE3o do queixo e dificuldade
+      para falar. Ao exame cl\xEDnico e radiogr\xE1fico, foi diagnosticada uma fratura
+      do dente 31 (incisivo central inferior esquerdo) e uma fratura no corpo mandibular
+      esquerdo, com leve desvio da arcada dent\xE1ria."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7461665378305
+    m_Localized: "O paciente foi encaminhado para avalia\xE7\xE3o conjunta com odontologia
+      e cirurgia bucomaxilofacial. Diante deste contexto, qual estrutura anat\xF4mica
+      est\xE1 associada neste tipo de les\xE3o?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7461669572608
+    m_Localized: "Uma paciente do sexo feminino, 27 anos, compareceu ao pronto-socorro
+      com febre persistente, fadiga, calafrios e dores musculares h\xE1 cerca de
+      10 dias. Durante a anamnese, relatou que "
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7461669572609
+    m_Localized: "havia realizado recentemente um procedimento odontol\xF3gico para
+      tratar c\xE1ries profundas em dois molares inferiores, mas n\xE3o seguiu a
+      orienta\xE7\xE3o de completar o ciclo do antibi\xF3tico prescrito."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7461669572610
+    m_Localized: "Ao exame f\xEDsico, apresentava sopro card\xEDaco e pequenas les\xF5es
+      avermelhadas nas extremidades dos dedos (les\xF5es de Janeway). O ecocardiograma
+      revelou vegeta\xE7\xF5es aderidas \xE0 v\xE1lvula mitral, confirmando o diagn\xF3stico
+      de endocardite infecciosa. Qual estrutura anat\xF4mica foi acometida por tal
+      condi\xE7\xE3o?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7461669572611
+    m_Localized: "Um paciente de 70 anos apresenta epis\xF3dios recorrentes de fraqueza
+      s\xFAbita no lado direito do corpo e dificuldade para falar que duram cerca
+      de 10 minutos e se resolvem espontaneamente."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7461669572612
+    m_Localized: "O ultrassom Doppler revela estenose (obstru\xE7\xE3o) cr\xEDtica
+      da art\xE9ria car\xF3tida interna esquerda. Qual \xF3rg\xE3o est\xE1 sendo
+      diretamente afetado por essa condi\xE7\xE3o?"
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []
